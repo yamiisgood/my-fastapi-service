@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Header, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
-    title="Valorant Agent finder,
+    title="Valorant Agent finder",
     description="A beginner-friendly REST API containing information about the Agents in Valorant.",
     version="1.0.0"
 )
@@ -67,6 +67,7 @@ agents = [
         "ultimate": "Dimensional Drift",
         "description": "Japanese native Yoru rips through reality to infiltrate enemy lines unseen. Employing deception and aggression in equal measure, he takes targets down before they even know where to look."
     },
+
     {
         "id": 6,
         "name": "Gekko",
@@ -75,7 +76,7 @@ agents = [
         "origin": "United States",
         "ultimate": "Thrash",
         "description": "Gekko the Angeleno leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to regroup and go again."
-}
+    }
 
 ]
 
@@ -103,23 +104,9 @@ def get_agents():
     }
 
 
-# GET ONE CAR
-@app.get("/agents/{agents_id}")
-def get_car(car_id: int):
-
-    for agent in agents:
-
-        if agent["id"] == agent_id:
-            return agent
-
-    raise HTTPException(
-        status_code=404,
-        detail="Car not found."
-    )
-
 # SEARCH CARS
 @app.get("/agents/search")
-def search_agents( q: str = Query(..., min_length=1)):
+def search_agents(q: str = Query(..., min_length=1)):
     q = q.lower()
     results = []
     for agent in agents:
@@ -127,7 +114,7 @@ def search_agents( q: str = Query(..., min_length=1)):
             f"{agent['name']} "
             f"{agent['Role']} "
             f"{agent['year']} "
-            f"{agent['origin']}"
+            f"{agent['origin']} "
             f"{agent['ultimate']}"
         ).lower()
 
@@ -139,3 +126,18 @@ def search_agents( q: str = Query(..., min_length=1)):
         "count": len(results),
         "results": results
     }
+
+
+# GET ONE CAR
+@app.get("/agents/{agents_id}")
+def get_car(agents_id: int):
+
+    for agent in agents:
+
+        if agent["id"] == agents_id:
+            return agent
+
+    raise HTTPException(
+        status_code=404,
+        detail="Agent not found."
+    )
