@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +8,18 @@
 </head>
 <body>
     <header>
-        <h1> Valorant Agent Finder</h1>
+        <h1>🎯 Valorant Agent Finder</h1>
         <p>A website powered by a REST API</p>
     </header>
     <main>
+        <!-- SEARCH SECTION -->
         <section class="search">
             <input type="text" id="searchInput" placeholder="Search for an agent...">
             <button onclick="searchAgents()"> Search </button>
             <button class="secondary" onclick="loadAgents()"> Show All </button>
         </section>
 
+        <!-- AGENTS GRID SECTION -->
         <section>
             <h2>Agents</h2>
             <div id="agentList" class="agent-list">
@@ -27,6 +27,16 @@
             </div>
         </section>
     </main>
+
+    <!-- AGENT DETAILS MODAL -->
+    <div id="agentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Dynamic Agent Details Load Here -->
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>Data provided by the Valorant Agents API</p>
