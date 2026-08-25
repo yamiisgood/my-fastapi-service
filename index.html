@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Car Finder</title>
-    <link rel="stylesheet" href="style.css" >
+    <title>Valorant Agent Finder</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
     <header>
-        <h1>🚗 Simple Car Finder</h1>
-        <p> A website powered by a REST API </p>
+        <h1>🎯 Valorant Agent Finder</h1>
+        <p>A website powered by a REST API</p>
     </header>
     <main>
-
-        <!-- SEARCH -->
         <section class="search">
-            <input type="text" id="searchInput" placeholder="Search for a car...">
-            <button onclick="searchCars()"> Search </button>
-            <button class="secondary" onclick="loadCars()"> Show All </button>
-
+            <input type="text" id="searchInput" placeholder="Search for an agent...">
+            <button onclick="searchAgents()"> Search </button>
+            <button class="secondary" onclick="loadAgents()"> Show All </button>
         </section>
 
         <section>
-            <h2>Cars</h2>
-            <div id="carList" class="car-list">
-                Loading cars...
+            <h2>Agents</h2>
+            <div id="agentList" class="agent-list">
+                Loading agents...
             </div>
         </section>
     </main>
 
     <footer>
-        <p> Data provided by the Simple Car API </p>
+        <p>Data provided by the Valorant Agents API</p>
     </footer>
     <script src="app.js"></script>
 </body>
