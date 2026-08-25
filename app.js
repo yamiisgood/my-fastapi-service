@@ -1,84 +1,83 @@
-const API_URL = "https://my-fastapi-service-eight.vercel.app/";
+const API_URL = "https://my-fastapi-service-eight.vercel.app/api";
 
 
-// GET ALL CARS
-async function loadCars() {
+// GET ALL AGENTS
+async function loadAgents() {
     try {
-        const response = await fetch(`${API_URL}/cars`);
+        const response = await fetch(`${API_URL}/agents`);
         const data = await response.json();
-        displayCars(data.cars);
+        displayAgents(data.agents);
     }
 
     catch (error) {
         console.error(error);
-        document.getElementById("carList").innerHTML = "Unable to connect to the API.";
+        document.getElementById("agentList").innerHTML = "Unable to connect to the API.";
     }
 }
 
 
-// DISPLAY CARS
-function displayCars(cars) {
-    const carList =
-        document.getElementById("carList");
+// DISPLAY AGENTS
+function displayAgents(agents) {
+    const agentList = document.getElementById("agentList");
 
-    carList.innerHTML = "";
+    agentList.innerHTML = "";
 
-    cars.forEach(car => {
+    agents.forEach(agent => {
         const card = document.createElement("div");
-        card.className = "car-card";
+        card.className = "agent-card";
         card.innerHTML = `
-            <div class="car-year">${car.year}</div>
-            <h3>${car.make} ${car.model}</h3>
-            <p class="car-engine">${car.engine}</p>
-            <p>${car.horsepower} horsepower/p>
-            <p>${car.description}</p>
-            <button onclick="viewCar(${car.id})"> View Details</button>
+            <div class="agent-year">${agent.year}</div>
+            <h3>${agent.name} (${agent.Role})</h3>
+            <p class="agent-origin">Origin: ${agent.origin}</p>
+            <p><strong>Ultimate:</strong> ${agent.ultimate}</p>
+            <p>${agent.description}</p>
+            <button onclick="viewAgent(${agent.id})"> View Details</button>
         `;
 
-        carList.appendChild(card);
+        agentList.appendChild(card);
     });
 
 }
 
-// GET ONE CAR
-async function viewCar(id) {
+// GET ONE AGENT
+async function viewAgent(id) {
 
     try {
-        const response = await fetch(`${API_URL}/cars/${id}`);
-        const car = await response.json();
+        const response = await fetch(`${API_URL}/agents/${id}`);
+        const agent = await response.json();
 
         alert(`
-            ${car.year} ${car.make} ${car.model}
-            Engine:
-            ${car.engine}
+            ${agent.name} - ${agent.Role} (${agent.year})
+            Origin:
+            ${agent.origin}
 
-            Horsepower:
-            ${car.horsepower}
+            Ultimate Ability:
+            ${agent.ultimate}
 
             Description:
-            ${car.description}
+            ${agent.description}
         `);
     }
     catch (error) {
         console.error(error);
-        alert("Unable to retrieve car.");
+        alert("Unable to retrieve agent.");
     }
 
 }
 
 // SEARCH
-async function searchCars() {
+async function searchAgents() {
 
     const query = document.getElementById("searchInput").value;
     if (!query) {
-        loadCars();
+        loadAgents();
         return;
     }
     try {
-        const response =
-            await fetch(`${API_URL}/cars/search?q=${encodeURIComponent(query)}`);
+        const response = 
+            await fetch(`${API_URL}/agents/search?q=${encodeURIComponent(query)}`);
         const data = await response.json();
-        displayCars(data.results);
+        displayAgents(data.results);
     }
 
     catch (error) {
@@ -87,4 +86,4 @@ async function searchCars() {
     }
 }
 
-loadCars();
+loadAgents();
