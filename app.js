@@ -1,4 +1,4 @@
-const API_URL = "https://my-fastapi-service-eight.vercel.app/api";
+const API_URL = "my-fastapi-service-gi31.vercel.app";
 
 
 // GET ALL AGENTS
