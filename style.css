@@ -1,102 +1,198 @@
-* {
-    box-sizing: border-box;
+:root {
+  --bg-primary: #0f1923;
+  --bg-secondary: #1f2326;
+  --card-bg: #111e2e;
+  --text-main: #ece8e1;
+  --text-muted: #768079;
+  --accent-red: #ff4655;
+  --accent-red-hover: #d93845;
+  --border-color: #2b3945;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-    color: #222;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
 }
 
 header {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+  width: 100%;
 }
 
 header h1 {
-    margin: 0;
+  font-size: 2.2rem;
+  color: var(--text-main);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1.5rem;
+  flex: 1;
 }
 
+/* SEARCH SECTION */
 .search {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
 }
 
 .search input {
-    flex: 1;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 300px;
+  outline: none;
+  transition: border-color 0.2s ease;
 }
 
-button {
-    padding: 12px 18px;
-    border: none;
-    border-radius: 5px;
-    background: #e63946;
-    color: white;
-    cursor: pointer;
+.search input:focus {
+  border-color: var(--accent-red);
 }
 
-button:hover {
-    background: #c92f3b;
+.search button {
+  background-color: var(--accent-red);
+  color: var(--text-main);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.2s ease;
 }
 
-button.secondary {
-    background: #555;
+.search button:hover {
+  background-color: var(--accent-red-hover);
 }
 
-.car-list {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.search button.secondary {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
 }
 
-.car-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow:
-        0 2px 8px rgba(0,0,0,0.1);
+.search button.secondary:hover {
+  background-color: var(--border-color);
 }
 
-
-.car-card h3 {
-    margin-top: 0;
+/* AGENTS GRID */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--accent-red);
+  padding-left: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-
-.car-year {
-    color: #e63946;
-    font-weight: bold;
+.agent-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 3rem;
 }
 
-
-.car-engine {
-    color: #666;
+/* AGENT CARD UI */
+.agent-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-
-.car-card button {
-    margin-top: 10px;
-    width: 100%;
+.agent-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-red);
 }
 
+.agent-year {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.agent-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.agent-origin {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.agent-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #c7cfd6;
+  margin-bottom: 0.5rem;
+}
+
+.agent-card button {
+  margin-top: auto;
+  background-color: transparent;
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.agent-card button:hover {
+  background-color: var(--accent-red);
+  color: var(--text-main);
+}
+
+/* FOOTER */
 footer {
-    text-align: center;
-    padding: 30px;
-    color: #777;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
