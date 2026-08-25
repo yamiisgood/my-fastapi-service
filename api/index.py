@@ -1,10 +1,12 @@
 from fastapi import FastAPI, HTTPException, Header, Query
 from fastapi.middleware.cors import CORSMiddleware
 
+# Setting root_path enables Swagger docs (/docs) to work seamlessly under Vercel's /api prefix
 app = FastAPI(
     title="Valorant Agent Finder",
     description="A beginner-friendly REST API containing information about the Agents in Valorant.",
-    version="1.0.0"
+    version="1.0.0",
+    root_path="/api"
 )
 
 app.add_middleware(
@@ -87,9 +89,9 @@ def home():
     return {
         "message": "Welcome to the Valorant Agents API!",
         "endpoints": [
-            "/agents",
-            "/agents/{agent_id}",
-            "/agents/search"
+            "/api/agents",
+            "/api/agents/{agent_id}",
+            "/api/agents/search"
         ]
     }
 
@@ -104,9 +106,9 @@ def get_agents():
     }
 
 
-# SEARCH AGENTS 
+# SEARCH AGENTS
 @app.get("/agents/search")
-def search_agents( q: str = Query(..., min_length=1)):
+def search_agents(q: str = Query(..., min_length=1)):
     q = q.lower()
     results = []
     for agent in agents:
