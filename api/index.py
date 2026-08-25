@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# COMPLETE AGENT DATA (26 AGENTS)
+# COMPLETE AGENT DATA (WITH SKILLS 1-3)
 agents = [
     {
         "id": 1,
@@ -24,8 +24,11 @@ agents = [
         "Role": "Controller",
         "year": 2020,
         "origin": "United States",
+        "skill_1": "Stim Beacon",
+        "skill_2": "Incendiary",
+        "skill_3": "Sky Smoke",
         "ultimate": "Orbital Strike",
-        "description": "Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and safely makes him the ultimate boots-on-the-ground commander."
+        "description": "Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage."
     },
     {
         "id": 2,
@@ -33,8 +36,11 @@ agents = [
         "Role": "Controller",
         "year": 2020,
         "origin": "United States",
+        "skill_1": "Snake Bite",
+        "skill_2": "Poison Cloud",
+        "skill_3": "Toxic Screen",
         "ultimate": "Viper's Pit",
-        "description": "The American chemist Viper deploys an array of poisonous chemical devices to control the battlefield and cripple the enemy's vision."
+        "description": "The American chemist Viper deploys an array of poisonous chemical devices to control the battlefield."
     },
     {
         "id": 3,
@@ -42,8 +48,11 @@ agents = [
         "Role": "Controller",
         "year": 2020,
         "origin": "Unknown",
+        "skill_1": "Shrouded Step",
+        "skill_2": "Paranoia",
+        "skill_3": "Dark Cover",
         "ultimate": "From The Shadows",
-        "description": "A phantom of a memory, Omen hunts in the shadows, blinding enemies, teleporting across the battlefield, and leaving paranoia in his wake."
+        "description": "A phantom of a memory, Omen hunts in the shadows, blinding enemies and teleporting across the map."
     },
     {
         "id": 4,
@@ -51,8 +60,11 @@ agents = [
         "Role": "Sentinel",
         "year": 2020,
         "origin": "Germany",
+        "skill_1": "Nanoswarm",
+        "skill_2": "Alarmbot",
+        "skill_3": "Turret",
         "ultimate": "Lockdown",
-        "description": "The genius of Germany, Killjoy secures the battlefield easefully using her arsenal of inventions and automated defenses."
+        "description": "The genius of Germany, Killjoy secures the battlefield using her arsenal of inventions."
     },
     {
         "id": 5,
@@ -60,8 +72,11 @@ agents = [
         "Role": "Sentinel",
         "year": 2020,
         "origin": "Morocco",
+        "skill_1": "Trapwire",
+        "skill_2": "Cyber Cage",
+        "skill_3": "Spycam",
         "ultimate": "Neural Theft",
-        "description": "The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move."
+        "description": "The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on enemy movement."
     },
     {
         "id": 6,
@@ -69,8 +84,11 @@ agents = [
         "Role": "Initiator",
         "year": 2020,
         "origin": "Russia",
+        "skill_1": "Owl Drone",
+        "skill_2": "Shock Bolt",
+        "skill_3": "Recon Bolt",
         "ultimate": "Hunter's Fury",
-        "description": "Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision."
+        "description": "Born from Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency."
     },
     {
         "id": 7,
@@ -78,8 +96,11 @@ agents = [
         "Role": "Sentinel",
         "year": 2020,
         "origin": "China",
+        "skill_1": "Barrier Orb",
+        "skill_2": "Slow Orb",
+        "skill_3": "Healing Orb",
         "ultimate": "Resurrection",
-        "description": "The stronghold of China, Sage assures safety for herself and her team wherever she goes, reviving fallen allies and slowing down enemy pushes."
+        "description": "The stronghold of China, Sage assures safety for her team, reviving fallen allies and slowing pushes."
     },
     {
         "id": 8,
@@ -87,8 +108,11 @@ agents = [
         "Role": "Duelist",
         "year": 2020,
         "origin": "United Kingdom",
+        "skill_1": "Blaze",
+        "skill_2": "Curveball",
+        "skill_3": "Hot Hands",
         "ultimate": "Run It Back",
-        "description": "Hailing from the UK, Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare."
+        "description": "Hailing from the UK, Phoenix's star power ignites the battlefield with flash and flare."
     },
     {
         "id": 9,
@@ -96,8 +120,11 @@ agents = [
         "Role": "Duelist",
         "year": 2020,
         "origin": "South Korea",
+        "skill_1": "Cloudburst",
+        "skill_2": "Updraft",
+        "skill_3": "Tailwind",
         "ultimate": "Blade Storm",
-        "description": "Representing South Korea, Jett's agile and evasive fighting style allows her to take risks no one else can, cutting enemies up with lethal precision."
+        "description": "Representing South Korea, Jett's agile fighting style allows her to take risks no one else can."
     },
     {
         "id": 10,
@@ -105,8 +132,11 @@ agents = [
         "Role": "Duelist",
         "year": 2020,
         "origin": "Mexico",
+        "skill_1": "Leer",
+        "skill_2": "Devour",
+        "skill_3": "Dismiss",
         "ultimate": "Empress",
-        "description": "Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores."
+        "description": "Forged in Mexico, Reyna dominates single combat, popping off with each kill she scores."
     },
     {
         "id": 11,
@@ -114,8 +144,11 @@ agents = [
         "Role": "Duelist",
         "year": 2020,
         "origin": "Brazil",
+        "skill_1": "Boom Bot",
+        "skill_2": "Blast Pack",
+        "skill_3": "Paint Shells",
         "ultimate": "Showstopper",
-        "description": "Raze explodes out of Brazil with her big personality and big guns, excelling at clearing tight spaces with high explosives."
+        "description": "Raze explodes out of Brazil with her big personality, excelling at clearing tight spaces with explosives."
     },
     {
         "id": 12,
@@ -123,8 +156,11 @@ agents = [
         "Role": "Initiator",
         "year": 2020,
         "origin": "Sweden",
+        "skill_1": "Aftershock",
+        "skill_2": "Flashpoint",
+        "skill_3": "Fault Line",
         "ultimate": "Rolling Thunder",
-        "description": "The bionic Swede, Breach fires powerful, targeted kinetic blasts to aggressively clear a path through enemy territory."
+        "description": "The bionic Swede, Breach fires powerful kinetic blasts to aggressively clear a path through enemy territory."
     },
     {
         "id": 13,
@@ -132,8 +168,11 @@ agents = [
         "Role": "Initiator",
         "year": 2020,
         "origin": "Australia",
+        "skill_1": "Regrowth",
+        "skill_2": "Trailblazer",
+        "skill_3": "Guiding Light",
         "ultimate": "Seekers",
-        "description": "Hailing from Australia, Skye and her band of beasts jam-pack utility into enemy line of sight while healing her allies."
+        "description": "Hailing from Australia, Skye and her beasts jam-pack utility into enemy line of sight while healing her allies."
     },
     {
         "id": 14,
@@ -141,8 +180,11 @@ agents = [
         "Role": "Duelist",
         "year": 2021,
         "origin": "Japan",
+        "skill_1": "Fakeout",
+        "skill_2": "Blindside",
+        "skill_3": "Gatecrash",
         "ultimate": "Dimensional Drift",
-        "description": "Japanese native Yoru rips through reality to infiltrate enemy lines unseen, employing deception and aggression."
+        "description": "Japanese native Yoru rips through reality to infiltrate enemy lines unseen."
     },
     {
         "id": 15,
@@ -150,8 +192,11 @@ agents = [
         "Role": "Controller",
         "year": 2021,
         "origin": "Ghana",
+        "skill_1": "Gravity Well",
+        "skill_2": "Nova Pulse",
+        "skill_3": "Nebula / Dissipate",
         "ultimate": "Cosmic Divide",
-        "description": "Ghanaian Agent Astra harnesses the energies of the cosmos to reshape battlefields according to her strategic vision."
+        "description": "Ghanaian Agent Astra harnesses the energies of the cosmos to reshape battlefields according to her vision."
     },
     {
         "id": 16,
@@ -159,6 +204,9 @@ agents = [
         "Role": "Initiator",
         "year": 2021,
         "origin": "Alternate Timeline",
+        "skill_1": "FRAG/ment",
+        "skill_2": "FLASH/drive",
+        "skill_3": "ZERO/point",
         "ultimate": "NULL/cmd",
         "description": "KAY/O is a machine of war built for one purpose: neutralizing radiants using suppression technology."
     },
@@ -168,8 +216,11 @@ agents = [
         "Role": "Sentinel",
         "year": 2021,
         "origin": "France",
+        "skill_1": "Trademark",
+        "skill_2": "Headhunter",
+        "skill_3": "Rendezvous",
         "ultimate": "Tour De Force",
-        "description": "Well-dressed and well-armed, French weapons designer Chamber leverages custom marksmanship weaponry to hold lines."
+        "description": "French weapons designer Chamber leverages custom marksmanship weaponry to hold lines with precision."
     },
     {
         "id": 18,
@@ -177,6 +228,9 @@ agents = [
         "Role": "Duelist",
         "year": 2022,
         "origin": "Philippines",
+        "skill_1": "Fast Lane",
+        "skill_2": "Relay Bolt",
+        "skill_3": "High Gear",
         "ultimate": "Overdrive",
         "description": "Filipino Agent Neon surges forward at shocking speeds, discharging bursts of bioelectric radiance."
     },
@@ -186,8 +240,11 @@ agents = [
         "Role": "Initiator",
         "year": 2022,
         "origin": "Turkey",
+        "skill_1": "Prowler",
+        "skill_2": "Seize",
+        "skill_3": "Haunt",
         "ultimate": "Nightfall",
-        "description": "Turkish bounty hunter Fade unleashes the power of raw nightmare to seize enemy secrets and track targets."
+        "description": "Turkish bounty hunter Fade unleashes raw nightmare power to seize enemy secrets and track targets."
     },
     {
         "id": 20,
@@ -195,8 +252,11 @@ agents = [
         "Role": "Controller",
         "year": 2022,
         "origin": "India",
+        "skill_1": "Cascade",
+        "skill_2": "Cove",
+        "skill_3": "High Tide",
         "ultimate": "Reckoning",
-        "description": "Hailing from India’s coast, Harbor commands ancient technology with power over water to shield allies and crush foes."
+        "description": "Hailing from India, Harbor commands ancient water technology to shield allies and crush foes."
     },
     {
         "id": 21,
@@ -204,8 +264,11 @@ agents = [
         "Role": "Initiator",
         "year": 2023,
         "origin": "United States",
+        "skill_1": "Mosh Pit",
+        "skill_2": "Wingman",
+        "skill_3": "Dizzy",
         "ultimate": "Thrash",
-        "description": "Gekko the Angeleno leads a tight-knit crew of calamitous creatures that bound forward to scatter enemies."
+        "description": "Gekko the Angeleno leads a crew of calamitous creatures that bound forward to scatter enemies."
     },
     {
         "id": 22,
@@ -213,6 +276,9 @@ agents = [
         "Role": "Sentinel",
         "year": 2023,
         "origin": "Norway",
+        "skill_1": "GravNet",
+        "skill_2": "Sonic Sensor",
+        "skill_3": "Barrier Mesh",
         "ultimate": "Annihilation",
         "description": "Norwegian operative Deadlock deploys high-tech nanowire arrays to secure the battlefield from lethal assaults."
     },
@@ -222,8 +288,11 @@ agents = [
         "Role": "Duelist",
         "year": 2023,
         "origin": "China",
+        "skill_1": "Contingency",
+        "skill_2": "Undercut",
+        "skill_3": "Double Tap",
         "ultimate": "Kill Contract",
-        "description": "Chinese fixer Iso enters a flow state to reconfigure ambient energy into bulletproof armor and drag enemies into 1v1 duels."
+        "description": "Chinese fixer Iso reconfigures ambient energy into bulletproof armor and drags enemies into 1v1 duels."
     },
     {
         "id": 24,
@@ -231,6 +300,9 @@ agents = [
         "Role": "Controller",
         "year": 2024,
         "origin": "Scotland",
+        "skill_1": "Pick-Me-Up",
+        "skill_2": "Meddle",
+        "skill_3": "Ruse",
         "ultimate": "Not Dead Yet",
         "description": "Scottish troublemaker Clove keeps enemies guessing even in death, controlling the site from beyond the grave."
     },
@@ -240,6 +312,9 @@ agents = [
         "Role": "Sentinel",
         "year": 2024,
         "origin": "Unknown",
+        "skill_1": "Razorvine",
+        "skill_2": "Shear",
+        "skill_3": "Arc Rose",
         "ultimate": "Steel Garden",
         "description": "The metallic mastermind Vyse isolates targets with liquid metal traps and disarms enemy primary weapons."
     },
@@ -249,6 +324,9 @@ agents = [
         "Role": "Initiator",
         "year": 2025,
         "origin": "Colombia",
+        "skill_1": "Stealth Drone",
+        "skill_2": "Special Delivery",
+        "skill_3": "Guided Salvo",
         "ultimate": "Armageddon",
         "description": "A veteran intelligence consultant from Colombia whose ballistic guidance systems force enemies off key choke points."
     }
@@ -285,6 +363,9 @@ def search_agents(q: str = Query(..., min_length=1)):
             f"{agent['Role']} "
             f"{agent['year']} "
             f"{agent['origin']} "
+            f"{agent['skill_1']} "
+            f"{agent['skill_2']} "
+            f"{agent['skill_3']} "
             f"{agent['ultimate']}"
         ).lower()
 
