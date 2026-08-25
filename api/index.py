@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Header, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
-    title="Valorant Agent finder",
+    title="Valorant Agent Finder",
     description="A beginner-friendly REST API containing information about the Agents in Valorant.",
     version="1.0.0"
 )
@@ -15,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# CAR DATA
+# AGENT DATA
 agents = [
 
     {
@@ -88,13 +88,13 @@ def home():
         "message": "Welcome to the Valorant Agents API!",
         "endpoints": [
             "/agents",
-            "/agents/{id}",
+            "/agents/{agent_id}",
             "/agents/search"
         ]
     }
 
 
-# GET ALL CARS
+# GET ALL AGENTS
 @app.get("/agents")
 def get_agents():
 
@@ -104,9 +104,9 @@ def get_agents():
     }
 
 
-# SEARCH CARS
+# SEARCH AGENTS 
 @app.get("/agents/search")
-def search_agents(q: str = Query(..., min_length=1)):
+def search_agents( q: str = Query(..., min_length=1)):
     q = q.lower()
     results = []
     for agent in agents:
@@ -128,13 +128,13 @@ def search_agents(q: str = Query(..., min_length=1)):
     }
 
 
-# GET ONE CAR
-@app.get("/agents/{agents_id}")
-def get_car(agents_id: int):
+# GET ONE AGENT
+@app.get("/agents/{agent_id}")
+def get_agent(agent_id: int):
 
     for agent in agents:
 
-        if agent["id"] == agents_id:
+        if agent["id"] == agent_id:
             return agent
 
     raise HTTPException(
