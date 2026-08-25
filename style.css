@@ -120,7 +120,7 @@ h2 {
   padding-bottom: 3rem;
 }
 
-/* AGENT CARD UI */
+/* AGENT CARD */
 .agent-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -168,7 +168,7 @@ h2 {
 }
 
 .agent-card button {
-  margin-top: auto;
+  margin-top: 1rem;
   background-color: transparent;
   border: 1px solid var(--accent-red);
   color: var(--accent-red);
@@ -185,6 +185,77 @@ h2 {
 .agent-card button:hover {
   background-color: var(--accent-red);
   color: var(--text-main);
+}
+
+/* MODAL OVERLAY */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* MODAL BOX */
+.modal-content {
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent-red);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  color: var(--text-main);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--accent-red);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+  border-left: none;
+  padding-left: 0;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.skills-list {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.skills-list p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.skills-list p strong {
+  color: var(--accent-red);
 }
 
 /* FOOTER */
