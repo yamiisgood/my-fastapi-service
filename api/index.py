@@ -16,11 +16,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# COMPLETE AGENT DATA (WITH AGENT NUMBER, CODE NAME, SIGNATURE & ULT POINTS)
+# COMPLETE AGENT DATA 
 agents = [
     {
         "id": 1,
-        "agent_number": "01",
+        "agent_number": "01",   
         "name": "Brimstone",
         "code_name": "Sarge",
         "Role": "Controller",
@@ -405,6 +405,21 @@ agents = [
         "skill_2": "Special Delivery",
         "signature": "Guided Salvo",
         "ultimate": "Armageddon",
+        "ult_points": 8,
+        "description": "A veteran intelligence consultant from Colombia whose ballistic guidance systems force enemies off key choke points."
+    },
+    {
+        "id": 27,
+        "agent_number": "28",
+        "name": "Miks",
+        "code_name": "Ballistic",
+        "Role": "Controller",
+        "year": 2026,
+        "origin": "Croatia",
+        "skill_1": "M-pulse",
+        "skill_2": "Harmonize",
+        "signature": "Waveform",
+        "ultimate": "Bassquake",
         "ult_points": 8,
         "description": "A veteran intelligence consultant from Colombia whose ballistic guidance systems force enemies off key choke points."
     }
