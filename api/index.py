@@ -2,8 +2,8 @@ from fastapi import FastAPI, HTTPException, Header, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
-    title="Simple Car API",
-    description="A beginner-friendly REST API containing information about cars.",
+    title="Valorant Agent finder,
+    description="A beginner-friendly REST API containing information about the Agents in Valorant.",
     version="1.0.0"
 )
 
@@ -16,57 +16,66 @@ app.add_middleware(
 )
 
 # CAR DATA
-cars = [
+agents = [
 
     {
         "id": 1,
-        "make": "Toyota",
-        "model": "Corolla",
-        "year": 1998,
-        "engine": "1.6L 4-cylinder",
-        "horsepower": 105,
-        "description": "A practical and reliable compact sedan."
+        "name": "Omen",
+        "Role": "Controller",
+        "year": 2020,
+        "origin": "Unknown",
+        "ultimate": "From The Shadows",
+        "description": "A phantom of a memory, Omen hunts in the shadows, blinding enemies, teleporting across the battlefield, and leaving paranoia in his wake as foes scramble to uncover where he will strike next."
     },
 
     {
         "id": 2,
-        "make": "Honda",
-        "model": "Civic Si",
-        "year": 1999,
-        "engine": "1.6L 4-cylinder",
-        "horsepower": 160,
-        "description": "A sporty compact car popular with enthusiasts."
+        "name": "Neon",
+        "Role": "Duelist",
+        "year": 2022,
+        "origin": "Philippines",
+        "ultimate": "Overdrive",
+        "description": "Filipino Agent Neon surges forward at shocking speeds, discharging bursts of bioelectric radiance as fast as her body generates it."
     },
 
     {
         "id": 3,
-        "make": "Mitsubishi",
-        "model": "Eclipse GSX",
-        "year": 1999,
-        "engine": "2.0L Turbo 4-cylinder",
-        "horsepower": 210,
-        "description": "A turbocharged AWD coupe built for performance."
+        "name": "Deadlock",
+        "Role": "Sentinel",
+        "year": 2023,
+        "origin": "Norway",
+        "ultimate": "Annihilation",
+        "description": "Norwegian operative Deadlock deploys an array of cutting-edge nanowire to secure the battlefield from even the most lethal assault."
     },
 
     {
         "id": 4,
-        "make": "Subaru",
-        "model": "Impreza WRX",
-        "year": 2002,
-        "engine": "2.0L Turbo 4-cylinder",
-        "horsepower": 227,
-        "description": "A turbocharged AWD performance sedan."
+        "name": "Tejo",
+        "Role": "Initiator",
+        "year": 2025,
+        "origin": "Colombia",
+        "ultimate": "Armageddon",
+        "description": "A veteran intelligence consultant from Colombia, Tejo's ballistic guidance system pressures the enemy to relinquish their ground—or their lives."
     },
 
     {
         "id": 5,
-        "make": "Mazda",
-        "model": "MX-5 Miata",
-        "year": 2001,
-        "engine": "1.8L 4-cylinder",
-        "horsepower": 142,
-        "description": "A lightweight two-seat roadster famous for its handling."
-    }
+        "name": "Yoru",
+        "Role": "Duelist",
+        "year": 2021,
+        "origin": "Japan",
+        "ultimate": "Dimensional Drift",
+        "description": "Japanese native Yoru rips through reality to infiltrate enemy lines unseen. Employing deception and aggression in equal measure, he takes targets down before they even know where to look."
+    },
+    {
+        "id": 6,
+        "name": "Gekko",
+        "Role": "Initiator",
+        "year": 2023,
+        "origin": "United States",
+        "ultimate": "Thrash",
+        "description": "Gekko the Angeleno leads a tight-knit crew of calamitous creatures. His buddies bound forward, scattering enemies out of the way, with Gekko chasing them down to regroup and go again."
+}
 
 ]
 
@@ -75,33 +84,33 @@ cars = [
 def home():
 
     return {
-        "message": "Welcome to the Simple Car API!",
+        "message": "Welcome to the Valorant Agents API!",
         "endpoints": [
-            "/cars",
-            "/cars/{id}",
-            "/cars/search"
+            "/agents",
+            "/agents/{id}",
+            "/agents/search"
         ]
     }
 
 
 # GET ALL CARS
-@app.get("/cars")
-def get_cars():
+@app.get("/agents")
+def get_agents():
 
     return {
-        "count": len(cars),
-        "cars": cars
+        "count": len(agents),
+        "agents": agents
     }
 
 
 # GET ONE CAR
-@app.get("/cars/{car_id}")
+@app.get("/agents/{agents_id}")
 def get_car(car_id: int):
 
-    for car in cars:
+    for agent in agents:
 
-        if car["id"] == car_id:
-            return car
+        if agent["id"] == agent_id:
+            return agent
 
     raise HTTPException(
         status_code=404,
@@ -109,20 +118,21 @@ def get_car(car_id: int):
     )
 
 # SEARCH CARS
-@app.get("/cars/search")
-def search_cars( q: str = Query(..., min_length=1)):
+@app.get("/agents/search")
+def search_agents( q: str = Query(..., min_length=1)):
     q = q.lower()
     results = []
-    for car in cars:
+    for agent in agents:
         searchable_text = (
-            f"{car['make']} "
-            f"{car['model']} "
-            f"{car['year']} "
-            f"{car['engine']}"
+            f"{agent['name']} "
+            f"{agent['Role']} "
+            f"{agent['year']} "
+            f"{agent['origin']}"
+            f"{agent['ultimate']}"
         ).lower()
 
         if q in searchable_text:
-            results.append(car)
+            results.append(agent)
 
     return {
         "query": q,
