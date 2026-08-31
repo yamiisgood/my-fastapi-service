@@ -1,96 +1,129 @@
 const API_URL = "https://my-fastapi-service-gi31.vercel.app/api";
 
-// GET ALL AGENTS
-async function loadAgents() {
+// GET ALL CHARACTERS
+async function loadCharacters() {
     try {
-        const response = await fetch(`${API_URL}/agents`);
+        const response = await fetch(`${API_URL}/characters`);
         const data = await response.json();
-        displayAgents(data.agents);
+        displayCharacters(data.characters);
     } catch (error) {
         console.error(error);
-        document.getElementById("agentList").innerHTML = "Unable to connect to the API.";
+        const container = document.getElementById("characterList") || document.getElementById("agentList");
+        if (container) {
+            container.innerHTML = "Unable to connect to the API.";
+        }
     }
 }
 
-// DISPLAY AGENTS
-function displayAgents(agents) {
-    const agentList = document.getElementById("agentList");
-    agentList.innerHTML = "";
+// DISPLAY CHARACTERS
+function displayCharacters(characters) {
+    const listContainer = document.getElementById("characterList") || document.getElementById("agentList");
+    if (!listContainer) return;
+    
+    listContainer.innerHTML = "";
 
-    agents.forEach(agent => {
+    characters.forEach(character => {
         const card = document.createElement("div");
         card.className = "agent-card";
         card.innerHTML = `
-            <div class="agent-year">${agent.year}</div>
-            <h3>${agent.name} (${agent.Role})</h3>
-            <p class="agent-origin">Origin: ${agent.origin}</p>
-            <p><strong>Ultimate:</strong> ${agent.ultimate}</p>
-            <p>${agent.description}</p>
-            <button onclick="viewAgent(${agent.id})">View Details</button>
+            <div class="agent-year">${character.character_code}</div>
+            <h3>${character.name} (${character.role})</h3>
+            <p class="agent-origin"><strong>Origin:</strong> ${character.origin} | <strong>Realm:</strong> ${character.realm}</p>
+            <p><strong>DLC:</strong> ${character.dlc} (${character.year})</p>
+            <p><strong>Perks / Power:</strong> ${character.perk_1}, ${character.perk_2}, ${character.perk_3}</p>
+            <p>${character.description}</p>
+            <button onclick="viewCharacter(${character.id})">View Details</button>
         `;
-        agentList.appendChild(card);
+        listContainer.appendChild(card);
     });
 }
 
-// GET ONE AGENT (DISPLAY IN MODAL)
-async function viewAgent(id) {
+// GET ONE CHARACTER (DISPLAY IN MODAL WITH ALL 14 DETAILS)
+async function viewCharacter(id) {
     try {
-        const response = await fetch(`${API_URL}/agents/${id}`);
-        const agent = await response.json();
+        const response = await fetch(`${API_URL}/characters/${id}`);
+        const character = await response.json();
 
         const modalBody = document.getElementById("modalBody");
+        if (!modalBody) return;
+
         modalBody.innerHTML = `
             <div class="modal-header">
-                <h2>${agent.name} <span style="font-size: 0.9rem; color: #768079;">(#${agent.agent_number})</span></h2>
-                <p class="agent-origin">${agent.Role} • ${agent.origin} (${agent.year})</p>
-                <p style="font-size: 0.8rem; color: #768079; margin-top: 0.2rem;">Code Name: ${agent.code_name}</p>
+                <h2>${character.name} <span style="font-size: 0.9rem; color: #768079;">[${character.character_code}]</span></h2>
+                <p class="agent-origin">${character.role} • ${character.gender} • ${character.origin}</p>
+                <p style="font-size: 0.85rem; color: #768079; margin-top: 0.2rem;">
+                    <strong>Difficulty:</strong> ${character.difficulty} | <strong>Released:</strong> ${character.year}
+                </p>
             </div>
             
-            <p>${agent.description}</p>
+            <p style="margin-top: 1rem;">${character.description}</p>
 
-            <div class="skills-list">
-                <p><strong>Ability 1:</strong> ${agent.skill_1 || 'N/A'}</p>
-                <p><strong>Ability 2:</strong> ${agent.skill_2 || 'N/A'}</p>
-                <p><strong>Signature:</strong> ${agent.signature || 'N/A'}</p>
-                <p><strong>Ultimate:</strong> ${agent.ultimate || 'N/A'} (${agent.ult_points || 8} Points)</p>
+            <div class="skills-list" style="margin-top: 1rem;">
+                <p><strong>Realm:</strong> ${character.realm}</p>
+                <p><strong>DLC Chapter:</strong> ${character.dlc}</p>
+                <p><strong>Perk / Power 1:</strong> ${character.perk_1 || 'N/A'}</p>
+                <p><strong>Perk / Power 2:</strong> ${character.perk_2 || 'N/A'}</p>
+                <p><strong>Perk / Power 3:</strong> ${character.perk_3 || 'N/A'}</p>
             </div>
         `;
 
-        document.getElementById("agentModal").style.display = "flex";
+        const modal = document.getElementById("agentModal") || document.getElementById("characterModal");
+        if (modal) {
+            modal.style.display = "flex";
+        }
     } catch (error) {
         console.error(error);
-        alert("Unable to retrieve agent details.");
+        alert("Unable to retrieve character details.");
     }
 }
 
 // CLOSE MODAL
 function closeModal() {
-    document.getElementById("agentModal").style.display = "none";
+    const modal = document.getElementById("agentModal") || document.getElementById("characterModal");
+    if (modal) {
+        modal.style.display = "none";
+    }
 }
 
 // CLOSE MODAL WHEN CLICKING OUTSIDE BOX
 window.onclick = function(event) {
-    const modal = document.getElementById("agentModal");
-    if (event.target === modal) {
+    const modal = document.getElementById("agentModal") || document.getElementById("characterModal");
+    if (modal && event.target === modal) {
         modal.style.display = "none";
     }
 };
 
-// SEARCH AGENTS
-async function searchAgents() {
-    const query = document.getElementById("searchInput").value;
+// SEARCH CHARACTERS
+async function searchCharacters() {
+    const searchInput = document.getElementById("searchInput");
+    const query = searchInput ? searchInput.value : "";
+    
     if (!query) {
-        loadAgents();
+        loadCharacters();
         return;
     }
     try {
-        const response = await fetch(`${API_URL}/agents/search?q=${encodeURIComponent(query)}`);
+        const response = await fetch(`${API_URL}/characters/search?q=${encodeURIComponent(query)}`);
         const data = await response.json();
-        displayAgents(data.results);
+        displayCharacters(data.results);
     } catch (error) {
         console.error(error);
         alert("Search failed.");
     }
 }
 
-loadAgents();
+// ALIAS FUNCTIONS FOR BACKWARD COMPATIBILITY WITH EXISTING HTML
+function searchAgents() {
+    searchCharacters();
+}
+
+function loadAgents() {
+    loadCharacters();
+}
+
+function viewAgent(id) {
+    viewCharacter(id);
+}
+
+// INITIAL LOAD
+loadCharacters();
