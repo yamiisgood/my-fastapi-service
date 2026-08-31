@@ -14,9 +14,15 @@
     <main>
         <!-- SEARCH & FILTER SECTION -->
         <section class="search">
-            <input type="text" id="searchInput" placeholder="Search survivors, killers, perks, or realms...">
-            <button onclick="searchCharacters()"> Search </button>
-            <button class="secondary" onclick="loadCharacters()"> Show All </button>
+            <input type="text" id="searchInput" placeholder="Search survivors, killers, powers, perks, or realms...">
+            <button onclick="searchCharacters(0)"> Search </button>
+            <button class="secondary" onclick="loadCharacters(0, '')"> Show All </button>
+            
+            <!-- ROLE FILTERS -->
+            <div class="role-filters" style="margin-top: 1rem;">
+                <button class="filter-btn" onclick="loadCharacters(0, 'Survivor')"> Survivors </button>
+                <button class="filter-btn" onclick="loadCharacters(0, 'Killer')"> Killers </button>
+            </div>
         </section>
 
         <!-- CHARACTERS GRID SECTION -->
@@ -24,6 +30,11 @@
             <h2>Survivors & Killers</h2>
             <div id="characterList" class="agent-list">
                 Loading characters...
+            </div>
+
+            <!-- PAGINATION CONTROLS -->
+            <div id="paginationContainer" class="pagination" style="margin-top: 1.5rem; text-align: center;">
+                <!-- Dynamic Pagination Buttons Load Here -->
             </div>
         </section>
     </main>
