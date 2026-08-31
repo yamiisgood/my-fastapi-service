@@ -1,48 +1,74 @@
+/* DEAD BY DAYLIGHT THEME VARIABLES */
 :root {
-  --bg-primary: #0f1923;
-  --bg-secondary: #1f2326;
-  --card-bg: #111e2e;
-  --text-main: #ece8e1;
-  --text-muted: #768079;
-  --accent-red: #ff4655;
-  --accent-red-hover: #d93845;
-  --border-color: #2b3945;
+  --bg-primary: #0a0c0e;
+  --bg-secondary: #14181c;
+  --card-bg: #111519;
+  --text-main: #e2e8f0;
+  --text-muted: #7f8c8d;
+  --accent-red: #8b0000;
+  --accent-red-bright: #d62828;
+  --accent-red-glow: rgba(139, 0, 0, 0.4);
+  --border-color: #242c33;
+  --fog-color: rgba(20, 24, 28, 0.85);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Cinzel', 'Georgia', 'Segoe UI', serif;
 }
 
 body {
   background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(139, 0, 0, 0.15), transparent 70%),
+    radial-gradient(circle at 50% 100%, #000, transparent 80%);
   color: var(--text-main);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ATMOSPHERIC FOG OVERLAY */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.9) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 header {
   text-align: center;
-  padding: 2.5rem 1rem 1.5rem;
+  padding: 3rem 1rem 1.5rem;
   width: 100%;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: var(--text-main);
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px rgba(214, 40, 40, 0.6), 0 0 25px rgba(139, 0, 0, 0.4);
+  text-transform: uppercase;
 }
 
 header p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 main {
@@ -50,9 +76,11 @@ main {
   max-width: 1100px;
   padding: 0 1.5rem;
   flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
-/* SEARCH SECTION */
+/* SEARCH & FILTER SECTION */
 .search {
   display: flex;
   gap: 0.75rem;
@@ -66,51 +94,59 @@ main {
   border: 1px solid var(--border-color);
   color: var(--text-main);
   padding: 0.75rem 1.25rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 300px;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  width: 320px;
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .search input:focus {
-  border-color: var(--accent-red);
+  border-color: var(--accent-red-bright);
+  box-shadow: 0 0 10px var(--accent-red-glow), inset 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .search button {
-  background-color: var(--accent-red);
+  background: linear-gradient(180deg, #9e0000 0%, #520000 100%);
   color: var(--text-main);
-  border: none;
+  border: 1px solid var(--accent-red-bright);
   padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: 2px;
+  font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background-color 0.2s ease;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .search button:hover {
-  background-color: var(--accent-red-hover);
+  background: linear-gradient(180deg, #bf0000 0%, #730000 100%);
+  box-shadow: 0 0 15px var(--accent-red-glow);
+  transform: translateY(-1px);
 }
 
 .search button.secondary {
-  background-color: var(--bg-secondary);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
 }
 
 .search button.secondary:hover {
   background-color: var(--border-color);
+  border-color: var(--text-muted);
+  box-shadow: none;
 }
 
-/* AGENTS GRID */
+/* SECTION HEADERS */
 h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  border-left: 4px solid var(--accent-red);
+  border-left: 4px solid var(--accent-red-bright);
   padding-left: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(214, 40, 40, 0.4);
 }
 
 .agent-list {
@@ -118,40 +154,63 @@ h2 {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
   padding-bottom: 3rem;
+  animation: fadeIn 0.8s ease-out;
 }
 
-/* AGENT CARD */
+/* CHARACTER CARD */
 .agent-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.agent-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-red-bright), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .agent-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-red);
+  transform: translateY(-6px);
+  border-color: var(--accent-red-bright);
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.35);
+}
+
+.agent-card:hover::before {
+  opacity: 1;
 }
 
 .agent-year {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(139, 0, 0, 0.25);
+  border: 1px solid var(--accent-red);
   padding: 0.2rem 0.6rem;
-  border-radius: 12px;
+  border-radius: 2px;
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--text-main);
+  letter-spacing: 1px;
 }
 
 .agent-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
   color: #fff;
+  letter-spacing: 1px;
 }
 
 .agent-origin {
@@ -161,33 +220,34 @@ h2 {
 }
 
 .agent-card p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #c7cfd6;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #b0b8c0;
   margin-bottom: 0.5rem;
 }
 
 .agent-card button {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   background-color: transparent;
   border: 1px solid var(--accent-red);
-  color: var(--accent-red);
+  color: var(--text-main);
   padding: 0.6rem 1rem;
-  border-radius: 4px;
+  border-radius: 2px;
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 0.8rem;
-  letter-spacing: 1px;
-  transition: all 0.2s ease;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
 }
 
 .agent-card button:hover {
   background-color: var(--accent-red);
-  color: var(--text-main);
+  box-shadow: 0 0 10px var(--accent-red-glow);
+  color: #fff;
 }
 
-/* MODAL OVERLAY */
+/* MODAL OVERLAY & ANIMATION */
 .modal {
   display: none;
   position: fixed;
@@ -196,23 +256,23 @@ h2 {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(6px);
   justify-content: center;
   align-items: center;
 }
 
-/* MODAL BOX */
 .modal-content {
   background-color: var(--card-bg);
-  border: 1px solid var(--accent-red);
-  border-radius: 8px;
+  border: 1px solid var(--accent-red-bright);
+  border-radius: 4px;
   width: 90%;
-  max-width: 500px;
+  max-width: 520px;
   padding: 2rem;
   position: relative;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
   color: var(--text-main);
+  animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .close-btn {
@@ -223,10 +283,11 @@ h2 {
   font-size: 1.8rem;
   font-weight: bold;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 
 .close-btn:hover {
-  color: var(--accent-red);
+  color: var(--accent-red-bright);
 }
 
 .modal-header {
@@ -243,8 +304,9 @@ h2 {
 }
 
 .skills-list {
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
   padding: 1rem;
   margin: 1rem 0;
 }
@@ -255,7 +317,7 @@ h2 {
 }
 
 .skills-list p strong {
-  color: var(--accent-red);
+  color: var(--accent-red-bright);
 }
 
 /* FOOTER */
@@ -266,4 +328,29 @@ footer {
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
   font-size: 0.85rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* KEYFRAME ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
