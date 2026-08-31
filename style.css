@@ -83,10 +83,18 @@ main {
 /* SEARCH & FILTER SECTION */
 .search {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.search-controls {
+  display: flex;
   gap: 0.75rem;
   justify-content: center;
-  margin-bottom: 2.5rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .search input {
@@ -138,6 +146,29 @@ main {
   box-shadow: none;
 }
 
+/* ROLE FILTERS CONTAINER */
+.role-filters {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.role-filters .filter-btn {
+  background: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+}
+
+.role-filters .filter-btn:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent-red-bright);
+  box-shadow: 0 0 10px var(--accent-red-glow);
+}
+
 /* SECTION HEADERS */
 h2 {
   font-size: 1.5rem;
@@ -153,7 +184,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   animation: fadeIn 0.8s ease-out;
 }
 
@@ -226,8 +257,12 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+.agent-card p strong {
+  color: var(--text-main);
+}
+
 .agent-card button {
-  margin-top: 1.2rem;
+  margin-top: auto;
   background-color: transparent;
   border: 1px solid var(--accent-red);
   color: var(--text-main);
@@ -245,6 +280,47 @@ h2 {
   background-color: var(--accent-red);
   box-shadow: 0 0 10px var(--accent-red-glow);
   color: #fff;
+}
+
+/* PAGINATION CONTROLS */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 0 3rem;
+}
+
+.pagination button {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  border-color: var(--accent-red-bright);
+  background-color: var(--bg-secondary);
+  box-shadow: 0 0 10px var(--accent-red-glow);
+}
+
+.pagination button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: var(--border-color);
+}
+
+.pagination span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 /* MODAL OVERLAY & ANIMATION */
