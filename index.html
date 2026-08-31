@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valorant Agent Finder</title>
+    <title>Dead by Daylight Character Directory</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>🎯 Valorant Agent Finder</h1>
+        <h1>🩸 Dead by Daylight Directory</h1>
         <p>A website powered by a REST API</p>
     </header>
     <main>
-        <!-- SEARCH SECTION -->
+        <!-- SEARCH & FILTER SECTION -->
         <section class="search">
-            <input type="text" id="searchInput" placeholder="Search for an agent...">
-            <button onclick="searchAgents()"> Search </button>
-            <button class="secondary" onclick="loadAgents()"> Show All </button>
+            <input type="text" id="searchInput" placeholder="Search survivors, killers, perks, or realms...">
+            <button onclick="searchCharacters()"> Search </button>
+            <button class="secondary" onclick="loadCharacters()"> Show All </button>
         </section>
 
-        <!-- AGENTS GRID SECTION -->
+        <!-- CHARACTERS GRID SECTION -->
         <section>
-            <h2>Agents</h2>
-            <div id="agentList" class="agent-list">
-                Loading agents...
+            <h2>Survivors & Killers</h2>
+            <div id="characterList" class="agent-list">
+                Loading characters...
             </div>
         </section>
     </main>
 
-    <!-- AGENT DETAILS MODAL -->
-    <div id="agentModal" class="modal">
+    <!-- CHARACTER DETAILS MODAL -->
+    <div id="characterModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <div id="modalBody">
-                <!-- Dynamic Agent Details Load Here -->
+                <!-- Dynamic Character Details Load Here -->
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Data provided by the Valorant Agents API</p>
+        <p>Data provided by the Dead by Daylight Character API</p>
     </footer>
     <script src="app.js"></script>
 </body>
