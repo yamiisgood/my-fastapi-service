@@ -185,7 +185,7 @@ characters = [
         "name": "Quentin Smith",
         "character_code": "S11",
         "role": "Survivor",
-        "gender": "Female",
+        "gender": "Male",
         "origin": "United States",
         "realm": "Springwood",
         "dlc": "A Nightmare on Elm Street Chapter",
@@ -241,8 +241,8 @@ characters = [
         "perk_1": "Diversion",
         "perk_2": "Deliverance",
         "perk_3": "Autodidact",
-        "difficulty": "Intermediate",
-        "description": "A resourceful teacher who throws rocks as distractions and guarantees successful self-unhooks after safe rescues."
+        "difficulty": "Hard",
+        "description": "A resourceful teacher capable of distracting Killers with pebbles and unhooking himself securely."
     },
     {
         "id": 15,
@@ -258,7 +258,7 @@ characters = [
         "perk_2": "Aftercare",
         "perk_3": "Distortion",
         "difficulty": "Easy",
-        "description": "A quiet artist with a heart of gold whose perks mask his aura and reward cooperative actions."
+        "description": "A quiet artist whose perks break hooks upon escape, show team auras, and hide his own from the Killer."
     },
     {
         "id": 16,
@@ -267,18 +267,18 @@ characters = [
         "role": "Survivor",
         "gender": "Female",
         "origin": "United States",
-        "realm": "Withered Isle",
-        "dlc": "Demise Faithful Chapter",
+        "realm": "The Plague's Temple",
+        "dlc": "Demise of the Faithful Chapter",
         "year": 2019,
         "perk_1": "Solidarity",
         "perk_2": "Poised",
         "perk_3": "Head On",
         "difficulty": "Intermediate",
-        "description": "An influential talk show host who stuns Killers out of lockers and heals herself while healing others."
+        "description": "An influential talk show host who heals while healing others, hides scratch marks on generator completions, and stuns Killers out of lockers."
     },
     {
         "id": 17,
-        "name": "Ashley J. Williams",
+        "name": "Ash Williams",
         "character_code": "S17",
         "role": "Survivor",
         "gender": "Male",
@@ -290,12 +290,28 @@ characters = [
         "perk_2": "Buckle Up",
         "perk_3": "Mettle of Man",
         "difficulty": "Hard",
-        "description": "A brash monster hunter who converts recovery progress into wiggle percentage and absorbs fatal strikes."
+        "description": "A legendary demon hunter who converts recovery progress to wiggle progress and absorbs fatal blows."
     },
     {
         "id": 18,
-        "name": "Steve Harrington",
+        "name": "Nancy Wheeler",
         "character_code": "S18",
+        "role": "Survivor",
+        "gender": "Female",
+        "origin": "United States",
+        "realm": "Hawkins National Laboratory",
+        "dlc": "Stranger Things Chapter",
+        "year": 2019,
+        "perk_1": "Inner Strength",
+        "perk_2": "Fixated",
+        "perk_3": "Better Together",
+        "difficulty": "Easy",
+        "description": "A headstrong journalist who heals herself by cleansing totems, sees her own scratch marks, and highlights generators for nearby allies."
+    },
+    {
+        "id": 19,
+        "name": "Steve Harrington",
+        "character_code": "S19",
         "role": "Survivor",
         "gender": "Male",
         "origin": "United States",
@@ -305,24 +321,8 @@ characters = [
         "perk_1": "Babysitter",
         "perk_2": "Camaraderie",
         "perk_3": "Second Wind",
-        "difficulty": "Easy",
-        "description": "A protective former high school jock who pauses hook timers and heals automatically after rescuing allies."
-    },
-    {
-        "id": 19,
-        "name": "Nancy Wheeler",
-        "character_code": "S19",
-        "role": "Survivor",
-        "gender": "Female",
-        "origin": "United States",
-        "realm": "Hawkins National Laboratory",
-        "dlc": "Stranger Things Chapter",
-        "year": 2019,
-        "perk_1": "Together Along",
-        "perk_2": "Fixated",
-        "perk_3": "Inner Strength",
-        "difficulty": "Easy",
-        "description": "An ambitious investigator who heals inside lockers after cleansing totems and walks at faster speeds."
+        "difficulty": "Intermediate",
+        "description": "A protective former popular kid who pauses hook struggle timers and hides unhooked teammates' pools of blood and scratch marks."
     },
     {
         "id": 20,
@@ -337,8 +337,8 @@ characters = [
         "perk_1": "Lucky Break",
         "perk_2": "Any Means Necessary",
         "perk_3": "Breakout",
-        "difficulty": "Intermediate",
-        "description": "A fierce street racer capable of resetting dropped pallets and aiding carried teammates with movement speed."
+        "difficulty": "Easy",
+        "description": "A hardened street racer who resets dropped pallets, hides her pools of blood when injured, and aids wiggling allies."
     },
     {
         "id": 21,
@@ -346,15 +346,15 @@ characters = [
         "character_code": "S21",
         "role": "Survivor",
         "gender": "Female",
-        "origin": "United States",
+        "origin": "Lebanon",
         "realm": "Grave of Glenvale",
         "dlc": "Chains of Hate Chapter",
         "year": 2020,
         "perk_1": "Off the Record",
         "perk_2": "Red Herring",
         "perk_3": "For the People",
-        "difficulty": "Intermediate",
-        "description": "A daring documentarian who creates false generator noises and instantly trades health to heal allies."
+        "difficulty": "Hard",
+        "description": "An independent filmmaker capable of instantly healing others at her own expense and masking her aura after being unhooked."
     },
     {
         "id": 22,
@@ -369,8 +369,8 @@ characters = [
         "perk_1": "Soul Guard",
         "perk_2": "Blood Pact",
         "perk_3": "Repressed Alliance",
-        "difficulty": "Intermediate",
-        "description": "A veteran of terror who relies on mysterious cosmic forces to block generators and gain Endurance after picking herself up."
+        "difficulty": "Hard",
+        "description": "A resilient young woman who blocks generators from the Killer's regression using the Entity and gains endurance after healing."
     },
     {
         "id": 23,
@@ -379,14 +379,14 @@ characters = [
         "role": "Survivor",
         "gender": "Male",
         "origin": "Germany",
-        "realm": "Dyer Island",
+        "realm": "Undisclosed",
         "dlc": "Descend Beyond Chapter",
         "year": 2020,
         "perk_1": "Visionary",
         "perk_2": "Desperate Measures",
         "perk_3": "Built to Last",
-        "difficulty": "Intermediate",
-        "description": "A visionary architect whose analytical skills allow him to locate nearby generators and replenish depleted item charges."
+        "difficulty": "Easy",
+        "description": "A brilliant architect who refills depleted item charges inside lockers and gains speed boosts to actions based on injured allies."
     },
     {
         "id": 24,
@@ -394,15 +394,15 @@ characters = [
         "character_code": "S24",
         "role": "Survivor",
         "gender": "Female",
-        "origin": "France",
-        "realm": "Dyer Island",
+        "origin": "Madagascar",
+        "realm": "Undisclosed",
         "dlc": "A Binding of Kin Chapter",
         "year": 2020,
         "perk_1": "Appraisal",
         "perk_2": "Deception",
         "perk_3": "Power Struggle",
-        "difficulty": "Intermediate",
-        "description": "An occult investigator who rummages through opened chests and drops pallets onto Killers while being carried."
+        "difficulty": "Hard",
+        "description": "An occult investigator who rummages through opened chests, fakes locker entries, and drops pallets on the Killer while being carried."
     },
     {
         "id": 25,
@@ -411,14 +411,14 @@ characters = [
         "role": "Survivor",
         "gender": "Female",
         "origin": "South Korea",
-        "realm": "Seoul",
+        "realm": "All-Kill Realm",
         "dlc": "All-Kill Chapter",
         "year": 2021,
         "perk_1": "Fast Track",
         "perk_2": "Smash Hit",
         "perk_3": "Self-Preservation",
-        "difficulty": "Hard",
-        "description": "A pragmatic music producer who turns the hookings and hits of her allies into personal power and speed."
+        "difficulty": "Easy",
+        "description": "A self-serving music producer who benefits from her teammates' misfortunes, gaining generator tokens and sprint bursts from pallet stuns."
     },
     {
         "id": 26,
@@ -427,14 +427,14 @@ characters = [
         "role": "Survivor",
         "gender": "Female",
         "origin": "United States",
-        "realm": "Raccoon City",
+        "realm": "Raccoon City Police Department",
         "dlc": "Resident Evil Chapter",
         "year": 2021,
         "perk_1": "Counterforce",
         "perk_2": "Resurgence",
         "perk_3": "Blast Mine",
         "difficulty": "Easy",
-        "description": "A skilled S.T.A.R.S. officer who sets explosive traps on generators and rapidly heals after being unhooked."
+        "description": "An elite police operative who cleanses totems rapidly, regains instant healing progress upon unhooking, and traps generators with blinding mines."
     },
     {
         "id": 27,
@@ -443,14 +443,14 @@ characters = [
         "role": "Survivor",
         "gender": "Male",
         "origin": "United States",
-        "realm": "Raccoon City",
+        "realm": "Raccoon City Police Department",
         "dlc": "Resident Evil Chapter",
         "year": 2021,
         "perk_1": "Bite the Bullet",
         "perk_2": "Flashbang",
         "perk_3": "Rookie Spirit",
         "difficulty": "Easy",
-        "description": "An idealist rookie cop capable of crafting flashbang grenades in lockers and silencing all healing noises."
+        "description": "An idealistic rookie cop who completely silences his healing sounds and crafts blinding flashbang grenades inside lockers."
     },
     {
         "id": 28,
@@ -459,14 +459,14 @@ characters = [
         "role": "Survivor",
         "gender": "Female",
         "origin": "United States",
-        "realm": "Forsaken Boneyard",
+        "realm": "Base Game",
         "dlc": "Hour of the Witch Chapter",
         "year": 2021,
         "perk_1": "Clairvoyance",
         "perk_2": "Boon: Circle of Healing",
         "perk_3": "Boon: Shadow Step",
         "difficulty": "Intermediate",
-        "description": "A modern witch capable of blessing Totems to create supportive Boon zones that heal allies and hide scratch marks."
+        "description": "A modern witch who blesses totems to create areas where survivors can heal quickly and hide their scratch marks."
     },
     {
         "id": 29,
@@ -475,14 +475,14 @@ characters = [
         "role": "Survivor",
         "gender": "Male",
         "origin": "United States",
-        "realm": "Forsaken Boneyard",
+        "realm": "Eyrie of Crows",
         "dlc": "Portrait of a Murder Chapter",
         "year": 2021,
         "perk_1": "Overcome",
         "perk_2": "Corrective Action",
         "perk_3": "Boon: Exponential",
-        "difficulty": "Intermediate",
-        "description": "A mathematical codebreaker whose perks extend hit speed bursts and grant team recovery speed via Boons."
+        "difficulty": "Easy",
+        "description": "A brilliant codebreaker who extends hit speed bursts and creates a recovery oasis for downed allies using Boon totems."
     },
     {
         "id": 30,
@@ -498,7 +498,7 @@ characters = [
         "perk_2": "Empathic Connection",
         "perk_3": "Boon: Dark Theory",
         "difficulty": "Intermediate",
-        "description": "A marine biologist with psychic intuition who hides scratch marks after stunning Killers and speeds up allies."
+        "description": "A psychic marine biologist who completely hides blood, scratches, and grunts after stunning a killer, and blesses totems to grant speed boosts."
     },
     {
         "id": 31,
@@ -506,15 +506,15 @@ characters = [
         "character_code": "S31",
         "role": "Survivor",
         "gender": "Female",
-        "origin": "Canada",
-        "realm": "Withered Isle",
+        "origin": "India",
+        "realm": "Garden of Joy",
         "dlc": "Roots of Dread Chapter",
         "year": 2022,
         "perk_1": "Inner Focus",
         "perk_2": "Residual Manifest",
         "perk_3": "Overzealous",
-        "difficulty": "Intermediate",
-        "description": "A paranormal investigator who blinds Killers with enhanced flashlights and increases repair speeds after totem cleansing."
+        "difficulty": "Easy",
+        "description": "A psychic podcaster who sees nearby ally scratch marks, blinds Killers to inflict blindness, and increases repair speed after cleansing totems."
     },
     {
         "id": 32,
@@ -522,15 +522,15 @@ characters = [
         "character_code": "S32",
         "role": "Survivor",
         "gender": "Female",
-        "origin": "United States",
-        "realm": "Raccoon City",
+        "origin": "China",
+        "realm": "Raccoon City Police Department",
         "dlc": "Resident Evil: PROJECT W Chapter",
         "year": 2022,
         "perk_1": "Wiretap",
         "perk_2": "Reactive Healing",
         "perk_3": "Low Profile",
         "difficulty": "Easy",
-        "description": "A secret agent who installs camera wiretaps on generators and instantly gains healing progress when allies are hurt."
+        "description": "A secretive spy who installs camera wiretaps on generators, heals instantly when nearby allies are hit, and hides traces when the lone survivor."
     },
     {
         "id": 33,
@@ -539,14 +539,14 @@ characters = [
         "role": "Survivor",
         "gender": "Female",
         "origin": "United States",
-        "realm": "Raccoon City",
+        "realm": "Raccoon City Police Department",
         "dlc": "Resident Evil: PROJECT W Chapter",
         "year": 2022,
-        "perk_1": "Better than New",
-        "perk_2": "Reassurance",
-        "perk_3": "Hyperfocus",
-        "difficulty": "Intermediate",
-        "description": "A rookie medic who pauses team hook struggle timers and rewards skill check precision with compounding repair speed."
+        "perk_1": "Better Than New",
+        "perk_2": "Hyperfocus",
+        "perk_3": "Reassurance",
+        "difficulty": "Hard",
+        "description": "A young prodigy medic who pauses the sacrifice timer of hooked allies and rewards rapid consecutive Great Skill Checks with huge repair bursts."
     },
     {
         "id": 34,
@@ -555,14 +555,14 @@ characters = [
         "role": "Survivor",
         "gender": "Male",
         "origin": "Italy",
-        "realm": "Decimated Borgo",
+        "realm": "The Shattered Square",
         "dlc": "Forged in Fog Chapter",
         "year": 2022,
         "perk_1": "Potential Energy",
         "perk_2": "Fogwise",
         "perk_3": "Quick Gambit",
         "difficulty": "Intermediate",
-        "description": "A medieval scholar who stores progress energy while working on generators to instantly boost repair tasks later."
+        "description": "An ancient, arcane scholar who stores generator progression to instantly dump it elsewhere and reveals the Killer during Great Skill Checks."
     },
     {
         "id": 35,
@@ -571,14 +571,14 @@ characters = [
         "role": "Survivor",
         "gender": "Female",
         "origin": "Brazil",
-        "realm": "Decimated Borgo",
+        "realm": "Shelter Woods",
         "dlc": "Tools of Torment Chapter",
         "year": 2023,
-        "perk_1": "Friendly Competition",
-        "perk_2": "Teamwork: Power Two",
-        "perk_3": "Cut Loose",
+        "perk_1": "Cut Loose",
+        "perk_2": "Friendly Competition",
+        "perk_3": "Teamwork: Power of Two",
         "difficulty": "Easy",
-        "description": "A free-spirited kite enthusiast whose team-oriented perks grant joint movement speed bonuses after healing."
+        "description": "A community-focused kite fighter whose perks reward group generator repairs and synchronized vault maneuvers during chases."
     },
     {
         "id": 36,
@@ -587,14 +587,14 @@ characters = [
         "role": "Survivor",
         "gender": "Male",
         "origin": "Brazil",
-        "realm": "Decimated Borgo",
+        "realm": "Shelter Woods",
         "dlc": "Tools of Torment Chapter",
         "year": 2023,
-        "perk_1": "Background Player",
-        "perk_2": "Teamwork: Collective Stealth",
-        "perk_3": "Blood Rush",
-        "difficulty": "Intermediate",
-        "description": "A thoughtful strategist who recovers swiftly from exhausted states and gains massive sprint bursts when allies are picked up."
+        "perk_1": "Blood Rush",
+        "perk_2": "Background Player",
+        "perk_3": "Teamwork: Collective Stealth",
+        "difficulty": "Hard",
+        "description": "A calm analyst who activates massive sprint bursts when the killer picks up an ally and can force exhaustion recovery at the cost of health."
     },
     {
         "id": 37,
@@ -602,15 +602,15 @@ characters = [
         "character_code": "S37",
         "role": "Survivor",
         "gender": "Male",
-        "origin": "United States",
+        "origin": "Undisclosed",
         "realm": "Toba Landing",
         "dlc": "End Transmission Chapter",
         "year": 2023,
         "perk_1": "Troubleshooter",
         "perk_2": "Made for This",
         "perk_3": "Scavenger",
-        "difficulty": "Easy",
-        "description": "A resilient starship engineer whose technological perks grant Haste and Endurance while injured."
+        "difficulty": "Intermediate",
+        "description": "A cloned starship technician who runs faster when injured, reveals the highest-progress generator during chases, and recycles depleted toolboxes."
     },
     {
         "id": 38,
@@ -620,13 +620,13 @@ characters = [
         "gender": "Male",
         "origin": "United States",
         "realm": "Base Game",
-        "dlc": "Nicolas Cage Chapter",
+        "dlc": "Nicolas Cage Paragraph",
         "year": 2023,
         "perk_1": "Dramaturgy",
         "perk_2": "Scene Partner",
         "perk_3": "Plot Twist",
         "difficulty": "Hard",
-        "description": "An iconic actor whose dramatic perks introduce unpredictable effects, haste, and voluntary downing to self-heal."
+        "description": "An eccentric movie superstar who can scream to read killer auras, fake his own death to completely heal from the dying state, and gain random items."
     },
     {
         "id": 39,
@@ -642,7 +642,7 @@ characters = [
         "perk_2": "Chemical Trap",
         "perk_3": "Light-Footed",
         "difficulty": "Easy",
-        "description": "A hardened warrant officer who suppresses footstep noise and installs chemical traps on pallets to slow Killers."
+        "description": "An iron-willed space survivor who suppresses her footsteps while healthy and installs slowing chemical traps onto dropped pallets."
     },
     {
         "id": 40,
@@ -651,14 +651,14 @@ characters = [
         "role": "Survivor",
         "gender": "Male",
         "origin": "United States",
-        "realm": "Bright Falls",
+        "realm": "Base Game",
         "dlc": "Alan Wake Chapter",
         "year": 2024,
         "perk_1": "Champion of Light",
         "perk_2": "Boon: Illumination",
         "perk_3": "Deadline",
         "difficulty": "Intermediate",
-        "description": "A tortured writer who illuminates chest and generator locations and slows Killers using enhanced flashlight beams."
+        "description": "A tormented writer who runs faster while shining flashlights, inflicts slowed movement on blinded killers, and alters skill check frequencies."
     },
     {
         "id": 41,
@@ -667,14 +667,14 @@ characters = [
         "role": "Survivor",
         "gender": "Female",
         "origin": "United States",
-        "realm": "Greenville Square",
-        "dlc": "All-Things-Wicked Chapter",
+        "realm": "Forgotten Ruins",
+        "dlc": "All Things Wicked Chapter",
         "year": 2024,
         "perk_1": "Invocation: Weaving Spiders",
         "perk_2": "Strength in Shadows",
         "perk_3": "Wicked",
-        "difficulty": "Intermediate",
-        "description": "A gothic outcast who performs invocation rituals in the basement to permanently reduce generator charges."
+        "difficulty": "Hard",
+        "description": "A gothic alternative girl who performs dark invocations inside the basement to trade her health for permanent match-wide generator repair progress."
     },
     {
         "id": 42,
@@ -682,36 +682,20 @@ characters = [
         "character_code": "S42",
         "role": "Survivor",
         "gender": "Female",
-        "origin": "Forgotten Realms",
-        "realm": "Decimated Borgo",
+        "origin": "Faerûn",
+        "realm": "Forgotten Ruins",
         "dlc": "Dungeons & Dragons Chapter",
         "year": 2024,
         "perk_1": "Mirrored Illusion",
         "perk_2": "Bardic Inspiration",
         "perk_3": "Still Sight",
         "difficulty": "Intermediate",
-        "description": "An elven bard who casts illusions at objectives, plays songs to boost team skill check progress, and reveals nearby auras."
+        "description": "An elven bard who casts illusory copies of herself on objectives and plays dice roll musical melodies to boost team performance."
     },
     {
         "id": 43,
-        "name": "Baermar Uraz",
-        "character_code": "S43",
-        "role": "Survivor",
-        "gender": "Male",
-        "origin": "Forgotten Realms",
-        "realm": "Decimated Borgo",
-        "dlc": "Dungeons & Dragons Chapter",
-        "year": 2024,
-        "perk_1": "Mirrored Illusion",
-        "perk_2": "Bardic Inspiration",
-        "perk_3": "Still Sight",
-        "difficulty": "Intermediate",
-        "description": "A male elven bard sharing versatile illusionary and song-crafting abilities alongside Aestri Yazar."
-    },
-    {
-        "id": 44,
         "name": "Lara Croft",
-        "character_code": "S44",
+        "character_code": "S43",
         "role": "Survivor",
         "gender": "Female",
         "origin": "United Kingdom",
@@ -722,171 +706,187 @@ characters = [
         "perk_2": "Hardened",
         "perk_3": "Specialist",
         "difficulty": "Easy",
-        "description": "An athletic tomb raider who vaults at blinding speeds while healthy and reduces total generator progression limits."
+        "description": "A legendary archaeologist who executes high-speed window vaults while healthy, bypasses screams, and permanently drops max generator requirements."
     },
     {
-        "id": 45,
+        "id": 44,
         "name": "Trevor Belmont",
-        "character_code": "S45",
+        "character_code": "S44",
         "role": "Survivor",
         "gender": "Male",
         "origin": "Wallachia",
-        "realm": "Decimated Borgo",
+        "realm": "Castle Dracula",
         "dlc": "Castlevania Chapter",
         "year": 2024,
         "perk_1": "Eyes of Belmont",
         "perk_2": "Exultation",
         "perk_3": "Moment of Glory",
+        "difficulty": "Easy",
+        "description": "A battle-hardened monster hunter who extends killer aura reveal durations and upgrades his current item tier upon stunning the killer."
+    },
+    {
+        "id": 45,
+        "name": "Sujata",
+        "character_code": "S45",
+        "role": "Survivor",
+        "gender": "Female",
+        "origin": "India",
+        "realm": "The Void",
+        "dlc": "Doomed Echoes Chapter",
+        "year": 2024,
+        "perk_1": "Flashover",
+        "perk_2": "Boon: Dark Sanctum",
+        "perk_3": "Hard Bargain",
         "difficulty": "Intermediate",
-        "description": "A legendary vampire hunter who upgrades item rarities when stunning Killers and senses Killer auras across long ranges."
+        "description": "A resourceful engineer capable of creating fake audio distractions on incomplete generators and protecting broken totems."
     },
     {
         "id": 46,
-        "name": "Taurie Cain",
+        "name": "Klaus Müller",
         "character_code": "S46",
         "role": "Survivor",
-        "gender": "Female",
-        "origin": "United States",
-        "realm": "Forsaken Boneyard",
-        "dlc": "Doomed Course Chapter",
+        "gender": "Male",
+        "origin": "Germany",
+        "realm": "The Void",
+        "dlc": "Doomed Echoes Chapter",
         "year": 2024,
-        "perk_1": "Invocation: Treacherous Crows",
-        "perk_2": "Clean Break",
-        "perk_3": "Shoulder the Burden",
-        "difficulty": "Intermediate",
-        "description": "A former cult investigator who trades health states and hook stages to save allies and manipulate basement powers."
+        "perk_1": "Iron Sight",
+        "perk_2": "Break the Ice",
+        "perk_3": "Heavy Footing",
+        "difficulty": "Easy",
+        "description": "A heavy-set industrial worker whose perks allow him to instantly break out of traps and trade stealth for fast unhooking speed."
     },
     {
         "id": 47,
-        "name": "Kaitlyn Diaz",
+        "name": "Rick Grimes",
         "character_code": "S47",
         "role": "Survivor",
-        "gender": "Female",
+        "gender": "Male",
         "origin": "United States",
-        "realm": "Greenville Square",
-        "dlc": "Standard Archives Paragraph",
+        "realm": "None",
+        "dlc": "Chapter 34.5: The Walking Dead",
         "year": 2025,
-        "perk_1": "Sprinting Start",
-        "perk_2": "Resourceful",
-        "perk_3": "Team Dynamics",
-        "difficulty": "Easy",
-        "description": "A resilient urban survivor focused on quick positioning and chest discovery during team pursuits."
+        "perk_1": "Apocalyptic Ingenuity",
+        "perk_2": "Come and Get Me!",
+        "perk_3": "Teamwork: Toughen Up",
+        "difficulty": "Hard",
+        "description": "A tactical former sheriff who crafts fragile temporary replacement pallets out of destroyed loops and draws killer aggro away from injured team members."
     },
     {
         "id": 48,
-        "name": "Kaito Sato",
+        "name": "Michonne",
         "character_code": "S48",
         "role": "Survivor",
-        "gender": "Male",
-        "origin": "Japan",
-        "realm": "Yamaoka Estate",
-        "dlc": "Standard Archives Paragraph",
+        "gender": "Female",
+        "origin": "United States",
+        "realm": "None",
+        "dlc": "Chapter 34.5: The Walking Dead",
         "year": 2025,
-        "perk_1": "Shadow Tread",
-        "perk_2": "Patience Paid",
-        "perk_3": "Calculated Risk",
-        "difficulty": "Intermediate",
-        "description": "A disciplined tech technician who suppresses noises during generator repairs and masks footsteps after vaults."
+        "perk_1": "Conviction",
+        "perk_2": "Last Stand",
+        "perk_3": "Teamwork: Throw Down",
+        "difficulty": "Hard",
+        "description": "A fearless katana survivor who triggers high-stakes, single-use window stuns, picks herself up from the dying state, and grants defensive buffs."
     },
     {
         "id": 49,
-        "name": "Lucas Vance",
+        "name": "Vee Boonyasak",
         "character_code": "S49",
         "role": "Survivor",
-        "gender": "Male",
-        "origin": "United States",
-        "realm": "Hawkins National Laboratory",
-        "dlc": "Forgotten Echoes Chapter",
+        "gender": "Female",
+        "origin": "Thailand",
+        "realm": "None",
+        "dlc": "Chapter 36.5: Sinister Grace",
         "year": 2025,
-        "perk_1": "Signal Flare",
-        "perk_2": "Quick Hands",
-        "perk_3": "Unbroken Spirit",
-        "difficulty": "Easy",
-        "description": "A radio operator who marks objectives for teammates and increases totem cleansing speed under pressure."
+        "perk_1": "Road Life",
+        "perk_2": "ONE-TWO-THREE-FOUR!",
+        "perk_3": "Ghost Notes",
+        "difficulty": "Intermediate",
+        "description": "An energetic punk rock drummer who utilizes rhythm performance actions to trigger team skill check bursts and slips out of loops with advanced stealth."
     },
     {
         "id": 50,
-        "name": "Sofia Rossi",
+        "name": "Aurora Stardotter",
         "character_code": "S50",
         "role": "Survivor",
         "gender": "Female",
-        "origin": "Italy",
-        "realm": "Decimated Borgo",
-        "dlc": "Forgotten Echoes Chapter",
-        "year": 2025,
-        "perk_1": "Guard Stance",
-        "perk_2": "Enduring Hope",
-        "perk_3": "Tactical Pivot",
-        "difficulty": "Intermediate",
-        "description": "An Italian historian who gains haste when near damaged generators and helps injured allies recover quicker."
+        "origin": "Terra Primus",
+        "realm": "None",
+        "dlc": "Chapter 38: Chorus of Sin",
+        "year": 2026,
+        "perk_1": "Starlight Beacon",
+        "perk_2": "Cosmic Link",
+        "perk_3": "Astral Projection",
+        "difficulty": "Hard",
+        "description": "An otherworldly astronaut who marks physical navigation points on the map and channels short distances to pass directly through solid tile walls."
     },
     {
         "id": 51,
-        "name": "Vanya Petrov",
+        "name": "Cynthia Vance",
         "character_code": "S51",
         "role": "Survivor",
-        "gender": "Male",
-        "origin": "Russia",
-        "realm": "Red Forest",
-        "dlc": "Frozen Shadows Paragraph",
-        "year": 2025,
-        "perk_1": "Cold Resistance",
-        "perk_2": "Tundra Trail",
-        "perk_3": "Heavy Duty",
-        "difficulty": "Hard",
-        "description": "A wilderness guide who reduces scratch mark visibility in open areas and sabotages traps rapidly."
+        "gender": "Female",
+        "origin": "United States",
+        "realm": "Neon Metropolis",
+        "dlc": "Chapter 39: Cyber Collapse",
+        "year": 2026,
+        "perk_1": "Overclocked System",
+        "perk_2": "Data Siphon",
+        "perk_3": "Grid runner",
+        "difficulty": "Intermediate",
+        "description": "A tech-renegade runner who hacks generator terminals to steal progress back from the killer and gains speed when stepping over electronic wire traps."
     },
     {
         "id": 52,
-        "name": "Amara Thorne",
+        "name": "Tariq Al-Amri",
         "character_code": "S52",
         "role": "Survivor",
-        "gender": "Female",
-        "origin": "United Kingdom",
-        "realm": "Withered Isle",
-        "dlc": "Ethereal Bounds Chapter",
+        "gender": "Male",
+        "origin": "Jordan",
+        "realm": "Shifting Sands",
+        "dlc": "Chapter 40: Desert Mirage",
         "year": 2026,
-        "perk_1": "Astral Anchor",
-        "perk_2": "Spirit Whisper",
-        "perk_3": "Boundless Energy",
-        "difficulty": "Intermediate",
-        "description": "A spiritualist capable of seeing nearby Killer aura pulses when repairing generators alongside allies."
+        "perk_1": "Dust Cover",
+        "perk_2": "Mirage Step",
+        "perk_3": "Oasis Refresh",
+        "difficulty": "Easy",
+        "description": "A rugged desert archeologist who masks his visual pathing footprint by leaving behind decoys and rapidly cleanses hex totems using specialized tools."
     },
     {
         "id": 53,
-        "name": "Darius Vance",
+        "name": "Evelyn Reed",
         "character_code": "S53",
         "role": "Survivor",
-        "gender": "Male",
-        "origin": "United States",
-        "realm": "Greenville Square",
-        "dlc": "Ethereal Bounds Chapter",
+        "gender": "Female",
+        "origin": "United Kingdom",
+        "realm": "Asylum Depths",
+        "dlc": "Chapter 41: Whispers of Mad",
         "year": 2026,
-        "perk_1": "Pressure Point",
-        "perk_2": "Overdrive Fix",
-        "perk_3": "Lethal Escape",
-        "difficulty": "Hard",
-        "description": "A mechanical engineer who converts successful skill checks into temporary team repair speed multipliers."
+        "perk_1": "Quiet Mind",
+        "perk_2": "Psychotherapy",
+        "perk_3": "Deep Breath",
+        "difficulty": "Easy",
+        "description": "A mental health physician who limits the build-up of hallucination affliction effects and stabilizes terrified status conditions of near teammates."
     },
     {
         "id": 54,
-        "name": "Nadia Al-Aziz",
+        "name": "Kenji Sato",
         "character_code": "S54",
         "role": "Survivor",
-        "gender": "Female",
-        "origin": "Egypt",
-        "realm": "Forsaken Boneyard",
-        "dlc": "Sands of Fate Chapter",
+        "gender": "Male",
+        "origin": "Japan",
+        "realm": "Asylum Depths",
+        "dlc": "Chapter 41: Whispers of Mad",
         "year": 2026,
-        "perk_1": "Mirage Dash",
-        "perk_2": "Ancient Guidance",
-        "perk_3": "Resilient Will",
+        "perk_1": "Adrenaline Rush",
+        "perk_2": "Counter Strike",
+        "perk_3": "Endurance Test",
         "difficulty": "Intermediate",
-        "description": "An archaeologist who creates decoy scratch trails while running and recovers faster from exhaustion status."
+        "description": "An underground street brawler who temporarily withstands exposed damage effects and safely breaks killer window traps through raw physical stamina."
     },
 
     # =========================================================================
-    # KILLERS (44 TOTAL)
+    # KILLERS
     # =========================================================================
     {
         "id": 55,
@@ -900,9 +900,10 @@ characters = [
         "year": 2016,
         "perk_1": "Unnerving Presence",
         "perk_2": "Brutal Strength",
-        "perk_3": "Bear Traps (Power)",
+        "perk_3": "Agitation",
         "difficulty": "Easy",
-        "description": "An area-control killer who sets deadly mechanical bear traps on the ground to immobilize unsuspecting survivors."
+        "power": "Bear Trap",
+        "description": "An area-control killer who sets hidden, physical steel bear traps across the map to catch, damage, and immobilize unwary survivors."
     },
     {
         "id": 56,
@@ -916,9 +917,10 @@ characters = [
         "year": 2016,
         "perk_1": "Predator",
         "perk_2": "Bloodhound",
-        "perk_3": "Wailing Bell (Power)",
+        "perk_3": "Shadowborn",
         "difficulty": "Easy",
-        "description": "A stealth killer who rings his skull bell to cloak himself in near-total invisibility and gain rapid movement speed."
+        "power": "Wailing Bell",
+        "description": "A stealth killer who rings a mystical bell to turn completely invisible, allowing him to traverse the map swiftly and ambush survivors."
     },
     {
         "id": 57,
@@ -932,9 +934,10 @@ characters = [
         "year": 2016,
         "perk_1": "Enduring",
         "perk_2": "Lightborn",
-        "perk_3": "Chainsaw (Power)",
-        "difficulty": "Hard",
-        "description": "A high-mobility killer who sprints across long distances with a motorized chainsaw capable of instantly downing targets."
+        "perk_3": "Tinkerer",
+        "difficulty": "Easy",
+        "power": "Chainsaw Sprint",
+        "description": "A high-mobility, high-threat killer who charges forward at high speeds with his chainsaw, instantly downing any survivor caught in his path."
     },
     {
         "id": 58,
@@ -946,15 +949,16 @@ characters = [
         "realm": "Crotus Prenn Asylum",
         "dlc": "The Last Breath Chapter",
         "year": 2016,
-        "perk_1": "Stridor",
-        "perk_2": "Thanatophobia",
-        "perk_3": "Spencer's Last Breath (Power)",
+        "perk_1": "A Nurse's Calling",
+        "perk_2": "Stridor",
+        "perk_3": "Thanatophobia",
         "difficulty": "Very Hard",
-        "description": "A blink-teleporting killer who ignores physical obstacles, walls, and pallets at the cost of high mechanical difficulty."
+        "power": "Spencer's Last Breath",
+        "description": "A hyper-lethal teleporting killer who blinks directly through solid obstacles and walls to immediately strike fleeing survivors."
     },
     {
         "id": 59,
-        "name": "The Shape (Michael Myers)",
+        "name": "The Shape",
         "character_code": "K05",
         "role": "Killer",
         "gender": "Male",
@@ -964,9 +968,10 @@ characters = [
         "year": 2016,
         "perk_1": "Save the Best for Last",
         "perk_2": "Play with Your Food",
-        "perk_3": "Evil Within (Power)",
-        "difficulty": "Hard",
-        "description": "A stalking killer who gains increased movement speed, lunge range, and instant-down power by observing survivors."
+        "perk_3": "Dying Light",
+        "difficulty": "Intermediate",
+        "power": "Evil Within",
+        "description": "An imposing stalker killer (Michael Myers) who watches survivors from afar to charge his inner malice, granting permanent stat tiers and instant-down capabilities."
     },
     {
         "id": 60,
@@ -974,15 +979,16 @@ characters = [
         "character_code": "K06",
         "role": "Killer",
         "gender": "Female",
-        "origin": "United States",
+        "origin": "Undisclosed",
         "realm": "Backwater Swamp",
         "dlc": "Of Flesh and Mud Chapter",
         "year": 2016,
         "perk_1": "Hex: The Third Seal",
         "perk_2": "Hex: Ruin",
-        "perk_3": "Blackened Catan (Power)",
+        "perk_3": "Hex: Devour Hope",
         "difficulty": "Intermediate",
-        "description": "A tactical killer who draws mud phantasm traps to instantly teleport across territorial zones when triggered."
+        "power": "Phantasm Traps",
+        "description": "A tactical teleportation killer who draws mud traps on the ground, warping straight to their position whenever a survivor triggers them by walking."
     },
     {
         "id": 61,
@@ -990,15 +996,16 @@ characters = [
         "character_code": "K07",
         "role": "Killer",
         "gender": "Male",
-        "origin": "China",
+        "origin": "United States",
         "realm": "Léry's Memorial Institute",
         "dlc": "Spark of Madness Chapter",
         "year": 2017,
-        "perk_1": "Overcharge",
+        "perk_1": "Overwhelming Presence",
         "perk_2": "Monitor & Abuse",
-        "perk_3": "Carter's Spark (Power)",
-        "difficulty": "Intermediate",
-        "description": "A psychological killer who emits shockwaves to induce Madness levels, causing illusions and blocking interaction actions."
+        "perk_3": "Overcharge",
+        "difficulty": "Easy",
+        "power": "Carter's Spark",
+        "description": "An oppressive disruption killer who releases localized madness shockwaves, driving survivors insane to reveal their locations and block interactions."
     },
     {
         "id": 62,
@@ -1011,30 +1018,32 @@ characters = [
         "dlc": "A Lullaby for the Dark Chapter",
         "year": 2017,
         "perk_1": "Beast of Prey",
-        "perk_2": "Terrifying Lullaby",
-        "perk_3": "Hunting Hatchets (Power)",
+        "perk_2": "Territorial Imperative",
+        "perk_3": "Hex: Huntress Lullaby",
         "difficulty": "Intermediate",
-        "description": "A ranged sniper killer who throws deadly, replenishable hatchets from long distances to injure fleeing survivors."
+        "power": "Hunting Hatchets",
+        "description": "A deadly ranged killer who hurls sharp hatchets across loops and open maps, injuring or downing survivors from afar."
     },
     {
         "id": 63,
-        "name": "The Cannibal (Leatherface)",
+        "name": "The Cannibal",
         "character_code": "K09",
         "role": "Killer",
         "gender": "Male",
         "origin": "United States",
         "realm": "Base Game",
-        "dlc": "TEXAS CHAINSAW MASSACRE Paragraph",
+        "dlc": "Leatherface Paragraph",
         "year": 2017,
         "perk_1": "Knock Out",
-        "perk_2": "Barbecue & Chilli",
-        "perk_3": "Bubba's Chainsaw (Power)",
+        "perk_2": "Barbecue & Chili",
+        "perk_3": "Franklin's Demise",
         "difficulty": "Easy",
-        "description": "A brutal killer who swings a sweeping chainsaw in a wide arc, downing multiple survivors in a single frenzy."
+        "power": "Bubba's Chainsaw",
+        "description": "A close-quarters threat killer (Leatherface) who swings his chainsaw in a wide, multi-hit sweeping tantrum, instantly downing any clusters of survivors."
     },
     {
         "id": 64,
-        "name": "The Nightmare (Freddy Krueger)",
+        "name": "The Nightmare",
         "character_code": "K10",
         "role": "Killer",
         "gender": "Male",
@@ -1044,13 +1053,14 @@ characters = [
         "year": 2017,
         "perk_1": "Fire Up",
         "perk_2": "Remember Me",
-        "perk_3": "Dream Demon (Power)",
-        "difficulty": "Intermediate",
-        "description": "A dream demon who drags survivors into the Dream World, places slowdown snares, and teleports directly to generators."
+        "perk_3": "Blood Warden",
+        "difficulty": "Easy",
+        "power": "Dream Demon",
+        "description": "A surreal dreamscape killer (Freddy Krueger) who pulls survivors into a sleeping state, allowing him to teleport directly to generators and lay slowing blood traps."
     },
     {
         "id": 65,
-        "name": "The Pig (Amanda Young)",
+        "name": "The Pig",
         "character_code": "K11",
         "role": "Killer",
         "gender": "Female",
@@ -1060,9 +1070,10 @@ characters = [
         "year": 2018,
         "perk_1": "Hangman's Trick",
         "perk_2": "Surveillance",
-        "perk_3": "Jigsaw's Baptism (Power)",
-        "difficulty": "Intermediate",
-        "description": "A crouched stealth killer who places deadly Reverse Bear Traps on downed targets, forcing them to search boxes before timers expire."
+        "perk_3": "Make Your Choice",
+        "difficulty": "Easy",
+        "power": "Jigsaw's Baptism",
+        "description": "A stealthy ambush killer (Amanda Young) who crouches to remove her terror radius, lunges out from corners, and places ticking Reverse Bear Traps on downed survivors."
     },
     {
         "id": 66,
@@ -1071,14 +1082,15 @@ characters = [
         "role": "Killer",
         "gender": "Male",
         "origin": "United States",
-        "realm": "Campbell's Chapel",
+        "realm": "Crotus Prenn Asylum",
         "dlc": "Curtain Call Chapter",
         "year": 2018,
-        "perk_1": "Bamboozle",
+        "perk_1": "The Third Seal",
         "perk_2": "Coulrophobia",
-        "perk_3": "The Afterpiece Tonic (Power)",
-        "difficulty": "Intermediate",
-        "description": "A sinister performer who hurls gas bottles to slow and vision-cloud survivors or empower his own movement speed."
+        "perk_3": "Pop Goes the Weasel",
+        "difficulty": "Easy",
+        "power": "The Afterpiece Tonic",
+        "description": "A tactical anti-loop killer who throws bottles of toxic gas to blur visions and slow down survivors, while deploying yellow gas to speed up his own chases."
     },
     {
         "id": 67,
@@ -1091,26 +1103,28 @@ characters = [
         "dlc": "Shattered Bloodline Chapter",
         "year": 2018,
         "perk_1": "Spirit Fury",
-        "perk_2": "Haunted Ground",
-        "perk_3": "Yamaoka's Haunting (Power)",
+        "perk_2": "Hex: Haunted Ground",
+        "perk_3": "Rancor",
         "difficulty": "Hard",
-        "description": "A phase-walking killer who moves invisibly at extreme speeds, relying on audio cues and scratch marks to track targets."
+        "power": "Yamaoka's Haunting",
+        "description": "A mind-game killer who detaches from her physical shell to travel invisibly through the spirit plane, tracking survivors purely via audio cues and scratch marks."
     },
     {
         "id": 68,
         "name": "The Legion",
         "character_code": "K14",
         "role": "Killer",
-        "gender": "Varied",
+        "gender": "Group",
         "origin": "Canada",
         "realm": "Ormond",
         "dlc": "Darkness Among Us Chapter",
         "year": 2018,
         "perk_1": "Discordance",
-        "perk_2": "Mad Grit",
-        "perk_3": "Feral Frenzy (Power)",
+        "perk_2": "Madness",
+        "perk_3": "Iron Maiden",
         "difficulty": "Easy",
-        "description": "An aggressive killer who sprints rapidly, vaults pallets like a survivor, and inflicts Deep Wound status across teams."
+        "power": "Feral Frenzy",
+        "description": "A fast-paced hit-and-run killer squad that sprint vaults over windows and pallets to rapidly stab multiple survivors, applying the bleeding Deep Wound status."
     },
     {
         "id": 69,
@@ -1119,14 +1133,15 @@ characters = [
         "role": "Killer",
         "gender": "Female",
         "origin": "Babylon",
-        "realm": "Withered Isle",
-        "dlc": "Demise Faithful Chapter",
+        "realm": "Plague Realm",
+        "dlc": "Demise of the Faithful Chapter",
         "year": 2019,
         "perk_1": "Corrupt Intervention",
         "perk_2": "Infectious Fright",
-        "perk_3": "Vile Purge (Power)",
+        "perk_3": "Dark Devotion",
         "difficulty": "Intermediate",
-        "description": "A disease-spreading priestess who vomits bile to infect survivors, objects, and environment points until cleansed."
+        "power": "Vile Purge",
+        "description": "A systematic affliction killer who vomits contagious bile onto objects and survivors, forcing them into a permanently broken, vomiting, and trackable state."
     },
     {
         "id": 70,
@@ -1140,25 +1155,27 @@ characters = [
         "year": 2019,
         "perk_1": "I'm All Ears",
         "perk_2": "Thrilling Tremors",
-        "perk_3": "Night Shroud (Power)",
-        "difficulty": "Intermediate",
-        "description": "A sneaky stalker who crouches, leans around corners, and marks individual survivors to expose them for instant downs."
+        "perk_3": "Furtive Chase",
+        "difficulty": "Easy",
+        "power": "Night Shroud",
+        "description": "A methodical stealth killer who hides his red stain and terror radius completely, leaning around corners to stalk and expose individual survivors."
     },
     {
         "id": 71,
         "name": "The Demogorgon",
         "character_code": "K17",
         "role": "Killer",
-        "gender": "Unknown",
-        "origin": "Upside Down",
+        "gender": "Male",
+        "origin": "The Upside Down",
         "realm": "Hawkins National Laboratory",
         "dlc": "Stranger Things Chapter",
         "year": 2019,
         "perk_1": "Surge",
-        "perk_2": "Mindbreaker",
-        "perk_3": "Of the Abyss (Power)",
+        "perk_2": "Cruel Limits",
+        "perk_3": "Mindbreaker",
         "difficulty": "Intermediate",
-        "description": "An interdimensional beast that sets portal networks to traverse maps and lunges across long distances with Shred strikes."
+        "power": "Of the Abyss",
+        "description": "A monstrous apex predator that lunges long distances across loops to shred pallets and tears open organic ground portals to travel under the map."
     },
     {
         "id": 72,
@@ -1171,10 +1188,11 @@ characters = [
         "dlc": "Cursed Legacy Chapter",
         "year": 2019,
         "perk_1": "Zanshin Tactics",
-        "perk_2": "Nemesis",
-        "perk_3": "Yamaoka's Wrath (Power)",
+        "perk_2": "Blood Echo",
+        "perk_3": "Nemesis",
         "difficulty": "Hard",
-        "description": "A demonic warrior who absorbs blood orbs dropped by injured targets to activate high-speed Demon Dashes and instant-down strikes."
+        "power": "Yamaoka's Wrath",
+        "description": "A high-momentum snowball killer who absorbs glowing blood orbs dropped by injured survivors to trigger a raging state, gaining map-wide dash speeds and lethal clubs."
     },
     {
         "id": 73,
@@ -1188,13 +1206,14 @@ characters = [
         "year": 2020,
         "perk_1": "Gearhead",
         "perk_2": "Dead Man's Switch",
-        "perk_3": "The Redeemer (Power)",
+        "perk_3": "Hex: Retribution",
         "difficulty": "Intermediate",
-        "description": "A vengeful bounty hunter armed with a custom spear-gun that reels hooked survivors in for close-range melee attacks."
+        "power": "The Redeemer",
+        "description": "An inventive ranged killer who fires a mechanical harpoon gun to impale survivors, reeling them in closer across obstacles for a basic attack blow."
     },
     {
         "id": 74,
-        "name": "The Executioner (Pyramid Head)",
+        "name": "The Executioner",
         "character_code": "K20",
         "role": "Killer",
         "gender": "Male",
@@ -1204,9 +1223,10 @@ characters = [
         "year": 2020,
         "perk_1": "Forced Penance",
         "perk_2": "Trail of Torment",
-        "perk_3": "Rites of Judgment (Power)",
+        "perk_3": "Deathbound",
         "difficulty": "Hard",
-        "description": "A relentless tormentor who carves ranged energy trenches into the earth, sending afflicted survivors to Cages of Atonement."
+        "power": "Rites of Judgement",
+        "description": "A heavy control killer (Pyramid Head) who carves trenches into the floor to afflict survivors, bypassing standard hook mechanics entirely via Cages of Atonement."
     },
     {
         "id": 75,
@@ -1215,30 +1235,32 @@ characters = [
         "role": "Killer",
         "gender": "Male",
         "origin": "Scotland",
-        "realm": "Dyer Island",
+        "realm": "Undisclosed",
         "dlc": "Descend Beyond Chapter",
         "year": 2020,
         "perk_1": "Dragon's Grip",
-        "perk_2": "Hex: Undying",
-        "perk_3": "Blighted Rush (Power)",
+        "perk_2": "Hex: Blood Favor",
+        "perk_3": "Hex: Undying",
         "difficulty": "Very Hard",
-        "description": "A hyper-mobile chemist who bounces off walls and environmental structures at high speeds to land lethal rushing attacks."
+        "power": "Blighted Rush",
+        "description": "A high-speed kinetic killer who drinks serum to bounce aggressively off environmental walls, launching lightning-fast lethal rush strikes down loops."
     },
     {
         "id": 76,
         "name": "The Twins",
         "character_code": "K22",
         "role": "Killer",
-        "gender": "Varied",
+        "gender": "Group",
         "origin": "France",
-        "realm": "Dyer Island",
+        "realm": "Undisclosed",
         "dlc": "A Binding of Kin Chapter",
         "year": 2020,
         "perk_1": "Hoarder",
         "perk_2": "Oppression",
-        "perk_3": "Bloodline (Power)",
-        "difficulty": "Hard",
-        "description": "A dual-entity killer consisting of Charlotte and Victor, allowing simultaneous zoning and detached high-speed pounce strikes."
+        "perk_3": "Coupe de Grâce",
+        "difficulty": "Very Hard",
+        "power": "Blood Bond",
+        "description": "A dual-character tag killer who splits her conjoined twin Victor from Charlotte's chest, controlling him to run at high speed and pounce on survivor backs."
     },
     {
         "id": 77,
@@ -1247,14 +1269,15 @@ characters = [
         "role": "Killer",
         "gender": "Male",
         "origin": "South Korea",
-        "realm": "Seoul",
+        "realm": "All-Kill Realm",
         "dlc": "All-Kill Chapter",
         "year": 2021,
         "perk_1": "Starstruck",
         "perk_2": "Hex: Crowd Control",
-        "perk_3": "Show-Thoppa (Power)",
-        "difficulty": "Intermediate",
-        "description": "A flamboyant performer who throws rapid-fire throwing knives to fill a target's Laceration meter from a distance."
+        "perk_3": "No Way Out",
+        "difficulty": "Easy",
+        "power": "Showstopper",
+        "description": "A flamboyant ranged killer who unleashes rapid-fire volleys of throwing knives to fill up a survivor's laceration meter from medium range."
     },
     {
         "id": 78,
@@ -1262,51 +1285,54 @@ characters = [
         "character_code": "K24",
         "role": "Killer",
         "gender": "Male",
-        "origin": "Raccoon City",
-        "realm": "Raccoon City",
+        "origin": "United States",
+        "realm": "Raccoon City Police Department",
         "dlc": "Resident Evil Chapter",
         "year": 2021,
         "perk_1": "Lethal Pursuer",
         "perk_2": "Hysteria",
-        "perk_3": "T-Virus (Power)",
-        "difficulty": "Intermediate",
-        "description": "A bio-weapon tyrant who uses tentacle whip strikes to contaminate targets and commands wandering AI zombies."
+        "perk_3": "Eruption",
+        "difficulty": "Easy",
+        "power": "T-Virus",
+        "description": "An evolving juggernaut bio-weapon killer who whips survivors with an infection tentacle to increase his power reach, supported by roaming AI zombies."
     },
     {
         "id": 79,
-        "name": "The Cenobite (Pinhead)",
+        "name": "The Cenobite",
         "character_code": "K25",
         "role": "Killer",
         "gender": "Male",
-        "origin": "Hell",
+        "origin": "Labyrinth",
         "realm": "Base Game",
-        "dlc": "Hellraiser Chapter",
+        "dlc": "Hellraiser Paragraph",
         "year": 2021,
         "perk_1": "Deadlock",
         "perk_2": "Hex: Plaything",
-        "perk_3": "Summon of Pain (Power)",
+        "perk_3": "Scourge Hook: Gift of Pain",
         "difficulty": "Hard",
-        "description": "An extradimensional entity who summons hooked chains to bind survivors and spawns map-wide Chain Hunts via the Lament Configuration."
+        "power": "Summons of Pain",
+        "description": "A global harassment killer (Pinhead) who shoots guided gateway hooks to tie down survivors, forcing them to find a puzzle box to halt constant passive chain attacks."
     },
-    {
+   {
         "id": 80,
         "name": "The Artist",
         "character_code": "K26",
         "role": "Killer",
         "gender": "Female",
         "origin": "Chile",
-        "realm": "Forsaken Boneyard",
+        "realm": "Eyrie of Crows",
         "dlc": "Portrait of a Murder Chapter",
         "year": 2021,
         "perk_1": "Grim Embrace",
         "perk_2": "Scourge Hook: Pain Resonance",
-        "perk_3": "Birds of Torment (Power)",
+        "perk_3": "Hex: Pentimento",
         "difficulty": "Intermediate",
-        "description": "A surrealist painter who summons dire crows that fly through map obstacles to track, swarm, and injure distant survivors."
+        "power": "Birds of Torment",
+        "description": "A tactical long-distance cross-map killer who sets ink crows on walls, firing them directly through solid objects to swarm or injure survivors across the realm."
     },
     {
         "id": 81,
-        "name": "The Onryō (Sadako Yamamura)",
+        "name": "The Onryō",
         "character_code": "K27",
         "role": "Killer",
         "gender": "Female",
@@ -1316,41 +1342,44 @@ characters = [
         "year": 2022,
         "perk_1": "Scourge Hook: Floods of Rage",
         "perk_2": "Call of Brine",
-        "perk_3": "Deluge of Fear (Power)",
+        "perk_3": "Merciless Storm",
         "difficulty": "Intermediate",
-        "description": "A vengeful spirit who manifests invisibly, projects herself through TV screens, and builds Condemned stacks on targets."
+        "power": "Deluge of Fear",
+        "description": "A creeping psychological curse killer (Sadako) who manifests out of active TV monitors to build up Condemned status layers on survivors, allowing instant executions."
     },
     {
         "id": 82,
         "name": "The Dredge",
         "character_code": "K28",
         "role": "Killer",
-        "gender": "Unknown",
-        "origin": "Withered Isle",
-        "realm": "Withered Isle",
+        "gender": "Genderless",
+        "origin": "Undisclosed",
+        "realm": "Garden of Joy",
         "dlc": "Roots of Dread Chapter",
         "year": 2022,
         "perk_1": "Dissolution",
         "perk_2": "Darkness Revealed",
-        "perk_3": "Reign of Darkness (Power)",
+        "perk_3": "Septic Touch",
         "difficulty": "Intermediate",
-        "description": "A manifestation of dark thoughts capable of teleporting between lockers and plunging the map into total Nightfall."
+        "power": "Reign of Darkness",
+        "description": "An amorphous manifestation of negative energy that teleports inside map lockers, materializes remnants during loops, and triggers a pitch-black Nightfall shroud."
     },
     {
         "id": 83,
-        "name": "The Mastermind (Albert Wesker)",
+        "name": "The Mastermind",
         "character_code": "K29",
         "role": "Killer",
         "gender": "Male",
         "origin": "United States",
-        "realm": "Raccoon City",
+        "realm": "Raccoon City Police Department",
         "dlc": "Resident Evil: PROJECT W Chapter",
         "year": 2022,
         "perk_1": "Superior Anatomy",
         "perk_2": "Awakened Awareness",
-        "perk_3": "Virulent Bound (Power)",
+        "perk_3": "Terminus",
         "difficulty": "Intermediate",
-        "description": "A genetically enhanced mastermind who dashes forward to grab targets, infects them with Uroboros, and throws them into obstacles."
+        "power": "Virulent Bound",
+        "description": "A high-speed bio-engineered predator (Albert Wesker) who dashes twice to grab and throw survivors, infecting them with a slowing Uroboros pathogen."
     },
     {
         "id": 84,
@@ -1358,15 +1387,16 @@ characters = [
         "character_code": "K30",
         "role": "Killer",
         "gender": "Male",
-        "origin": "Hungary",
-        "realm": "Decimated Borgo",
+        "origin": "Italy",
+        "realm": "The Shattered Square",
         "dlc": "Forged in Fog Chapter",
         "year": 2022,
         "perk_1": "Nowhere to Hide",
         "perk_2": "Hex: Face the Darkness",
-        "perk_3": "Guardia Compagnia (Power)",
+        "perk_3": "Hubris",
         "difficulty": "Intermediate",
-        "description": "A ruthless warlord who draws patrol paths to summon spectral guards (Carnifex, Assassin, Jailer) to hunt and break items."
+        "power": "Guardia Compagnia",
+        "description": "A tactical squad commander killer who draws physical search paths to summon AI spectral guards, tasking them to destroy objects or hunt survivors down."
     },
     {
         "id": 85,
@@ -1375,50 +1405,53 @@ characters = [
         "role": "Killer",
         "gender": "Female",
         "origin": "Brazil",
-        "realm": "Decimated Borgo",
+        "realm": "Shelter Woods",
         "dlc": "Tools of Torment Chapter",
         "year": 2023,
-        "perk_1": "THWACK!",
+        "perk_1": "Thwack!",
         "perk_2": "Leverage",
-        "perk_3": "Eyes in the Sky (Power)",
-        "difficulty": "Intermediate",
-        "description": "A high-tech billionaire who deploys aerial drones to scan areas, apply Claw Traps, and track survivor radar positions."
+        "perk_3": "Game Afoot",
+        "difficulty": "Easy",
+        "power": "Eyes in the Sky",
+        "description": "A high-tech hunting tracker who deploys spinning surveillance drones to map out territories, exposing survivors and tracking their exact positions."
     },
     {
         "id": 86,
         "name": "The Singularity",
         "character_code": "K32",
         "role": "Killer",
-        "gender": "Unknown",
+        "gender": "Genderless",
         "origin": "Toba Landing",
         "realm": "Toba Landing",
         "dlc": "End Transmission Chapter",
         "year": 2023,
         "perk_1": "Genetic Limits",
         "perk_2": "Forced Hesitation",
-        "perk_3": "Quantum Instantation (Power)",
-        "difficulty": "Hard",
-        "description": "An alien rogue AI that fires Biopods onto walls to tag survivors with Slipstream pods and teleport directly onto their backs."
+        "perk_3": "Machine Learning",
+        "difficulty": "Very Hard",
+        "power": "Quantum Instantiation",
+        "description": "A corrupted AI lifeform that shoots biopod cameras onto structural surfaces, shooting slipstream nodes onto survivors to teleport straight behind them."
     },
     {
         "id": 87,
         "name": "The Xenomorph",
         "character_code": "K33",
         "role": "Killer",
-        "gender": "Unknown",
-        "origin": "Acheron (LV-426)",
+        "gender": "Genderless",
+        "origin": "Nostromo Wreckage",
         "realm": "Nostromo Wreckage",
         "dlc": "Alien Chapter",
         "year": 2023,
-        "perk_1": "Ultimate Weapon",
-        "perk_2": "Rapid Brutality",
-        "perk_3": "Hidden Pursuit (Power)",
-        "difficulty": "Intermediate",
-        "description": "An apex predator utilizing subterranean tunnel stations to navigate maps silently before striking with its deadly tail."
+        "perk_1": "Rapid Brutality",
+        "perk_2": "Alien Instinct",
+        "perk_3": "Ultimate Weapon",
+        "difficulty": "Easy",
+        "power": "Hidden Pursuit",
+        "description": "An iconic alien predator that crawls on all fours through sub-surface floor tunnels, emerging at control stations to strike loops using a razor-sharp tail lash."
     },
     {
         "id": 88,
-        "name": "The Good Guy (Chucky)",
+        "name": "The Good Guy",
         "character_code": "K34",
         "role": "Killer",
         "gender": "Male",
@@ -1427,173 +1460,150 @@ characters = [
         "dlc": "Chucky Chapter",
         "year": 2023,
         "perk_1": "Hex: Two Can Play",
-        "perk_2": "Friends 'til the End",
-        "perk_3": "Playtime's Over (Power)",
+        "perk_2": "Friends 'Til the End",
+        "perk_3": "Batteries Included",
         "difficulty": "Hard",
-        "description": "A stealthy third-person killer doll who enters Hidey-Ho Mode, scampers under pallets, and charges targets with Slice & Dice."
+        "power": "Playtime's Over",
+        "description": "A diminutive, third-person perspective killer doll (Chucky) who completely hides his physical form in white footprints, launching scamper slice rushes under loops."
     },
     {
         "id": 89,
         "name": "The Unknown",
         "character_code": "K35",
         "role": "Killer",
-        "gender": "Unknown",
+        "gender": "Genderless",
         "origin": "United States",
-        "realm": "Greenville Square",
-        "dlc": "All-Things-Wicked Chapter",
+        "realm": "Forgotten Ruins",
+        "dlc": "All Things Wicked Chapter",
         "year": 2024,
         "perk_1": "Unbound",
         "perk_2": "Unforeseen",
-        "perk_3": "UVX & Hallucinations (Power)",
+        "perk_3": "Undone",
         "difficulty": "Hard",
-        "description": "An unnatural cryptid capable of bouncing explosive UVX projectiles off walls and teleporting to left-behind illusions."
+        "power": "UVX",
+        "description": "A bizarre cryptid horror that bounces structural venom toxins off loop walls to weaken survivors, dropping stationary decoys to instantly teleport across tiles."
     },
     {
         "id": 90,
-        "name": "The Lich (Vecna)",
+        "name": "The Lich",
         "character_code": "K36",
         "role": "Killer",
         "gender": "Male",
-        "origin": "Greyhawk",
-        "realm": "Decimated Borgo",
+        "origin": "Oerth",
+        "realm": "Forgotten Ruins",
         "dlc": "Dungeons & Dragons Chapter",
         "year": 2024,
-        "perk_1": "Weave Attunement",
-        "perk_2": "Languish",
-        "perk_3": "Vile Darkness (Power)",
+        "perk_1": "Languid Bleed",
+        "perk_2": "Weave Attunement",
+        "perk_3": "Dark Arrogance",
         "difficulty": "Hard",
-        "description": "An archlich wizard who cycles through four iconic spells: Fly, Flight of the Damned, Mage Hand, and Dispelling Sphere."
+        "power": "Vile Book of Spells",
+        "description": "An ancient sorcerer (Vecna) who toggles through four magical spell types to lift dropped pallets, fly over gaps, track items, or launch magical skeletons."
     },
     {
         "id": 91,
-        "name": "The Dark Lord (Dracula)",
+        "name": "The Dark Lord",
         "character_code": "K37",
         "role": "Killer",
         "gender": "Male",
         "origin": "Wallachia",
-        "realm": "Decimated Borgo",
+        "realm": "Castle Dracula",
         "dlc": "Castlevania Chapter",
         "year": 2024,
         "perk_1": "Dominance",
-        "perk_2": "Hex: Wretched Fate",
-        "perk_3": "Vampiric Transformation (Power)",
+        "perk_2": "Human Frailty",
+        "perk_3": "Exquisite Blood",
         "difficulty": "Hard",
-        "description": "A shapeshifting lord who toggles between Vampire Form (Hellfire), Wolf Form (Scent tracking), and Bat Form (Teleportation)."
+        "power": "Vampiric Powers",
+        "description": "A shape-shifting vampire king (Dracula) who transitions between Vampire form to cast hellfire columns, Wolf form to chase scent tracks, and Bat form to teleport over vaults."
     },
     {
         "id": 92,
-        "name": "The Houndmaster",
+        "name": "The Hound",
         "character_code": "K38",
         "role": "Killer",
-        "gender": "Female",
+        "gender": "Male",
         "origin": "United States",
-        "realm": "Forsaken Boneyard",
-        "dlc": "Doomed Course Chapter",
+        "realm": "The Void",
+        "dlc": "Doomed Echoes Chapter",
         "year": 2024,
-        "perk_1": "All-Shaking Thunder",
-        "perk_2": "No Quarter",
-        "perk_3": "The Chase & The Hounds (Power)",
-        "difficulty": "Hard",
-        "description": "A ruthless sea commander accompanied by a hound that commands area denial and tracks fleeing survivors."
+        "perk_1": "Scent of Blood",
+        "perk_2": "Cornered Prey",
+        "perk_3": "Terrible Maw",
+        "difficulty": "Intermediate",
+        "power": "Savage Hunt",
+        "description": "A feral tracker killer that moves on all fours to follow scent trails left by running survivors, executing extended bite lunges that apply heavy hemorrhage."
     },
     {
         "id": 93,
-        "name": "The Specter",
+        "name": "The Ghoul",
         "character_code": "K39",
         "role": "Killer",
-        "gender": "Female",
-        "origin": "United States",
-        "realm": "Greenville Square",
-        "dlc": "Standard Archives Paragraph",
-        "year": 2025,
-        "perk_1": "Lingering Dread",
-        "perk_2": "Phantom Reach",
-        "perk_3": "Spectral Projection (Power)",
-        "difficulty": "Intermediate",
-        "description": "An ethereal spirit that projects disembodied shadows through loop walls to block vault actions."
-    },
-    {
-        "id": 94,
-        "name": "The Mechanist",
-        "character_code": "K40",
-        "role": "Killer",
         "gender": "Male",
-        "origin": "Germany",
-        "realm": "Dyer Island",
-        "dlc": "Standard Archives Paragraph",
+        "origin": "Japan",
+        "realm": "None",
+        "dlc": "Chapter 35: Tokyo Ghoul",
         "year": 2025,
-        "perk_1": "Clockwork Trap",
-        "perk_2": "Overheated Gears",
-        "perk_3": "Automated Overdrive (Power)",
-        "difficulty": "Hard",
-        "description": "A mad inventor who lays down gear traps that block generator progress when walked over by survivors."
+        "perk_1": "Hex: Nothing But Misery",
+        "perk_2": "Forever Entwined",
+        "perk_3": "None Are Free",
+        "difficulty": "Intermediate",
+        "power": "One-Eyed Terror",
+        "description": "An aggressive, half-ghoul killer who thrives on slowing survivors in chases, speeding up hook pickups, and locking down windows and standing pallets during the endgame."
     },
     {
         "id": 95,
-        "name": "The Void Stalker",
+        "name": "The Krasue",
         "character_code": "K41",
         "role": "Killer",
-        "gender": "Unknown",
-        "origin": "The Void",
-        "realm": "Withered Isle",
-        "dlc": "Forgotten Echoes Chapter",
+        "gender": "Female",
+        "origin": "Thailand",
+        "realm": "None",
+        "dlc": "Chapter 37: Sinister Grace",
         "year": 2025,
-        "perk_1": "Void Resonance",
-        "perk_2": "Grasp of Darkness",
-        "perk_3": "Void Rift (Power)",
+        "perk_1": "Ravenous",
+        "perk_2": "Wandering Eye",
+        "perk_3": "Hex: Overture of Doom",
         "difficulty": "Hard",
-        "description": "A dark entity born from the Entity's Void that creates dimensional rifts to ambush survivors."
+        "power": "Visceral Flight",
+        "description": "A split-form killer inspired by Thai folklore who detaches her floating head to lunge out with a long-range Intestinal Whip, while her perks maximize map-wide tracking, false terror radii, and sudden endgame pressure."
     },
     {
         "id": 96,
-        "name": "The Siren",
-        "character_code": "K42",
+        "name": "The Slasher",
+        "character_code": "K35_JV",
         "role": "Killer",
-        "gender": "Female",
-        "origin": "Greece",
-        "realm": "Backwater Swamp",
-        "dlc": "Forgotten Echoes Chapter",
-        "year": 2025,
-        "perk_1": "Luring Song",
-        "perk_2": "Drowning Echo",
-        "perk_3": "Abyssal Call (Power)",
-        "difficulty": "Intermediate",
-        "description": "A aquatic monster whose siren song disorients survivors and forces involuntary movement towards her."
+        "gender": "Male",
+        "origin": "United States",
+        "realm": "None",
+        "dlc": "Chapter 40: Jason",
+        "year": 2026,
+        "perk_1": "Hex: Scared to Death",
+        "perk_2": "Silent Shadow",
+        "perk_3": "Rampage",
+        "difficulty": "Easy",
+        "power": "Omnipresent Evil",
+        "description": "A relentless, masked powerhouse (Jason Voorhees) who blends high-speed invisible map teleportation with a brutal projectile-flinging mechanics to isolate and pin down survivors."
     },
     {
         "id": 97,
-        "name": "The Phantom",
-        "character_code": "K43",
+        "name": "The Judgment",
+        "character_code": "K42",
         "role": "Killer",
-        "gender": "Male",
-        "origin": "United Kingdom",
-        "realm": "Withered Isle",
-        "dlc": "Ethereal Bounds Chapter",
+        "gender": "Genderless",
+        "origin": "Terra Primus",
+        "realm": "None",
+        "dlc": "Chapter 38: Chorus of Sin",
         "year": 2026,
-        "perk_1": "Haunted Aura",
-        "perk_2": "Silent Step",
-        "perk_3": "Phantom Shift (Power)",
-        "difficulty": "Hard",
-        "description": "A ghostly killer that phases through walls in short bursts, leaving illusionary decoys behind."
-    },
-    {
-        "id": 98,
-        "name": "The Pharaoh",
-        "character_code": "K44",
-        "role": "Killer",
-        "gender": "Male",
-        "origin": "Egypt",
-        "realm": "Forsaken Boneyard",
-        "dlc": "Sands of Fate Chapter",
-        "year": 2026,
-        "perk_1": "Curse of the Tomb",
-        "perk_2": "Sandstorm Terror",
-        "perk_3": "Sandstone Curse (Power)",
-        "difficulty": "Hard",
-        "description": "An ancient resurrected ruler who summons sandstorms to impair survivor vision and slow generator repair speeds."
+        "perk_1": "Celestial Witness",
+        "perk_2": "Hex: Under Your Thumb",
+        "perk_3": "Lay Waste",
+        "difficulty": "Very Hard",
+        "power": "Divine Condemned",
+        "description": "A punishing celestial entity that casts down columns of divine light to brand survivors with Heresy, allowing it to banish downed heretics straight into the grueling trial of Exile."
     }
-]
 
+   
 
 # =========================================================================
 # API ENDPOINTS
@@ -1613,26 +1623,46 @@ def home():
         ]
     }
 
-# GET ALL CHARACTERS (WITH OPTIONAL ROLE FILTER)
+# GET ALL CHARACTERS (WITH ROLE FILTER, PAGINATION, AND SORTING)
 @app.get("/characters")
-def get_characters(role: str = Query(None, description="Filter by 'Survivor' or 'Killer'")):
+def get_characters(
+    role: str = Query(None, description="Filter by 'Survivor' or 'Killer'"),
+    sort_by: str = Query("name", description="Sort field: 'name', 'year', 'difficulty', 'character_code'"),
+    order: str = Query("asc", description="'asc' or 'desc'"),
+    limit: int = Query(10, ge=1, le=100, description="Items per page (default: 10)"),
+    offset: int = Query(0, ge=0, description="Page starting offset")
+):
+    results = characters
+
+    # Filter by role
     if role:
-        filtered = [c for c in characters if c["role"].lower() == role.lower()]
-        return {
-            "count": len(filtered),
-            "characters": filtered
-        }
-    
+        results = [c for c in results if c["role"].lower() == role.lower()]
+
+    # Sort results
+    reverse = (order.lower() == "desc")
+    if sort_by in ["name", "year", "difficulty", "character_code"]:
+        results = sorted(results, key=lambda x: str(x.get(sort_by, "")).lower(), reverse=reverse)
+
+    # Paginate results
+    total_count = len(results)
+    paginated_results = results[offset : offset + limit]
+
     return {
-        "count": len(characters),
-        "characters": characters
+        "total": total_count,
+        "limit": limit,
+        "offset": offset,
+        "characters": paginated_results
     }
 
 # SEARCH CHARACTERS BY ANY KEYWORD
 @app.get("/characters/search")
-def search_characters(q: str = Query(..., min_length=1)):
+def search_characters(
+    q: str = Query(..., min_length=1),
+    limit: int = Query(10, ge=1, le=100),
+    offset: int = Query(0, ge=0)
+):
     q = q.lower()
-    results = []
+    matched = []
     for c in characters:
         searchable_text = (
             f"{c['character_code']} "
@@ -1646,18 +1676,20 @@ def search_characters(q: str = Query(..., min_length=1)):
             f"{c['perk_1']} "
             f"{c['perk_2']} "
             f"{c['perk_3']} "
-            f"{c['difficulty']}"
+            f"{c['difficulty']} "
+            f"{c.get('power', '')}"
         ).lower()
 
         if q in searchable_text:
-            results.append(c)
-
+            matched.append(c)
+    paginated_results = matched[offset : offset + limit]
     return {
         "query": q,
-        "count": len(results),
-        "results": results
+        "total": len(matched),
+        "limit": limit,
+        "offset": offset,
+        "results": paginated_results
     }
-
 # GET SINGLE CHARACTER BY ID
 @app.get("/characters/{character_id}")
 def get_character(character_id: int):
