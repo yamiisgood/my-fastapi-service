@@ -1,36 +1,66 @@
 const API_URL = "https://my-fastapi-service-gi31.vercel.app/api";
 
-// GET ALL CHARACTERS
-async function loadCharacters() {
+let currentPage = 0;
+const limit = 10;
+let currentRole = "";
+let currentQuery = "";
+
+// GET ALL CHARACTERS (WITH PAGINATION AND OPTIONAL ROLE FILTER)
+async function loadCharacters(page = 0, role = "") {
     try {
-        const response = await fetch(`${API_URL}/characters`);
+        currentPage = page;
+        currentRole = role;
+        currentQuery = ""; // Reset search when loading main list
+        
+        const offset = page * limit;
+        let url = `${API_URL}/characters?limit=${limit}&offset=${offset}`;
+        
+        if (role) {
+            url += `&role=${encodeURIComponent(role)}`;
+        }
+
+        const response = await fetch(url);
         const data = await response.json();
+        
         displayCharacters(data.characters);
+        updatePaginationControls(data.total, page);
     } catch (error) {
-        console.error(error);
+        console.error("Error loading characters:", error);
         const container = document.getElementById("characterList") || document.getElementById("agentList");
         if (container) {
-            container.innerHTML = "Unable to connect to the API.";
+            container.innerHTML = "<p>Unable to connect to the API.</p>";
         }
     }
 }
 
-// DISPLAY CHARACTERS
+// DISPLAY CHARACTERS IN GRID / CARDS
 function displayCharacters(characters) {
     const listContainer = document.getElementById("characterList") || document.getElementById("agentList");
     if (!listContainer) return;
     
     listContainer.innerHTML = "";
 
+    if (!characters || characters.length === 0) {
+        listContainer.innerHTML = "<p>No characters found.</p>";
+        return;
+    }
+
     characters.forEach(character => {
         const card = document.createElement("div");
         card.className = "agent-card";
+        
+        // Display specific power info if present
+        const powerDisplay = character.power && character.power !== "None" 
+            ? `<p><strong>Power:</strong> ${character.power}</p>` 
+            : "";
+
         card.innerHTML = `
             <div class="agent-year">${character.character_code}</div>
             <h3>${character.name} (${character.role})</h3>
             <p class="agent-origin"><strong>Origin:</strong> ${character.origin} | <strong>Realm:</strong> ${character.realm}</p>
             <p><strong>DLC:</strong> ${character.dlc} (${character.year})</p>
-            <p><strong>Perks / Power:</strong> ${character.perk_1}, ${character.perk_2}, ${character.perk_3}</p>
+            ${powerDisplay}
+            <p><strong>Perks:</strong> ${character.perk_1}, ${character.perk_2}, ${character.perk_3}</p>
             <p>${character.description}</p>
             <button onclick="viewCharacter(${character.id})">View Details</button>
         `;
@@ -38,14 +68,21 @@ function displayCharacters(characters) {
     });
 }
 
-// GET ONE CHARACTER (DISPLAY IN MODAL WITH ALL 14 DETAILS)
+// GET SINGLE CHARACTER FOR MODAL VIEW
 async function viewCharacter(id) {
     try {
         const response = await fetch(`${API_URL}/characters/${id}`);
+        if (!response.ok) throw new Error("Character not found");
+
         const character = await response.json();
 
         const modalBody = document.getElementById("modalBody");
         if (!modalBody) return;
+
+        // Render Power conditionally if character is a Killer
+        const powerSection = character.power && character.power !== "None"
+            ? `<p><strong>Power:</strong> ${character.power}</p>`
+            : `<p><strong>Power:</strong> N/A (Survivor)</p>`;
 
         modalBody.innerHTML = `
             <div class="modal-header">
@@ -61,9 +98,10 @@ async function viewCharacter(id) {
             <div class="skills-list" style="margin-top: 1rem;">
                 <p><strong>Realm:</strong> ${character.realm}</p>
                 <p><strong>DLC Chapter:</strong> ${character.dlc}</p>
-                <p><strong>Perk / Power 1:</strong> ${character.perk_1 || 'N/A'}</p>
-                <p><strong>Perk / Power 2:</strong> ${character.perk_2 || 'N/A'}</p>
-                <p><strong>Perk / Power 3:</strong> ${character.perk_3 || 'N/A'}</p>
+                ${powerSection}
+                <p><strong>Perk 1:</strong> ${character.perk_1 || 'N/A'}</p>
+                <p><strong>Perk 2:</strong> ${character.perk_2 || 'N/A'}</p>
+                <p><strong>Perk 3:</strong> ${character.perk_3 || 'N/A'}</p>
             </div>
         `;
 
@@ -72,7 +110,7 @@ async function viewCharacter(id) {
             modal.style.display = "flex";
         }
     } catch (error) {
-        console.error(error);
+        console.error("Error fetching character details:", error);
         alert("Unable to retrieve character details.");
     }
 }
@@ -85,7 +123,7 @@ function closeModal() {
     }
 }
 
-// CLOSE MODAL WHEN CLICKING OUTSIDE BOX
+// CLOSE MODAL WHEN CLICKING OUTSIDE BOUNDS
 window.onclick = function(event) {
     const modal = document.getElementById("agentModal") || document.getElementById("characterModal");
     if (modal && event.target === modal) {
@@ -94,25 +132,54 @@ window.onclick = function(event) {
 };
 
 // SEARCH CHARACTERS
-async function searchCharacters() {
+async function searchCharacters(page = 0) {
     const searchInput = document.getElementById("searchInput");
-    const query = searchInput ? searchInput.value : "";
+    const query = searchInput ? searchInput.value.trim() : "";
     
     if (!query) {
-        loadCharacters();
+        loadCharacters(0, currentRole);
         return;
     }
+
     try {
-        const response = await fetch(`${API_URL}/characters/search?q=${encodeURIComponent(query)}`);
+        currentPage = page;
+        currentQuery = query;
+        const offset = page * limit;
+
+        const response = await fetch(`${API_URL}/characters/search?q=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`);
         const data = await response.json();
+        
         displayCharacters(data.results);
+        updatePaginationControls(data.total, page);
     } catch (error) {
-        console.error(error);
+        console.error("Search failed:", error);
         alert("Search failed.");
     }
 }
 
-// ALIAS FUNCTIONS FOR BACKWARD COMPATIBILITY WITH EXISTING HTML
+// OPTIONAL: PAGINATION UI CONTROLLER (Updates pagination buttons if present in your DOM)
+function updatePaginationControls(totalItems, page) {
+    const paginationContainer = document.getElementById("paginationContainer");
+    if (!paginationContainer) return;
+
+    const totalPages = Math.ceil(totalItems / limit);
+    
+    paginationContainer.innerHTML = `
+        <button ${page === 0 ? 'disabled' : ''} onclick="changePage(${page - 1})">Previous</button>
+        <span>Page ${page + 1} of ${totalPages || 1}</span>
+        <button ${(page + 1) >= totalPages ? 'disabled' : ''} onclick="changePage(${page + 1})">Next</button>
+    `;
+}
+
+function changePage(newPage) {
+    if (currentQuery) {
+        searchCharacters(newPage);
+    } else {
+        loadCharacters(newPage, currentRole);
+    }
+}
+
+// BACKWARD COMPATIBILITY ALIASES
 function searchAgents() {
     searchCharacters();
 }
@@ -125,5 +192,5 @@ function viewAgent(id) {
     viewCharacter(id);
 }
 
-// INITIAL LOAD
+// INITIALIZATION
 loadCharacters();
