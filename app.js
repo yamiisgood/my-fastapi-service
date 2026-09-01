@@ -5,6 +5,15 @@ const limit = 10;
 let currentRole = "";
 let currentQuery = "";
 
+// Helper options to disable browser and edge caching
+const fetchOptions = {
+    cache: "no-store",
+    headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache"
+    }
+};
+
 // GET ALL CHARACTERS
 async function loadCharacters(page = 0, role = "") {
     try {
@@ -19,7 +28,7 @@ async function loadCharacters(page = 0, role = "") {
             url += `&role=${encodeURIComponent(role)}`;
         }
 
-        const response = await fetch(url);
+        const response = await fetch(url, fetchOptions);
         const data = await response.json();
         
         displayCharacters(data.characters);
@@ -70,7 +79,7 @@ function displayCharacters(characters) {
 // GET SINGLE CHARACTER FOR MODAL
 async function viewCharacter(id) {
     try {
-        const response = await fetch(`${API_URL}/characters/${id}`);
+        const response = await fetch(`${API_URL}/characters/${id}`, fetchOptions);
         if (!response.ok) throw new Error("Character not found");
 
         const character = await response.json();
@@ -136,7 +145,10 @@ async function searchCharacters(page = 0) {
         currentQuery = query;
         const offset = currentPage * limit;
 
-        const response = await fetch(`${API_URL}/characters/search?q=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`);
+        const response = await fetch(
+            `${API_URL}/characters/search?q=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`,
+            fetchOptions
+        );
         const data = await response.json();
         
         displayCharacters(data.results);
@@ -171,6 +183,11 @@ function changePage(newPage) {
         loadCharacters(newPage, currentRole);
     }
 }
+
+// BACKWARD COMPATIBILITY ALIASES
+function searchAgents() { searchCharacters(); }
+function loadAgents() { loadCharacters(); }
+function viewAgent(id) { viewCharacter(id); }
 
 // INITIAL LOAD
 loadCharacters(0);
