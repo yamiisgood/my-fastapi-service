@@ -1,11 +1,10 @@
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Dead by Daylight Character Directory API",
-    description="A REST API containing all 54 Survivors and 44 Killers in Dead by Daylight with 14 unique fields each.",
-    version="2.0.0",
-    root_path="/api"
+    description="A REST API containing all Survivors and Killers in Dead by Daylight with 14 unique fields each.",
+    version="2.0.0"
 )
 
 app.add_middleware(
@@ -18,7 +17,7 @@ app.add_middleware(
 
 characters = [
     # =========================================================================
-    # SURVIVORS (54 TOTAL)
+    # SURVIVORS
     # =========================================================================
     {
         "id": 1,
@@ -34,6 +33,7 @@ characters = [
         "perk_2": "Prove Thyself",
         "perk_3": "Leader",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A nervous leader whose perks help allies locate one another and increase team repair and action efficiency."
     },
     {
@@ -50,6 +50,7 @@ characters = [
         "perk_2": "Sprint Burst",
         "perk_3": "Adrenaline",
         "difficulty": "Easy",
+        "power": "None",
         "description": "An energetic athlete capable of outrunning danger, vaulting silently, and escaping high-pressure chases."
     },
     {
@@ -66,6 +67,7 @@ characters = [
         "perk_2": "Botany Knowledge",
         "perk_3": "Self-Care",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A studious botanist who uses her knowledge to heal herself and her teammates with high efficiency."
     },
     {
@@ -82,6 +84,7 @@ characters = [
         "perk_2": "Calm Spirit",
         "perk_3": "Saboteur",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A solitary survivalist capable of sabotaging meat hooks quietly and staying calm under intense pressure."
     },
     {
@@ -98,6 +101,7 @@ characters = [
         "perk_2": "Urban Evasion",
         "perk_3": "Streetwise",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "An urban artist skilled in stealth, crouch-walking quickly, and landing safely from extreme heights."
     },
     {
@@ -114,6 +118,7 @@ characters = [
         "perk_2": "Object of Obsession",
         "perk_3": "Decisive Strike",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A resilient survivor whose determination allows her to become the Killer's Obsession and break free from grasps."
     },
     {
@@ -130,6 +135,7 @@ characters = [
         "perk_2": "Up the Ante",
         "perk_3": "Ace in the Hole",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A lucky gambler who boosts aura reading ranges and increases luck and chest add-on quality for the team."
     },
     {
@@ -146,6 +152,7 @@ characters = [
         "perk_2": "Borrowed Time",
         "perk_3": "Unbreakable",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A tough military veteran accustomed to sacrificing himself for the group and picking himself up from dying states."
     },
     {
@@ -162,6 +169,7 @@ characters = [
         "perk_2": "Lithe",
         "perk_3": "Alert",
         "difficulty": "Easy",
+        "power": "None",
         "description": "An esports competitor who repairs generators quietly, gains speed when vaulting, and tracks Killer actions."
     },
     {
@@ -178,6 +186,7 @@ characters = [
         "perk_2": "Dead Hard",
         "perk_3": "No Mither",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A rugged brawler who takes hits for his teammates, pushes through injuries, and withstands fatal blows."
     },
     {
@@ -194,6 +203,7 @@ characters = [
         "perk_2": "Pharmacy",
         "perk_3": "Vigil",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "A sleepy survivor who opens exit gates faster, loots med-kits reliably, and reduces status effect durations."
     },
     {
@@ -210,6 +220,7 @@ characters = [
         "perk_2": "Detective's Intuition",
         "perk_3": "Stake Out",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "An obsessed detective who crawls quickly while recovering and tracks objective auras after generator completions."
     },
     {
@@ -226,6 +237,7 @@ characters = [
         "perk_2": "Windows of Opportunity",
         "perk_3": "Boil Over",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A hopeful songbird who tracks vault and pallet auras and fiercely resists being carried to hooks."
     },
     {
@@ -242,6 +254,7 @@ characters = [
         "perk_2": "Deliverance",
         "perk_3": "Autodidact",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A resourceful teacher capable of distracting Killers with pebbles and unhooking himself securely."
     },
     {
@@ -258,6 +271,7 @@ characters = [
         "perk_2": "Aftercare",
         "perk_3": "Distortion",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A quiet artist whose perks break hooks upon escape, show team auras, and hide his own from the Killer."
     },
     {
@@ -274,6 +288,7 @@ characters = [
         "perk_2": "Poised",
         "perk_3": "Head On",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "An influential talk show host who heals while healing others, hides scratch marks on generator completions, and stuns Killers out of lockers."
     },
     {
@@ -290,6 +305,7 @@ characters = [
         "perk_2": "Buckle Up",
         "perk_3": "Mettle of Man",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A legendary demon hunter who converts recovery progress to wiggle progress and absorbs fatal blows."
     },
     {
@@ -306,6 +322,7 @@ characters = [
         "perk_2": "Fixated",
         "perk_3": "Better Together",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A headstrong journalist who heals herself by cleansing totems, sees her own scratch marks, and highlights generators for nearby allies."
     },
     {
@@ -322,6 +339,7 @@ characters = [
         "perk_2": "Camaraderie",
         "perk_3": "Second Wind",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "A protective former popular kid who pauses hook struggle timers and hides unhooked teammates' pools of blood and scratch marks."
     },
     {
@@ -338,6 +356,7 @@ characters = [
         "perk_2": "Any Means Necessary",
         "perk_3": "Breakout",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A hardened street racer who resets dropped pallets, hides her pools of blood when injured, and aids wiggling allies."
     },
     {
@@ -354,6 +373,7 @@ characters = [
         "perk_2": "Red Herring",
         "perk_3": "For the People",
         "difficulty": "Hard",
+        "power": "None",
         "description": "An independent filmmaker capable of instantly healing others at her own expense and masking her aura after being unhooked."
     },
     {
@@ -370,6 +390,7 @@ characters = [
         "perk_2": "Blood Pact",
         "perk_3": "Repressed Alliance",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A resilient young woman who blocks generators from the Killer's regression using the Entity and gains endurance after healing."
     },
     {
@@ -386,6 +407,7 @@ characters = [
         "perk_2": "Desperate Measures",
         "perk_3": "Built to Last",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A brilliant architect who refills depleted item charges inside lockers and gains speed boosts to actions based on injured allies."
     },
     {
@@ -402,6 +424,7 @@ characters = [
         "perk_2": "Deception",
         "perk_3": "Power Struggle",
         "difficulty": "Hard",
+        "power": "None",
         "description": "An occult investigator who rummages through opened chests, fakes locker entries, and drops pallets on the Killer while being carried."
     },
     {
@@ -418,6 +441,7 @@ characters = [
         "perk_2": "Smash Hit",
         "perk_3": "Self-Preservation",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A self-serving music producer who benefits from her teammates' misfortunes, gaining generator tokens and sprint bursts from pallet stuns."
     },
     {
@@ -434,6 +458,7 @@ characters = [
         "perk_2": "Resurgence",
         "perk_3": "Blast Mine",
         "difficulty": "Easy",
+        "power": "None",
         "description": "An elite police operative who cleanses totems rapidly, regains instant healing progress upon unhooking, and traps generators with blinding mines."
     },
     {
@@ -450,6 +475,7 @@ characters = [
         "perk_2": "Flashbang",
         "perk_3": "Rookie Spirit",
         "difficulty": "Easy",
+        "power": "None",
         "description": "An idealistic rookie cop who completely silences his healing sounds and crafts blinding flashbang grenades inside lockers."
     },
     {
@@ -466,6 +492,7 @@ characters = [
         "perk_2": "Boon: Circle of Healing",
         "perk_3": "Boon: Shadow Step",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "A modern witch who blesses totems to create areas where survivors can heal quickly and hide their scratch marks."
     },
     {
@@ -482,6 +509,7 @@ characters = [
         "perk_2": "Corrective Action",
         "perk_3": "Boon: Exponential",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A brilliant codebreaker who extends hit speed bursts and creates a recovery oasis for downed allies using Boon totems."
     },
     {
@@ -498,6 +526,7 @@ characters = [
         "perk_2": "Empathic Connection",
         "perk_3": "Boon: Dark Theory",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "A psychic marine biologist who completely hides blood, scratches, and grunts after stunning a killer, and blesses totems to grant speed boosts."
     },
     {
@@ -514,6 +543,7 @@ characters = [
         "perk_2": "Residual Manifest",
         "perk_3": "Overzealous",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A psychic podcaster who sees nearby ally scratch marks, blinds Killers to inflict blindness, and increases repair speed after cleansing totems."
     },
     {
@@ -530,6 +560,7 @@ characters = [
         "perk_2": "Reactive Healing",
         "perk_3": "Low Profile",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A secretive spy who installs camera wiretaps on generators, heals instantly when nearby allies are hit, and hides traces when the lone survivor."
     },
     {
@@ -546,6 +577,7 @@ characters = [
         "perk_2": "Hyperfocus",
         "perk_3": "Reassurance",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A young prodigy medic who pauses the sacrifice timer of hooked allies and rewards rapid consecutive Great Skill Checks with huge repair bursts."
     },
     {
@@ -562,6 +594,7 @@ characters = [
         "perk_2": "Fogwise",
         "perk_3": "Quick Gambit",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "An ancient, arcane scholar who stores generator progression to instantly dump it elsewhere and reveals the Killer during Great Skill Checks."
     },
     {
@@ -578,6 +611,7 @@ characters = [
         "perk_2": "Friendly Competition",
         "perk_3": "Teamwork: Power of Two",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A community-focused kite fighter whose perks reward group generator repairs and synchronized vault maneuvers during chases."
     },
     {
@@ -594,6 +628,7 @@ characters = [
         "perk_2": "Background Player",
         "perk_3": "Teamwork: Collective Stealth",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A calm analyst who activates massive sprint bursts when the killer picks up an ally and can force exhaustion recovery at the cost of health."
     },
     {
@@ -610,6 +645,7 @@ characters = [
         "perk_2": "Made for This",
         "perk_3": "Scavenger",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "A cloned starship technician who runs faster when injured, reveals the highest-progress generator during chases, and recycles depleted toolboxes."
     },
     {
@@ -626,6 +662,7 @@ characters = [
         "perk_2": "Scene Partner",
         "perk_3": "Plot Twist",
         "difficulty": "Hard",
+        "power": "None",
         "description": "An eccentric movie superstar who can scream to read killer auras, fake his own death to completely heal from the dying state, and gain random items."
     },
     {
@@ -642,6 +679,7 @@ characters = [
         "perk_2": "Chemical Trap",
         "perk_3": "Light-Footed",
         "difficulty": "Easy",
+        "power": "None",
         "description": "An iron-willed space survivor who suppresses her footsteps while healthy and installs slowing chemical traps onto dropped pallets."
     },
     {
@@ -658,6 +696,7 @@ characters = [
         "perk_2": "Boon: Illumination",
         "perk_3": "Deadline",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "A tormented writer who runs faster while shining flashlights, inflicts slowed movement on blinded killers, and alters skill check frequencies."
     },
     {
@@ -674,6 +713,7 @@ characters = [
         "perk_2": "Strength in Shadows",
         "perk_3": "Wicked",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A gothic alternative girl who performs dark invocations inside the basement to trade her health for permanent match-wide generator repair progress."
     },
     {
@@ -690,6 +730,7 @@ characters = [
         "perk_2": "Bardic Inspiration",
         "perk_3": "Still Sight",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "An elven bard who casts illusory copies of herself on objectives and plays dice roll musical melodies to boost team performance."
     },
     {
@@ -706,6 +747,7 @@ characters = [
         "perk_2": "Hardened",
         "perk_3": "Specialist",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A legendary archaeologist who executes high-speed window vaults while healthy, bypasses screams, and permanently drops max generator requirements."
     },
     {
@@ -722,6 +764,7 @@ characters = [
         "perk_2": "Exultation",
         "perk_3": "Moment of Glory",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A battle-hardened monster hunter who extends killer aura reveal durations and upgrades his current item tier upon stunning the killer."
     },
     {
@@ -738,6 +781,7 @@ characters = [
         "perk_2": "Boon: Dark Sanctum",
         "perk_3": "Hard Bargain",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "A resourceful engineer capable of creating fake audio distractions on incomplete generators and protecting broken totems."
     },
     {
@@ -754,6 +798,7 @@ characters = [
         "perk_2": "Break the Ice",
         "perk_3": "Heavy Footing",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A heavy-set industrial worker whose perks allow him to instantly break out of traps and trade stealth for fast unhooking speed."
     },
     {
@@ -770,6 +815,7 @@ characters = [
         "perk_2": "Come and Get Me!",
         "perk_3": "Teamwork: Toughen Up",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A tactical former sheriff who crafts fragile temporary replacement pallets out of destroyed loops and draws killer aggro away from injured team members."
     },
     {
@@ -786,6 +832,7 @@ characters = [
         "perk_2": "Last Stand",
         "perk_3": "Teamwork: Throw Down",
         "difficulty": "Hard",
+        "power": "None",
         "description": "A fearless katana survivor who triggers high-stakes, single-use window stuns, picks herself up from the dying state, and grants defensive buffs."
     },
     {
@@ -802,6 +849,7 @@ characters = [
         "perk_2": "ONE-TWO-THREE-FOUR!",
         "perk_3": "Ghost Notes",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "An energetic punk rock drummer who utilizes rhythm performance actions to trigger team skill check bursts and slips out of loops with advanced stealth."
     },
     {
@@ -818,6 +866,7 @@ characters = [
         "perk_2": "Cosmic Link",
         "perk_3": "Astral Projection",
         "difficulty": "Hard",
+        "power": "None",
         "description": "An otherworldly astronaut who marks physical navigation points on the map and channels short distances to pass directly through solid tile walls."
     },
     {
@@ -834,6 +883,7 @@ characters = [
         "perk_2": "Data Siphon",
         "perk_3": "Grid runner",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "A tech-renegade runner who hacks generator terminals to steal progress back from the killer and gains speed when stepping over electronic wire traps."
     },
     {
@@ -850,6 +900,7 @@ characters = [
         "perk_2": "Mirage Step",
         "perk_3": "Oasis Refresh",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A rugged desert archeologist who masks his visual pathing footprint by leaving behind decoys and rapidly cleanses hex totems using specialized tools."
     },
     {
@@ -866,6 +917,7 @@ characters = [
         "perk_2": "Psychotherapy",
         "perk_3": "Deep Breath",
         "difficulty": "Easy",
+        "power": "None",
         "description": "A mental health physician who limits the build-up of hallucination affliction effects and stabilizes terrified status conditions of near teammates."
     },
     {
@@ -882,6 +934,7 @@ characters = [
         "perk_2": "Counter Strike",
         "perk_3": "Endurance Test",
         "difficulty": "Intermediate",
+        "power": "None",
         "description": "An underground street brawler who temporarily withstands exposed damage effects and safely breaks killer window traps through raw physical stamina."
     },
 
@@ -1313,7 +1366,7 @@ characters = [
         "power": "Summons of Pain",
         "description": "A global harassment killer (Pinhead) who shoots guided gateway hooks to tie down survivors, forcing them to find a puzzle box to halt constant passive chain attacks."
     },
-   {
+    {
         "id": 80,
         "name": "The Artist",
         "character_code": "K26",
@@ -1602,36 +1655,46 @@ characters = [
         "power": "Divine Condemned",
         "description": "A punishing celestial entity that casts down columns of divine light to brand survivors with Heresy, allowing it to banish downed heretics straight into the grueling trial of Exile."
     }
+]
 
-   
+
+# Helper function to prevent client caching on Vercel
+def set_no_cache_headers(response: Response):
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+
 
 # =========================================================================
 # API ENDPOINTS
 # =========================================================================
 
 @app.get("/")
-def home():
+def home(response: Response):
+    set_no_cache_headers(response)
     return {
         "message": "Welcome to the Dead by Daylight Character Directory API!",
         "total_characters": len(characters),
         "survivors_count": len([c for c in characters if c["role"] == "Survivor"]),
         "killers_count": len([c for c in characters if c["role"] == "Killer"]),
         "endpoints": [
-            "/api/characters",
-            "/api/characters/{character_id}",
-            "/api/characters/search"
+            "/characters",
+            "/characters/{character_id}",
+            "/characters/search"
         ]
     }
 
 # GET ALL CHARACTERS (WITH ROLE FILTER, PAGINATION, AND SORTING)
 @app.get("/characters")
 def get_characters(
+    response: Response,
     role: str = Query(None, description="Filter by 'Survivor' or 'Killer'"),
     sort_by: str = Query("name", description="Sort field: 'name', 'year', 'difficulty', 'character_code'"),
     order: str = Query("asc", description="'asc' or 'desc'"),
     limit: int = Query(10, ge=1, le=100, description="Items per page (default: 10)"),
     offset: int = Query(0, ge=0, description="Page starting offset")
 ):
+    set_no_cache_headers(response)
     results = characters
 
     # Filter by role
@@ -1657,10 +1720,12 @@ def get_characters(
 # SEARCH CHARACTERS BY ANY KEYWORD
 @app.get("/characters/search")
 def search_characters(
+    response: Response,
     q: str = Query(..., min_length=1),
     limit: int = Query(10, ge=1, le=100),
     offset: int = Query(0, ge=0)
 ):
+    set_no_cache_headers(response)
     q = q.lower()
     matched = []
     for c in characters:
@@ -1682,6 +1747,7 @@ def search_characters(
 
         if q in searchable_text:
             matched.append(c)
+            
     paginated_results = matched[offset : offset + limit]
     return {
         "query": q,
@@ -1690,9 +1756,11 @@ def search_characters(
         "offset": offset,
         "results": paginated_results
     }
+
 # GET SINGLE CHARACTER BY ID
 @app.get("/characters/{character_id}")
-def get_character(character_id: int):
+def get_character(character_id: int, response: Response):
+    set_no_cache_headers(response)
     for c in characters:
         if c["id"] == character_id:
             return c
