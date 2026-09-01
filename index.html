@@ -3,55 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dead by Daylight Character Directory</title>
+    <title>Dead by Daylight Character Directory — The Fog Wiki</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>🩸 Dead by Daylight Directory</h1>
-        <p>A website powered by a REST API</p>
+
+    <header class="site-header">
+        <div class="masthead-inner">
+            <div class="wordmark">
+                <h1>The Fog Wiki</h1>
+                <span class="tagline">a Dead by Daylight character directory</span>
+            </div>
+        </div>
     </header>
-    <main>
-        <!-- SEARCH & FILTER SECTION -->
-        <section class="search">
-            <input type="text" id="searchInput" placeholder="Search survivors, killers, powers, perks, or realms...">
-            <button onclick="searchCharacters(0)"> Search </button>
-            <button class="secondary" onclick="loadCharacters(0, '')"> Show All </button>
-            
-            <!-- ROLE FILTERS -->
-            <div class="role-filters" style="margin-top: 1rem;">
-                <button class="filter-btn" onclick="loadCharacters(0, 'Survivor')"> Survivors </button>
-                <button class="filter-btn" onclick="loadCharacters(0, 'Killer')"> Killers </button>
-            </div>
-        </section>
 
-        <!-- CHARACTERS GRID SECTION -->
-        <section>
-            <h2>Survivors & Killers</h2>
-            <div id="characterList" class="agent-list">
-                Loading characters...
-            </div>
+    <div class="tab-bar">
+        <div class="tab-bar-inner">
+            <button class="active" onclick="loadCharacters(0, '')">Article</button>
+            <button onclick="loadCharacters(0, 'Survivor')">Survivors</button>
+            <button onclick="loadCharacters(0, 'Killer')">Killers</button>
+        </div>
+    </div>
 
-            <!-- PAGINATION CONTROLS -->
-            <div id="paginationContainer" class="pagination" style="margin-top: 1.5rem; text-align: center;">
-                <!-- Dynamic Pagination Buttons Load Here -->
-            </div>
-        </section>
-    </main>
+    <div class="page-frame">
+
+        <nav class="wiki-sidebar">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#" onclick="loadCharacters(0, ''); return false;">All characters</a></li>
+                <li><a href="#" onclick="loadCharacters(0, 'Survivor'); return false;">Survivors</a></li>
+                <li><a href="#" onclick="loadCharacters(0, 'Killer'); return false;">Killers</a></li>
+            </ul>
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">What is DBD?</a></li>
+                <li><a href="#">Chapters &amp; DLC</a></li>
+                <li><a href="#">Realms</a></li>
+            </ul>
+            <h3>Tools</h3>
+            <ul>
+                <li><a href="#">What links here</a></li>
+                <li><a href="#">Random character</a></li>
+                <li><a href="#">Cite this page</a></li>
+            </ul>
+        </nav>
+
+        <main class="wiki-content">
+
+            <p class="breadcrumb">The Fog Wiki &rsaquo; Directory</p>
+            <h2 class="page-title">Survivors and Killers</h2>
+
+            <p class="hatnote">
+                This directory lists every Survivor and Killer currently featured in <em>Dead by Daylight</em>,
+                sourced from a REST API. Use the search box or the role links in the sidebar to narrow the list.
+            </p>
+
+            <section class="search">
+                <div class="search-controls">
+                    <input type="text" id="searchInput" placeholder="Search survivors, killers, powers, perks, or realms...">
+                    <button onclick="searchCharacters(0)">Search</button>
+                    <button class="secondary" onclick="loadCharacters(0, '')">Show all</button>
+                </div>
+
+                <div class="role-filters">
+                    <button class="filter-btn" onclick="loadCharacters(0, 'Survivor')">Survivors</button>
+                    <button class="filter-btn" onclick="loadCharacters(0, 'Killer')">Killers</button>
+                </div>
+            </section>
+
+            <section>
+                <h2>Character list</h2>
+                <div id="characterList" class="agent-list">
+                    Loading characters&hellip;
+                </div>
+
+                <div id="paginationContainer" class="pagination">
+                    <!-- Dynamic pagination buttons load here -->
+                </div>
+            </section>
+
+        </main>
+    </div>
 
     <!-- CHARACTER DETAILS MODAL -->
     <div id="characterModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <div id="modalBody">
-                <!-- Dynamic Character Details Load Here -->
+                <!-- Dynamic character details load here -->
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Data provided by the Dead by Daylight Character API</p>
+        <p>Content sourced from the Dead by Daylight Character API. Not affiliated with Behaviour Interactive.</p>
+        <p>This page was last generated on page load.</p>
     </footer>
+
     <script src="app.js"></script>
 </body>
 </html>
