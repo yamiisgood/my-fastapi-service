@@ -1,3 +1,7 @@
+/* =========================================================================
+   DEAD BY DAYLIGHT DIRECTORY — Wikipedia (Vector skin) styling
+   ========================================================================= */
+
 :root {
   --wiki-bg: #ffffff;
   --wiki-sidebar-bg: #f8f9fa;
@@ -14,17 +18,17 @@
   --serif: Georgia, "Linux Libertine", "Times New Roman", Times, serif;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
- 
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
- 
+
 html {
   font-size: 14px;
 }
- 
+
 body {
   background-color: #f6f6f6;
   color: var(--wiki-text);
@@ -34,21 +38,21 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
- 
+
 a {
   color: var(--wiki-link);
 }
- 
+
 /* =========================================================================
    MASTHEAD
    ========================================================================= */
- 
+
 header.site-header {
   background: var(--wiki-bg);
   border-bottom: 1px solid var(--wiki-border);
   padding: 0.6rem 1.5rem;
 }
- 
+
 .masthead-inner {
   max-width: 1180px;
   margin: 0 auto;
@@ -58,37 +62,39 @@ header.site-header {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
- 
+
 .wordmark {
   display: flex;
   align-items: baseline;
   gap: 0.6rem;
 }
- 
+
 header h1 {
   font-family: var(--serif);
   font-size: 1.85rem;
   font-weight: normal;
   color: var(--wiki-text);
   letter-spacing: normal;
+  animation: masthead-in 0.5s ease-out;
 }
- 
+
 header .tagline {
   font-family: var(--serif);
   font-style: italic;
   font-size: 0.85rem;
   color: var(--wiki-text-muted);
+  animation: masthead-in 0.5s ease-out 0.1s backwards;
 }
- 
+
 /* =========================================================================
    TAB / SUBNAV BAR (article tabs, like "Read / Talk")
    ========================================================================= */
- 
+
 .tab-bar {
   background: var(--wiki-tab-bg);
   border-bottom: 1px solid var(--wiki-border);
 }
- 
+
 .tab-bar-inner {
   max-width: 1180px;
   margin: 0 auto;
@@ -96,7 +102,7 @@ header .tagline {
   gap: 0.25rem;
   padding: 0 1.5rem;
 }
- 
+
 .tab-bar-inner button {
   background: transparent;
   border: 1px solid transparent;
@@ -107,11 +113,11 @@ header .tagline {
   color: var(--wiki-link);
   cursor: pointer;
 }
- 
+
 .tab-bar-inner button:hover {
   text-decoration: underline;
 }
- 
+
 .tab-bar-inner button.active {
   background: var(--wiki-bg);
   border-color: var(--wiki-border);
@@ -120,11 +126,11 @@ header .tagline {
   position: relative;
   top: 1px;
 }
- 
+
 /* =========================================================================
    PAGE FRAME (sidebar + content, like Vector skin)
    ========================================================================= */
- 
+
 .page-frame {
   max-width: 1180px;
   margin: 0 auto;
@@ -135,9 +141,9 @@ header .tagline {
   border-left: 1px solid var(--wiki-border);
   border-right: 1px solid var(--wiki-border);
 }
- 
+
 /* SIDEBAR */
- 
+
 .wiki-sidebar {
   width: 190px;
   flex-shrink: 0;
@@ -146,7 +152,7 @@ header .tagline {
   padding: 1.25rem 0.9rem;
   font-size: 0.8rem;
 }
- 
+
 .wiki-sidebar h3 {
   font-family: var(--sans);
   font-size: 0.75rem;
@@ -157,42 +163,42 @@ header .tagline {
   margin-bottom: 0.5rem;
   margin-top: 1.25rem;
 }
- 
+
 .wiki-sidebar h3:first-child {
   margin-top: 0;
 }
- 
+
 .wiki-sidebar ul {
   list-style: none;
 }
- 
+
 .wiki-sidebar li {
   margin-bottom: 0.35rem;
 }
- 
+
 .wiki-sidebar a {
   color: var(--wiki-link);
   text-decoration: none;
 }
- 
+
 .wiki-sidebar a:hover {
   text-decoration: underline;
 }
- 
+
 /* MAIN CONTENT COLUMN */
- 
+
 main.wiki-content {
   flex: 1;
   padding: 1.5rem 2rem 3rem;
   min-width: 0;
 }
- 
+
 .breadcrumb {
   font-size: 0.78rem;
   color: var(--wiki-text-muted);
   margin-bottom: 0.5rem;
 }
- 
+
 main.wiki-content > h2.page-title {
   font-family: var(--serif);
   font-size: 1.9rem;
@@ -201,7 +207,7 @@ main.wiki-content > h2.page-title {
   padding-bottom: 0.35rem;
   margin-bottom: 0.75rem;
 }
- 
+
 .hatnote {
   font-family: var(--serif);
   font-style: italic;
@@ -211,23 +217,23 @@ main.wiki-content > h2.page-title {
   border-left: 3px solid var(--wiki-border);
   margin-bottom: 1.25rem;
 }
- 
+
 /* =========================================================================
    SEARCH / FILTER CONTROLS
    ========================================================================= */
- 
+
 .search {
   display: block;
   margin-bottom: 1.5rem;
 }
- 
+
 .search-controls {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
 }
- 
+
 .search input {
   font-family: var(--sans);
   background-color: #ffffff;
@@ -238,13 +244,14 @@ main.wiki-content > h2.page-title {
   width: 300px;
   max-width: 100%;
   outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
- 
+
 .search input:focus {
   border-color: #3366cc;
   box-shadow: 0 0 0 1px #3366cc;
 }
- 
+
 .search button {
   font-family: var(--sans);
   background: #f8f9fa;
@@ -253,41 +260,43 @@ main.wiki-content > h2.page-title {
   padding: 0.45rem 0.9rem;
   font-size: 0.85rem;
   cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
- 
+
 .search button:hover {
   background: #eaecf0;
   border-color: #72777d;
 }
- 
+
 .search button.secondary {
   color: var(--wiki-text-muted);
 }
- 
+
 .role-filters {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   margin-top: 0.75rem !important;
 }
- 
+
 .role-filters .filter-btn {
   background: #ffffff;
   border: 1px solid var(--wiki-border);
   color: var(--wiki-link);
   font-size: 0.8rem;
   padding: 0.35rem 0.85rem;
+  transition: background-color 0.15s ease;
 }
- 
+
 .role-filters .filter-btn:hover {
   background: #eaf3ff;
   text-decoration: underline;
 }
- 
+
 /* =========================================================================
    SECTION HEADER
    ========================================================================= */
- 
+
 h2 {
   font-family: var(--serif);
   font-size: 1.5rem;
@@ -297,18 +306,18 @@ h2 {
   margin-bottom: 1rem;
   color: var(--wiki-text);
 }
- 
+
 /* =========================================================================
    CHARACTER GRID — infobox-styled cards
    ========================================================================= */
- 
+
 .agent-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.25rem;
   padding-bottom: 1rem;
 }
- 
+
 .agent-card {
   background: var(--wiki-bg);
   border: 1px solid var(--wiki-border);
@@ -316,8 +325,15 @@ h2 {
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
- 
+
+.agent-card:hover {
+  border-color: #3366cc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
 .agent-card .agent-year {
   position: static;
   order: -1;
@@ -329,7 +345,7 @@ h2 {
   color: var(--wiki-text);
   letter-spacing: 0.5px;
 }
- 
+
 .agent-card h3 {
   font-family: var(--serif);
   font-size: 1.15rem;
@@ -337,25 +353,25 @@ h2 {
   color: var(--wiki-text);
   padding: 0.6rem 0.9rem 0.2rem;
 }
- 
+
 .agent-card .agent-origin {
   color: var(--wiki-text-muted);
   font-size: 0.78rem;
   padding: 0 0.9rem 0.5rem;
   border-bottom: 1px solid var(--wiki-border-light);
 }
- 
+
 .agent-card p {
   font-size: 0.82rem;
   line-height: 1.5;
   color: var(--wiki-text);
   padding: 0.3rem 0.9rem;
 }
- 
+
 .agent-card p strong {
   color: var(--wiki-text);
 }
- 
+
 .agent-card button {
   margin: 0.6rem 0.9rem 0.9rem;
   align-self: flex-start;
@@ -365,17 +381,18 @@ h2 {
   padding: 0.4rem 0.8rem;
   font-size: 0.78rem;
   cursor: pointer;
+  transition: background-color 0.15s ease;
 }
- 
+
 .agent-card button:hover {
   background: #eaf3ff;
   text-decoration: underline;
 }
- 
+
 /* =========================================================================
    PAGINATION — Wikipedia-style prev/next links
    ========================================================================= */
- 
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -384,7 +401,7 @@ h2 {
   padding: 1rem 0 2rem;
   font-size: 0.85rem;
 }
- 
+
 .pagination button {
   background: none;
   border: none;
@@ -393,24 +410,24 @@ h2 {
   font-size: 0.85rem;
   padding: 0.2rem 0.4rem;
 }
- 
+
 .pagination button:hover:not(:disabled) {
   text-decoration: underline;
 }
- 
+
 .pagination button:disabled {
   color: var(--wiki-text-muted);
   cursor: not-allowed;
 }
- 
+
 .pagination span {
   color: var(--wiki-text-muted);
 }
- 
+
 /* =========================================================================
    MODAL — styled as a wiki page popup / preview
    ========================================================================= */
- 
+
 .modal {
   display: none;
   position: fixed;
@@ -425,7 +442,7 @@ h2 {
   overflow-y: auto;
   padding: 3rem 1rem;
 }
- 
+
 .modal-content {
   background-color: var(--wiki-bg);
   border: 1px solid var(--wiki-border);
@@ -435,8 +452,9 @@ h2 {
   position: relative;
   color: var(--wiki-text);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  animation: modal-pop 0.18s ease-out;
 }
- 
+
 .close-btn {
   position: absolute;
   top: 0.75rem;
@@ -447,17 +465,17 @@ h2 {
   cursor: pointer;
   line-height: 1;
 }
- 
+
 .close-btn:hover {
   color: var(--wiki-link);
 }
- 
+
 .modal-header {
   border-bottom: 1px solid var(--wiki-border);
   padding-bottom: 0.6rem;
   margin-bottom: 0.85rem;
 }
- 
+
 .modal-header h2 {
   font-family: var(--serif);
   border: none;
@@ -465,50 +483,76 @@ h2 {
   margin-bottom: 0.15rem;
   font-size: 1.5rem;
 }
- 
+
 .modal-header .agent-origin {
   border: none;
   padding: 0;
   color: var(--wiki-text-muted);
   font-size: 0.82rem;
 }
- 
+
 #modalBody > p {
   font-size: 0.9rem;
   line-height: 1.6;
   margin-top: 0.75rem;
 }
- 
+
 .skills-list {
   background: var(--wiki-infobox-bg);
   border: 1px solid var(--wiki-border);
   padding: 0.85rem 1rem;
   margin: 1rem 0 0;
 }
- 
+
 .skills-list p {
   margin-bottom: 0.4rem;
   font-size: 0.85rem;
   border-bottom: 1px solid var(--wiki-border-light);
   padding-bottom: 0.4rem;
 }
- 
+
 .skills-list p:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
- 
+
 .skills-list p strong {
   color: var(--wiki-text);
   display: inline-block;
   min-width: 110px;
 }
- 
+
+/* =========================================================================
+   KEYFRAMES
+   ========================================================================= */
+
+@keyframes masthead-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 /* =========================================================================
    FOOTER
    ========================================================================= */
- 
+
 footer {
   width: 100%;
   text-align: center;
@@ -518,7 +562,7 @@ footer {
   color: var(--wiki-text-muted);
   font-size: 0.78rem;
 }
- 
+
 footer p {
   margin: 0.15rem 0;
 }
