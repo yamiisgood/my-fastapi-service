@@ -5,7 +5,6 @@ const limit = 10;
 let currentRole = "";
 let currentQuery = "";
 
-// Helper options to disable browser and edge caching
 const fetchOptions = {
     cache: "no-store",
     headers: {
@@ -50,27 +49,28 @@ function displayCharacters(characters) {
     listContainer.innerHTML = "";
 
     if (!characters || characters.length === 0) {
-        listContainer.innerHTML = "<p>No characters found.</p>";
+        listContainer.innerHTML = "<p>No characters found in the fog.</p>";
         return;
     }
 
     characters.forEach(character => {
         const card = document.createElement("div");
         card.className = "agent-card";
+        card.onclick = () => viewCharacter(character.id);
         
-        const powerDisplay = character.power && character.power !== "None" 
-            ? `<p><strong>Power:</strong> ${character.power}</p>` 
-            : "";
+        // Image support with fallback placeholder
+        const imageUrl = character.image || 'https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity';
 
         card.innerHTML = `
             <div class="agent-year">${character.character_code}</div>
-            <h3>${character.name} (${character.role})</h3>
-            <p class="agent-origin"><strong>Origin:</strong> ${character.origin} | <strong>Realm:</strong> ${character.realm}</p>
-            <p><strong>DLC:</strong> ${character.dlc} (${character.year})</p>
-            ${powerDisplay}
-            <p><strong>Perks:</strong> ${character.perk_1}, ${character.perk_2}, ${character.perk_3}</p>
-            <p>${character.description}</p>
-            <button onclick="viewCharacter(${character.id})">View Details</button>
+            <div class="card-portrait">
+                <img src="${imageUrl}" alt="${character.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity'">
+            </div>
+            <div class="card-content">
+                <h3>${character.name}</h3>
+                <p class="agent-origin">${character.role} • ${character.realm}</p>
+                <button onclick="event.stopPropagation(); viewCharacter(${character.id})">View Details</button>
+            </div>
         `;
         listContainer.appendChild(card);
     });
@@ -86,22 +86,26 @@ async function viewCharacter(id) {
         const modalBody = document.getElementById("modalBody");
         if (!modalBody) return;
 
+        const imageUrl = character.image || 'https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity';
         const powerSection = character.power && character.power !== "None"
             ? `<p><strong>Power:</strong> ${character.power}</p>`
             : `<p><strong>Power:</strong> N/A (Survivor)</p>`;
 
         modalBody.innerHTML = `
-            <div class="modal-header">
-                <h2>${character.name} <span style="font-size: 0.9rem; color: #768079;">[${character.character_code}]</span></h2>
-                <p class="agent-origin">${character.role} • ${character.gender} • ${character.origin}</p>
-                <p style="font-size: 0.85rem; color: #768079; margin-top: 0.2rem;">
-                    <strong>Difficulty:</strong> ${character.difficulty} | <strong>Released:</strong> ${character.year}
-                </p>
+            <div class="modal-body-layout">
+                <img src="${imageUrl}" alt="${character.name}" class="modal-portrait" onerror="this.src='https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity'">
+                <div class="modal-header">
+                    <h2>${character.name} <span style="font-size: 0.85rem; color: #808792;">[${character.character_code}]</span></h2>
+                    <p class="agent-origin">${character.role} • ${character.gender} • ${character.origin}</p>
+                    <p style="font-size: 0.85rem; color: #808792; margin-top: 0.4rem;">
+                        <strong>Difficulty:</strong> ${character.difficulty} | <strong>Released:</strong> ${character.year}
+                    </p>
+                </div>
             </div>
             
-            <p style="margin-top: 1rem;">${character.description}</p>
+            <p style="line-height: 1.6;">${character.description}</p>
 
-            <div class="skills-list" style="margin-top: 1rem;">
+            <div class="skills-list">
                 <p><strong>Realm:</strong> ${character.realm}</p>
                 <p><strong>DLC Chapter:</strong> ${character.dlc}</p>
                 ${powerSection}
@@ -183,11 +187,6 @@ function changePage(newPage) {
         loadCharacters(newPage, currentRole);
     }
 }
-
-// BACKWARD COMPATIBILITY ALIASES
-function searchAgents() { searchCharacters(); }
-function loadAgents() { loadCharacters(); }
-function viewAgent(id) { viewCharacter(id); }
 
 // INITIAL LOAD
 loadCharacters(0);
