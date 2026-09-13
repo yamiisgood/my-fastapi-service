@@ -11,7 +11,7 @@
     <header class="site-header">
         <div class="masthead-inner">
             <div class="wordmark">
-                <h1>The Fog Wiki</h1>
+                <h1>The Fog Archives</h1>
                 <span class="tagline">a Dead by Daylight character directory</span>
             </div>
         </div>
@@ -19,7 +19,7 @@
 
     <div class="tab-bar">
         <div class="tab-bar-inner">
-            <button class="active" onclick="loadCharacters(0, '')">Article</button>
+            <button class="active" onclick="loadCharacters(0, '')">Database</button>
         </div>
     </div>
 
@@ -34,26 +34,25 @@
             </ul>
             <h3>About</h3>
             <ul>
-                <li><a href="#">What is DBD?</a></li>
-                <li><a href="#">Chapters &amp; DLC</a></li>
-                <li><a href="#">Realms</a></li>
+                <li><a href="#" onclick="return false;">What is DBD?</a></li>
+                <li><a href="#" onclick="return false;">Chapters &amp; DLC</a></li>
+                <li><a href="#" onclick="return false;">Realms</a></li>
             </ul>
             <h3>Tools</h3>
             <ul>
-                <li><a href="#">What links here</a></li>
-                <li><a href="#">Random character</a></li>
-                <li><a href="#">Cite this page</a></li>
+                <li><a href="#" onclick="return false;">What links here</a></li>
+                <li><a href="#" onclick="return false;">Random character</a></li>
+                <li><a href="#" onclick="return false;">Cite this page</a></li>
             </ul>
         </nav>
 
         <main class="wiki-content">
 
-            <p class="breadcrumb">The Fog Wiki &rsaquo; Directory</p>
+            <p class="breadcrumb">The Fog Archives &rsaquo; Directory</p>
             <h2 class="page-title">Survivors and Killers</h2>
 
             <p class="hatnote">
-                This directory lists every Survivor and Killer currently featured in <em>Dead by Daylight</em>,
-                sourced from a REST API. Use the search box or the role links in the sidebar to narrow the list.
+                This directory lists every Survivor and Killer currently featured in <em>Dead by Daylight</em>. Click any character card to inspect full perks and details.
             </p>
 
             <section class="search">
@@ -70,9 +69,9 @@
             </section>
 
             <section>
-                <h2>Character list</h2>
+                <h2>Character Roster</h2>
                 <div id="characterList" class="agent-list">
-                    Loading characters&hellip;
+                    Loading characters from the fog&hellip;
                 </div>
 
                 <div id="paginationContainer" class="pagination">
@@ -95,7 +94,6 @@
 
     <footer>
         <p>Content sourced from the Dead by Daylight Character API. Not affiliated with Behaviour Interactive.</p>
-        <p>This page was last generated on page load.</p>
     </footer>
 
     <script src="app.js"></script>
