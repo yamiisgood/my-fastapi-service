@@ -125,7 +125,7 @@ characters = [
         "difficulty": "Hard",
         "power": "None",
         "description": "A resilient survivor whose determination allows her to become the Killer's Obsession and break free from grasps.",
-        "iamge": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/90/New_Store_Laurie.png/revision/latest?cb=20220325045515"
+        "iamge": "https://static.wikia.nocookie.net/halloweenmovie/images/b/b9/LaurieDBD.webp/revision/latest?cb=20220402055032"
     },
     {
         "id": 7,
@@ -178,7 +178,8 @@ characters = [
         "perk_3": "Alert",
         "difficulty": "Easy",
         "power": "None",
-        "description": "An esports competitor who repairs generators quietly, gains speed when vaulting, and tracks Killer actions."
+        "description": "An esports competitor who repairs generators quietly, gains speed when vaulting, and tracks Killer actions.",
+        "image": "https://deadbydaylight.com/static/64f24a9f3705db694aa68a2bd28d10d9/ad4ca/DBD_Survivor_Feng_Ming_only_a988940ff0.webp"
     },
     {
         "id": 10,
@@ -195,7 +196,8 @@ characters = [
         "perk_3": "No Mither",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A rugged brawler who takes hits for his teammates, pushes through injuries, and withstands fatal blows."
+        "description": "A rugged brawler who takes hits for his teammates, pushes through injuries, and withstands fatal blows.",
+        "iamge": "https://deadbydaylight.com/static/37b607f85bcac74e5b7dd0ee159b4643/4421b/DBD_Survivor_David_King_only_92578775b6.webp"
     },
     {
         "id": 11,
@@ -212,7 +214,8 @@ characters = [
         "perk_3": "Vigil",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "A sleepy survivor who opens exit gates faster, loots med-kits reliably, and reduces status effect durations."
+        "description": "A sleepy survivor who opens exit gates faster, loots med-kits reliably, and reduces status effect durations.",
+        "image": "https://deadbydaylight.com/static/0b2382adae76d6b79a394fdd0dce7404/0f2df/DBD_Survivor_Quentin_only_1ec65c154a.webp"
     },
     {
         "id": 12,
@@ -229,7 +232,8 @@ characters = [
         "perk_3": "Stake Out",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "An obsessed detective who crawls quickly while recovering and tracks objective auras after generator completions."
+        "description": "An obsessed detective who crawls quickly while recovering and tracks objective auras after generator completions.",
+        "image": "https://deadbydaylight.com/static/1cd51fbdf2a23db9a1f73720e49662d4/1b615/DBD_Survivor_David_Tapp_only_372da5fad1.webp"
     },
     {
         "id": 13,
@@ -246,7 +250,8 @@ characters = [
         "perk_3": "Boil Over",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A hopeful songbird who tracks vault and pallet auras and fiercely resists being carried to hooks."
+        "description": "A hopeful songbird who tracks vault and pallet auras and fiercely resists being carried to hooks.",
+        "image": "https://deadbydaylight.com/static/c19ceb6f87fdc19072ec9afb471bffde/43423/DBD_Survivor_Kate_only_a94e775efb.webp"
     },
     {
         "id": 14,
@@ -263,7 +268,8 @@ characters = [
         "perk_3": "Autodidact",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A resourceful teacher capable of distracting Killers with pebbles and unhooking himself securely."
+        "description": "A resourceful teacher capable of distracting Killers with pebbles and unhooking himself securely.",
+        "image": "https://deadbydaylight.com/static/d573cb5d078562279defa864f92865dc/8ada0/DBD_Survivor_Adam_only_b71e1ed1d8.webp"
     },
     {
         "id": 15,
@@ -280,7 +286,8 @@ characters = [
         "perk_3": "Distortion",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A quiet artist whose perks break hooks upon escape, show team auras, and hide his own from the Killer."
+        "description": "A quiet artist whose perks break hooks upon escape, show team auras, and hide his own from the Killer.",
+        "image": "https://deadbydaylight.com/static/fc98f794f4bc8fb3d3bf9739efa2cf48/12122/DBD_Survivor_Jeff_only_4c4caad581.webp"
     },
     {
         "id": 16,
@@ -297,7 +304,8 @@ characters = [
         "perk_3": "Head On",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "An influential talk show host who heals while healing others, hides scratch marks on generator completions, and stuns Killers out of lockers."
+        "description": "An influential talk show host who heals while healing others, hides scratch marks on generator completions, and stuns Killers out of lockers.",
+        "image": "https://deadbydaylight.com/static/363228a4ebced2a793845352cb86ac67/1852c/DBD_Survivor_Jane_only_4629ed580e.webp"
     },
     {
         "id": 17,
@@ -314,7 +322,8 @@ characters = [
         "perk_3": "Mettle of Man",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A legendary demon hunter who converts recovery progress to wiggle progress and absorbs fatal blows."
+        "description": "A legendary demon hunter who converts recovery progress to wiggle progress and absorbs fatal blows.",
+        "image": "https://deadbydaylight.com/static/f864b1820f2137a46144a3c46c533011/0fb44/DBD_Survivor_Ash_only_03e2a515fa.webp"
     },
     {
         "id": 18,
@@ -331,7 +340,8 @@ characters = [
         "perk_3": "Better Together",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A headstrong journalist who heals herself by cleansing totems, sees her own scratch marks, and highlights generators for nearby allies."
+        "description": "A headstrong journalist who heals herself by cleansing totems, sees her own scratch marks, and highlights generators for nearby allies.",
+        "image": "https://deadbydaylight.com/static/4c128ebcae087481f9a55f2ad8f4b5e2/71c80/CM_1639_DBD_Website_Ch13_Character_Page_Nancy_ONLY_8f259fd20e.webp"
     },
     {
         "id": 19,
@@ -348,7 +358,8 @@ characters = [
         "perk_3": "Second Wind",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "A protective former popular kid who pauses hook struggle timers and hides unhooked teammates' pools of blood and scratch marks."
+        "description": "A protective former popular kid who pauses hook struggle timers and hides unhooked teammates' pools of blood and scratch marks.",
+        "image": "https://deadbydaylight.com/static/6b9c65a52cef3e1f7ea7ad9e68870f02/f5268/CM_1639_DBD_Website_Ch13_Character_Page_Steve_ONLY_f87506bf77.webp"
     },
     {
         "id": 20,
@@ -365,7 +376,8 @@ characters = [
         "perk_3": "Breakout",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A hardened street racer who resets dropped pallets, hides her pools of blood when injured, and aids wiggling allies."
+        "description": "A hardened street racer who resets dropped pallets, hides her pools of blood when injured, and aids wiggling allies.",
+        "image": "https://deadbydaylight.com/static/915a04bc5882f32ab2e6e74f99568f85/1c3db/DBD_Survivor_Yui_Kamura_only_fcfa8c6786.webp"
     },
     {
         "id": 21,
@@ -382,7 +394,8 @@ characters = [
         "perk_3": "For the People",
         "difficulty": "Hard",
         "power": "None",
-        "description": "An independent filmmaker capable of instantly healing others at her own expense and masking her aura after being unhooked."
+        "description": "An independent filmmaker capable of instantly healing others at her own expense and masking her aura after being unhooked.",
+        "image": "https://deadbydaylight.com/static/647ba234e9c9806c0783453bb0373247/5b0f6/DBD_Survivor_Zarina_only_404279f793.webp"
     },
     {
         "id": 22,
@@ -399,7 +412,8 @@ characters = [
         "perk_3": "Repressed Alliance",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A resilient young woman who blocks generators from the Killer's regression using the Entity and gains endurance after healing."
+        "description": "A resilient young woman who blocks generators from the Killer's regression using the Entity and gains endurance after healing.",
+        "image": "https://deadbydaylight.com/static/2efda55012428f36ea64fd987d446cfe/a3edc/DBD_Survivor_Cheryl_only_2b098e322c.webp"
     },
     {
         "id": 23,
@@ -416,7 +430,8 @@ characters = [
         "perk_3": "Built to Last",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A brilliant architect who refills depleted item charges inside lockers and gains speed boosts to actions based on injured allies."
+        "description": "A brilliant architect who refills depleted item charges inside lockers and gains speed boosts to actions based on injured allies.",
+        "image": "https://deadbydaylight.com/static/e4f7bbde54b1571c7d3e4122f0de8d7e/315f4/DBD_Survivor_Felix_only_a3f9dddd83.webp"
     },
     {
         "id": 24,
@@ -433,7 +448,8 @@ characters = [
         "perk_3": "Power Struggle",
         "difficulty": "Hard",
         "power": "None",
-        "description": "An occult investigator who rummages through opened chests, fakes locker entries, and drops pallets on the Killer while being carried."
+        "description": "An occult investigator who rummages through opened chests, fakes locker entries, and drops pallets on the Killer while being carried.",
+        "image": "https://deadbydaylight.com/static/d24ddf5d55c8ee3bb7d5da18c155bc63/d3b07/DBD_Survivor_Elodie_only_61b051f9db.webp"
     },
     {
         "id": 25,
@@ -450,7 +466,8 @@ characters = [
         "perk_3": "Self-Preservation",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A self-serving music producer who benefits from her teammates' misfortunes, gaining generator tokens and sprint bursts from pallet stuns."
+        "description": "A self-serving music producer who benefits from her teammates' misfortunes, gaining generator tokens and sprint bursts from pallet stuns.",
+        "image": "https://deadbydaylight.com/static/b38895e1b5c2b0807af564b00908b1ff/99ebe/DBD_Survivor_Yun_Jin_only_ad2b67d501.webp"
     },
     {
         "id": 26,
@@ -467,7 +484,8 @@ characters = [
         "perk_3": "Blast Mine",
         "difficulty": "Easy",
         "power": "None",
-        "description": "An elite police operative who cleanses totems rapidly, regains instant healing progress upon unhooking, and traps generators with blinding mines."
+        "description": "An elite police operative who cleanses totems rapidly, regains instant healing progress upon unhooking, and traps generators with blinding mines.",
+        "image": "https://deadbydaylight.com/static/11142a038069d83025fdb2d1215ce96a/a5a4c/DBD_Survivor_Jill_only_6add07fd37.webp"
     },
     {
         "id": 27,
@@ -484,7 +502,8 @@ characters = [
         "perk_3": "Rookie Spirit",
         "difficulty": "Easy",
         "power": "None",
-        "description": "An idealistic rookie cop who completely silences his healing sounds and crafts blinding flashbang grenades inside lockers."
+        "description": "An idealistic rookie cop who completely silences his healing sounds and crafts blinding flashbang grenades inside lockers.",
+        "image": "https://deadbydaylight.com/static/9756c3a8ceed79cf76cbe28f96fc039f/4a362/DBD_Survivor_Leon_only_83e8e83493.webp"
     },
     {
         "id": 28,
@@ -569,7 +588,8 @@ characters = [
         "perk_3": "Low Profile",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A secretive spy who installs camera wiretaps on generators, heals instantly when nearby allies are hit, and hides traces when the lone survivor."
+        "description": "A secretive spy who installs camera wiretaps on generators, heals instantly when nearby allies are hit, and hides traces when the lone survivor.",
+        "image": "https://deadbydaylight.com/static/c50f82b1434e9e777754d09e467ec0cf/82f4a/DBD_Survivor_Ada_Wong_only_5a1367612e.webp"
     },
     {
         "id": 33,
