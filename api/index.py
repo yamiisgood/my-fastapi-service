@@ -520,7 +520,8 @@ characters = [
         "perk_3": "Boon: Shadow Step",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "A modern witch who blesses totems to create areas where survivors can heal quickly and hide their scratch marks."
+        "description": "A modern witch who blesses totems to create areas where survivors can heal quickly and hide their scratch marks.",
+        "image": "https://deadbydaylight.com/static/38b6b06bcd8f4629c7ed3784f8872cfd/2f542/DBD_Survivor_Mikaela_only_3e3b90279b.webp"
     },
     {
         "id": 29,
@@ -537,7 +538,8 @@ characters = [
         "perk_3": "Boon: Exponential",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A brilliant codebreaker who extends hit speed bursts and creates a recovery oasis for downed allies using Boon totems."
+        "description": "A brilliant codebreaker who extends hit speed bursts and creates a recovery oasis for downed allies using Boon totems.",
+        "image": "https://deadbydaylight.com/static/a187b5b028cb0a23a7e6228dcbc68e29/944ed/DBD_Survivor_Jonah_only_214fe0fc2f.webp"
     },
     {
         "id": 30,
@@ -554,7 +556,8 @@ characters = [
         "perk_3": "Boon: Dark Theory",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "A psychic marine biologist who completely hides blood, scratches, and grunts after stunning a killer, and blesses totems to grant speed boosts."
+        "description": "A psychic marine biologist who completely hides blood, scratches, and grunts after stunning a killer, and blesses totems to grant speed boosts.",
+        "image": "https://deadbydaylight.com/static/e83583da80436b24b6ce4f497f56e31e/a6472/DBD_Survivor_Yoichi_only_67e6855e29.webp"
     },
     {
         "id": 31,
@@ -571,7 +574,8 @@ characters = [
         "perk_3": "Overzealous",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A psychic podcaster who sees nearby ally scratch marks, blinds Killers to inflict blindness, and increases repair speed after cleansing totems."
+        "description": "A psychic podcaster who sees nearby ally scratch marks, blinds Killers to inflict blindness, and increases repair speed after cleansing totems.",
+        "image": "https://deadbydaylight.com/static/4db50dcec74a704f235259d8847f47e2/5fed0/DBD_Survivor_Haddie_only_c03e10dcd0.webp"
     },
     {
         "id": 32,
@@ -606,7 +610,8 @@ characters = [
         "perk_3": "Reassurance",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A young prodigy medic who pauses the sacrifice timer of hooked allies and rewards rapid consecutive Great Skill Checks with huge repair bursts."
+        "description": "A young prodigy medic who pauses the sacrifice timer of hooked allies and rewards rapid consecutive Great Skill Checks with huge repair bursts.",
+        "image": "https://deadbydaylight.com/static/44a306f9dd69bba3c8dd77b5298070b9/4e40a/DBD_Survivor_Rebeca_only_b6a6753e9b.webp"
     },
     {
         "id": 34,
@@ -623,7 +628,8 @@ characters = [
         "perk_3": "Quick Gambit",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "An ancient, arcane scholar who stores generator progression to instantly dump it elsewhere and reveals the Killer during Great Skill Checks."
+        "description": "An ancient, arcane scholar who stores generator progression to instantly dump it elsewhere and reveals the Killer during Great Skill Checks.",
+        "image": "https://deadbydaylight.com/static/8cd8121c9f773a21c7f17ae85d5d7d23/aff4d/DBD_Survivor_Vittorio_only_4848b4923b.webp"
     },
     {
         "id": 35,
@@ -640,7 +646,8 @@ characters = [
         "perk_3": "Teamwork: Power of Two",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A community-focused kite fighter whose perks reward group generator repairs and synchronized vault maneuvers during chases."
+        "description": "A community-focused kite fighter whose perks reward group generator repairs and synchronized vault maneuvers during chases.",
+        "image": "https://deadbydaylight.com/static/6cdb99c07fcc2f22b3333bea19e48530/ea2f7/DBD_Survivor_Thalita_only_5d556e7020.webp"
     },
     {
         "id": 36,
@@ -657,7 +664,8 @@ characters = [
         "perk_3": "Teamwork: Collective Stealth",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A calm analyst who activates massive sprint bursts when the killer picks up an ally and can force exhaustion recovery at the cost of health."
+        "description": "A calm analyst who activates massive sprint bursts when the killer picks up an ally and can force exhaustion recovery at the cost of health.",
+        "image": "https://deadbydaylight.com/static/2d0ab948e475fc1fb44858a560bd9966/33492/DBD_Survivor_Renato_only_cd4eb78666.webp"
     },
     {
         "id": 37,
@@ -674,7 +682,8 @@ characters = [
         "perk_3": "Scavenger",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "A cloned starship technician who runs faster when injured, reveals the highest-progress generator during chases, and recycles depleted toolboxes."
+        "description": "A cloned starship technician who runs faster when injured, reveals the highest-progress generator during chases, and recycles depleted toolboxes.",
+        "image": "https://deadbydaylight.com/static/d7941b67057e857981d0ebd9b55dde5a/c0840/CM_1285_DBD_Website_Ch27_Character_Page_Survivor_Gabriel_ONLY_1d66e2e05e.webp"
     },
     {
         "id": 38,
@@ -691,7 +700,8 @@ characters = [
         "perk_3": "Plot Twist",
         "difficulty": "Hard",
         "power": "None",
-        "description": "An eccentric movie superstar who can scream to read killer auras, fake his own death to completely heal from the dying state, and gain random items."
+        "description": "An eccentric movie superstar who can scream to read killer auras, fake his own death to completely heal from the dying state, and gain random items.",
+        "image": "https://deadbydaylight.com/static/207bcdca864bfebdd18949e565e13867/fadb4/CM_1489_DBD_Website_Ch28_5_Character_Page_Survivor_Nick_Cage_ONLY_f3160126ef.webp"
     },
     {
         "id": 39,
@@ -708,7 +718,8 @@ characters = [
         "perk_3": "Light-Footed",
         "difficulty": "Easy",
         "power": "None",
-        "description": "An iron-willed space survivor who suppresses her footsteps while healthy and installs slowing chemical traps onto dropped pallets."
+        "description": "An iron-willed space survivor who suppresses her footsteps while healthy and installs slowing chemical traps onto dropped pallets.",
+        "image": "https://deadbydaylight.com/static/5abb04054e04b4b184a98ced0a4f25fc/83653/CM_1549_DBD_Character_Render_Survivor_Ellen_18e40d4323.webp"
     },
     {
         "id": 40,
@@ -725,7 +736,8 @@ characters = [
         "perk_3": "Deadline",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "A tormented writer who runs faster while shining flashlights, inflicts slowed movement on blinded killers, and alters skill check frequencies."
+        "description": "A tormented writer who runs faster while shining flashlights, inflicts slowed movement on blinded killers, and alters skill check frequencies.",
+        "image": "https://deadbydaylight.com/static/4e16e064f9f2888a3ef27202bc256e43/aa26e/DBD_Chap30_5_Zodiac_Character_Renders_Survivor_3b678c2a9a.webp"
     },
     {
         "id": 41,
@@ -742,7 +754,8 @@ characters = [
         "perk_3": "Wicked",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A gothic alternative girl who performs dark invocations inside the basement to trade her health for permanent match-wide generator repair progress."
+        "description": "A gothic alternative girl who performs dark invocations inside the basement to trade her health for permanent match-wide generator repair progress.",
+        "image": "https://deadbydaylight.com/static/18f59ffadbe3fa28c1d170a4960ea260/dbd1f/DBD_Website_Ch31_Character_Page_Survivor_Sable_084678d1f0.webp"
     },
     {
         "id": 42,
@@ -759,7 +772,8 @@ characters = [
         "perk_3": "Still Sight",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "An elven bard who casts illusory copies of herself on objectives and plays dice roll musical melodies to boost team performance."
+        "description": "An elven bard who casts illusory copies of herself on objectives and plays dice roll musical melodies to boost team performance.",
+        "image": "https://deadbydaylight.com/static/ee95eb716d9e9ee9256126b11270a284/b0d5c/DBD_Website_Ch31_Character_Page_Survivor_Aestri_ONLY_0d4f73719b.webp"
     },
     {
         "id": 43,
@@ -776,7 +790,8 @@ characters = [
         "perk_3": "Specialist",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A legendary archaeologist who executes high-speed window vaults while healthy, bypasses screams, and permanently drops max generator requirements."
+        "description": "A legendary archaeologist who executes high-speed window vaults while healthy, bypasses screams, and permanently drops max generator requirements.",
+        "image": "https://deadbydaylight.com/static/14ec5edaf1680a41f9db353056227255/44bb7/WEB_DBD_DONUTS_Survivor_Lara_only_c83551f39a.webp"
     },
     {
         "id": 44,
@@ -793,24 +808,8 @@ characters = [
         "perk_3": "Moment of Glory",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A battle-hardened monster hunter who extends killer aura reveal durations and upgrades his current item tier upon stunning the killer."
-    },
-    {
-        "id": 45,
-        "name": "Sujata",
-        "character_code": "S45",
-        "role": "Survivor",
-        "gender": "Female",
-        "origin": "India",
-        "realm": "The Void",
-        "dlc": "Doomed Echoes Chapter",
-        "year": 2024,
-        "perk_1": "Flashover",
-        "perk_2": "Boon: Dark Sanctum",
-        "perk_3": "Hard Bargain",
-        "difficulty": "Intermediate",
-        "power": "None",
-        "description": "A resourceful engineer capable of creating fake audio distractions on incomplete generators and protecting broken totems."
+        "description": "A battle-hardened monster hunter who extends killer aura reveal durations and upgrades his current item tier upon stunning the killer.",
+        "image": "https://deadbydaylight.com/static/1b26554ebecb0d0c4ecc9e43eca418b2/8634a/DBD_ECLAIR_WEBPAGE_Character_Page_Survivor_Trevor_ONLY_5c3deb1b56.webp"
     },
     {
         "id": 46,
