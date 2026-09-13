@@ -125,7 +125,7 @@ characters = [
         "difficulty": "Hard",
         "power": "None",
         "description": "A resilient survivor whose determination allows her to become the Killer's Obsession and break free from grasps.",
-        "iamge": "https://static.wikia.nocookie.net/halloweenmovie/images/b/b9/LaurieDBD.webp/revision/latest?cb=20220402055032"
+        "image": "https://static.wikia.nocookie.net/halloweenmovie/images/b/b9/LaurieDBD.webp/revision/latest?cb=20220402055032"
     },
     {
         "id": 7,
@@ -901,7 +901,7 @@ characters = [
         "power": "None",
         "description": "Clever and loyal to a fault, Dustin Hendersen has saved his group more time than he can count.",
         "image": "https://deadbydaylight.com/static/7c0009ce5812866c62919b5f7a15dfb0/3b120/DBD_WEBPAGE_Character_Page_DUSTIN_CHARACTER_ONLY_1b12c7a603.webp"
-    }
+    },
     {
         "id": 50,
         "name": "Eleven",
