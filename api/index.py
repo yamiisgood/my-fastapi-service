@@ -917,7 +917,8 @@ characters = [
         "perk_3": "Oasis Refresh",
         "difficulty": "Easy",
         "power": "None",
-        "description": "Raised in captivity and studied for her psychic abilities, the lonely girl called Eleven never experienced a meaningful connection"
+        "description": "Raised in captivity and studied for her psychic abilities, the lonely girl called Eleven never experienced a meaningful connection",
+        "image": "https://deadbydaylight.com/static/2a03b828a4986c03a59f3d3749604ee8/8834d/DBD_POUTINE_WEBPAGE_Character_Page_ELEVEN_VF_2_Character_Only_e8f307c7a5.webp"
     },
    
     # =========================================================================
