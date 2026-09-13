@@ -197,7 +197,7 @@ characters = [
         "difficulty": "Hard",
         "power": "None",
         "description": "A rugged brawler who takes hits for his teammates, pushes through injuries, and withstands fatal blows.",
-        "iamge": "https://deadbydaylight.com/static/37b607f85bcac74e5b7dd0ee159b4643/4421b/DBD_Survivor_David_King_only_92578775b6.webp"
+        "image": "https://deadbydaylight.com/static/37b607f85bcac74e5b7dd0ee159b4643/4421b/DBD_Survivor_David_King_only_92578775b6.webp"
     },
     {
         "id": 11,
@@ -811,23 +811,7 @@ characters = [
         "description": "A battle-hardened monster hunter who extends killer aura reveal durations and upgrades his current item tier upon stunning the killer.",
         "image": "https://deadbydaylight.com/static/1b26554ebecb0d0c4ecc9e43eca418b2/8634a/DBD_ECLAIR_WEBPAGE_Character_Page_Survivor_Trevor_ONLY_5c3deb1b56.webp"
     },
-    {
-        "id": 46,
-        "name": "Klaus Müller",
-        "character_code": "S46",
-        "role": "Survivor",
-        "gender": "Male",
-        "origin": "Germany",
-        "realm": "The Void",
-        "dlc": "Doomed Echoes Chapter",
-        "year": 2024,
-        "perk_1": "Iron Sight",
-        "perk_2": "Break the Ice",
-        "perk_3": "Heavy Footing",
-        "difficulty": "Easy",
-        "power": "None",
-        "description": "A heavy-set industrial worker whose perks allow him to instantly break out of traps and trade stealth for fast unhooking speed."
-    },
+    
     {
         "id": 47,
         "name": "Rick Grimes",
@@ -843,7 +827,8 @@ characters = [
         "perk_3": "Teamwork: Toughen Up",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A tactical former sheriff who crafts fragile temporary replacement pallets out of destroyed loops and draws killer aggro away from injured team members."
+        "description": "A tactical former sheriff who crafts fragile temporary replacement pallets out of destroyed loops and draws killer aggro away from injured team members.",
+        "image": "https://deadbydaylight.com/static/249e148bb87d0ddb393b2815caa2c4ab/d5ea7/Db_D_LASAGNA_CH_Character_Art_Survivor_S47_WEB_3840_X1344_VF_2_Character_only_d19bdfa143.webp"
     },
     {
         "id": 48,
@@ -860,7 +845,8 @@ characters = [
         "perk_3": "Teamwork: Throw Down",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A fearless katana survivor who triggers high-stakes, single-use window stuns, picks herself up from the dying state, and grants defensive buffs."
+        "description": "A fearless katana survivor who triggers high-stakes, single-use window stuns, picks herself up from the dying state, and grants defensive buffs.",
+        "image": "https://deadbydaylight.com/static/3049fe32c32188db2d9de7d3b8982886/58672/Db_D_LASAGNA_CH_Character_Art_Survivor_S48_WEB_3840_X1344_V_Fb_Character_only_98ff606a16.webp"
     },
     {
         "id": 49,
@@ -877,7 +863,8 @@ characters = [
         "perk_3": "Ghost Notes",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "An energetic punk rock drummer who utilizes rhythm performance actions to trigger team skill check bursts and slips out of loops with advanced stealth."
+        "description": "An energetic punk rock drummer who utilizes rhythm performance actions to trigger team skill check bursts and slips out of loops with advanced stealth.",
+        "image": "https://deadbydaylight.com/static/69acdd3cb30f83ee0a48bd0a15a0e732/88c81/DBD_MAPLE_CH_WEB_CHARACTERPAGE_SURVIVOR_Vee_098b4a177e.webp"
     },
     {
         "id": 50,
@@ -894,77 +881,45 @@ characters = [
         "perk_3": "Astral Projection",
         "difficulty": "Hard",
         "power": "None",
-        "description": "An otherworldly astronaut who marks physical navigation points on the map and channels short distances to pass directly through solid tile walls."
+        "description": "An otherworldly astronaut who marks physical navigation points on the map and channels short distances to pass directly through solid tile walls.",
+        "image": "https://deadbydaylight.com/static/ac13b9b590f6f406796835634e60fee8/ca5bd/DBD_UDON_CHAPTER_STAND_ALONE_RENDERS_WEB_ASSETS_AURORA_CHARACTER_ONLY_2163848678.webp"
     },
     {
         "id": 51,
-        "name": "Cynthia Vance",
+        "name": "Dustin Henderson",
         "character_code": "S51",
+        "role": "Survivor",
+        "gender": "Male",
+        "origin": "United States",
+        "realm": "Hawkins",
+        "dlc": "Stranger Things Chapter",
+        "year": 2025,
+        "perk_1": "BADA BADA BOOM",
+        "perk_2": "Change Of Plan",
+        "perk_3": "Teamwork: Soft Spoken",
+        "difficulty": "Intermediate",
+        "power": "None",
+        "description": "Clever and loyal to a fault, Dustin Hendersen has saved his group more time than he can count.",
+        "image": "https://deadbydaylight.com/static/7c0009ce5812866c62919b5f7a15dfb0/3b120/DBD_WEBPAGE_Character_Page_DUSTIN_CHARACTER_ONLY_1b12c7a603.webp"
+    }
+    {
+        "id": 52,
+        "name": "Eleven",
+        "character_code": "S52",
         "role": "Survivor",
         "gender": "Female",
         "origin": "United States",
-        "realm": "Neon Metropolis",
-        "dlc": "Chapter 39: Cyber Collapse",
-        "year": 2026,
-        "perk_1": "Overclocked System",
-        "perk_2": "Data Siphon",
-        "perk_3": "Grid runner",
-        "difficulty": "Intermediate",
-        "power": "None",
-        "description": "A tech-renegade runner who hacks generator terminals to steal progress back from the killer and gains speed when stepping over electronic wire traps."
-    },
-    {
-        "id": 52,
-        "name": "Tariq Al-Amri",
-        "character_code": "S52",
-        "role": "Survivor",
-        "gender": "Male",
-        "origin": "Jordan",
-        "realm": "Shifting Sands",
-        "dlc": "Chapter 40: Desert Mirage",
-        "year": 2026,
-        "perk_1": "Dust Cover",
-        "perk_2": "Mirage Step",
+        "realm": "hawkins",
+        "dlc": "Stranger Things Chapter",
+        "year": 2025,
+        "perk_1": "Extracensory Perception",
+        "perk_2": "We See You",
         "perk_3": "Oasis Refresh",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A rugged desert archeologist who masks his visual pathing footprint by leaving behind decoys and rapidly cleanses hex totems using specialized tools."
+        "description": "Raised in captivity and studied for her psychic abilities, the lonely girl called Eleven never experienced a meaningful connection"
     },
-    {
-        "id": 53,
-        "name": "Evelyn Reed",
-        "character_code": "S53",
-        "role": "Survivor",
-        "gender": "Female",
-        "origin": "United Kingdom",
-        "realm": "Asylum Depths",
-        "dlc": "Chapter 41: Whispers of Mad",
-        "year": 2026,
-        "perk_1": "Quiet Mind",
-        "perk_2": "Psychotherapy",
-        "perk_3": "Deep Breath",
-        "difficulty": "Easy",
-        "power": "None",
-        "description": "A mental health physician who limits the build-up of hallucination affliction effects and stabilizes terrified status conditions of near teammates."
-    },
-    {
-        "id": 54,
-        "name": "Kenji Sato",
-        "character_code": "S54",
-        "role": "Survivor",
-        "gender": "Male",
-        "origin": "Japan",
-        "realm": "Asylum Depths",
-        "dlc": "Chapter 41: Whispers of Mad",
-        "year": 2026,
-        "perk_1": "Adrenaline Rush",
-        "perk_2": "Counter Strike",
-        "perk_3": "Endurance Test",
-        "difficulty": "Intermediate",
-        "power": "None",
-        "description": "An underground street brawler who temporarily withstands exposed damage effects and safely breaks killer window traps through raw physical stamina."
-    },
-
+   
     # =========================================================================
     # KILLERS
     # =========================================================================
