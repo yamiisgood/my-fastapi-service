@@ -34,8 +34,8 @@ characters = [
         "perk_3": "Leader",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A nervous leader whose perks help allies locate one another and increase team repair and action efficiency."
-        "image" = "https://deadbydaylight.com/static/0fe15a5913b4d237f4e4f813e492cbba/fa99b/DBD_Survivor_Meg_only_5019ce4dbb.webp"
+        "description": "A nervous leader whose perks help allies locate one another and increase team repair and action efficiency.",
+        "image": "https://deadbydaylight.com/static/0fe15a5913b4d237f4e4f813e492cbba/fa99b/DBD_Survivor_Meg_only_5019ce4dbb.webp"
     },
     {
         "id": 2,
@@ -137,7 +137,8 @@ characters = [
         "perk_3": "Ace in the Hole",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A lucky gambler who boosts aura reading ranges and increases luck and chest add-on quality for the team."
+        "description": "A lucky gambler who boosts aura reading ranges and increases luck and chest add-on quality for the team.",
+        "image": "https://deadbydaylight.com/static/b8d8bc40047189d8410df495e6691270/0005a/DBD_Survivor_Ace_only_f4ed90f604.webp"
     },
     {
         "id": 8,
