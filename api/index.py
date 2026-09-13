@@ -813,7 +813,7 @@ characters = [
     },
     
     {
-        "id": 47,
+        "id": 45,
         "name": "Rick Grimes",
         "character_code": "S47",
         "role": "Survivor",
@@ -831,7 +831,7 @@ characters = [
         "image": "https://deadbydaylight.com/static/249e148bb87d0ddb393b2815caa2c4ab/d5ea7/Db_D_LASAGNA_CH_Character_Art_Survivor_S47_WEB_3840_X1344_VF_2_Character_only_d19bdfa143.webp"
     },
     {
-        "id": 48,
+        "id": 46,
         "name": "Michonne",
         "character_code": "S48",
         "role": "Survivor",
@@ -849,7 +849,7 @@ characters = [
         "image": "https://deadbydaylight.com/static/3049fe32c32188db2d9de7d3b8982886/58672/Db_D_LASAGNA_CH_Character_Art_Survivor_S48_WEB_3840_X1344_V_Fb_Character_only_98ff606a16.webp"
     },
     {
-        "id": 49,
+        "id": 47,
         "name": "Vee Boonyasak",
         "character_code": "S49",
         "role": "Survivor",
@@ -867,7 +867,7 @@ characters = [
         "image": "https://deadbydaylight.com/static/69acdd3cb30f83ee0a48bd0a15a0e732/88c81/DBD_MAPLE_CH_WEB_CHARACTERPAGE_SURVIVOR_Vee_098b4a177e.webp"
     },
     {
-        "id": 50,
+        "id": 48,
         "name": "Aurora Stardotter",
         "character_code": "S50",
         "role": "Survivor",
@@ -885,7 +885,7 @@ characters = [
         "image": "https://deadbydaylight.com/static/ac13b9b590f6f406796835634e60fee8/ca5bd/DBD_UDON_CHAPTER_STAND_ALONE_RENDERS_WEB_ASSETS_AURORA_CHARACTER_ONLY_2163848678.webp"
     },
     {
-        "id": 51,
+        "id": 49,
         "name": "Dustin Henderson",
         "character_code": "S51",
         "role": "Survivor",
@@ -903,7 +903,7 @@ characters = [
         "image": "https://deadbydaylight.com/static/7c0009ce5812866c62919b5f7a15dfb0/3b120/DBD_WEBPAGE_Character_Page_DUSTIN_CHARACTER_ONLY_1b12c7a603.webp"
     }
     {
-        "id": 52,
+        "id": 50,
         "name": "Eleven",
         "character_code": "S52",
         "role": "Survivor",
@@ -924,7 +924,7 @@ characters = [
     # KILLERS
     # =========================================================================
     {
-        "id": 55,
+        "id": 51,
         "name": "The Trapper",
         "character_code": "K01",
         "role": "Killer",
@@ -941,7 +941,7 @@ characters = [
         "description": "An area-control killer who sets hidden, physical steel bear traps across the map to catch, damage, and immobilize unwary survivors."
     },
     {
-        "id": 56,
+        "id": 52,
         "name": "The Wraith",
         "character_code": "K02",
         "role": "Killer",
@@ -958,7 +958,7 @@ characters = [
         "description": "A stealth killer who rings a mystical bell to turn completely invisible, allowing him to traverse the map swiftly and ambush survivors."
     },
     {
-        "id": 57,
+        "id": 53,
         "name": "The Hillbilly",
         "character_code": "K03",
         "role": "Killer",
@@ -975,7 +975,7 @@ characters = [
         "description": "A high-mobility, high-threat killer who charges forward at high speeds with his chainsaw, instantly downing any survivor caught in his path."
     },
     {
-        "id": 58,
+        "id": 54,
         "name": "The Nurse",
         "character_code": "K04",
         "role": "Killer",
@@ -992,7 +992,7 @@ characters = [
         "description": "A hyper-lethal teleporting killer who blinks directly through solid obstacles and walls to immediately strike fleeing survivors."
     },
     {
-        "id": 59,
+        "id": 55,
         "name": "The Shape",
         "character_code": "K05",
         "role": "Killer",
@@ -1009,7 +1009,7 @@ characters = [
         "description": "An imposing stalker killer (Michael Myers) who watches survivors from afar to charge his inner malice, granting permanent stat tiers and instant-down capabilities."
     },
     {
-        "id": 60,
+        "id": 56,
         "name": "The Hag",
         "character_code": "K06",
         "role": "Killer",
@@ -1026,7 +1026,7 @@ characters = [
         "description": "A tactical teleportation killer who draws mud traps on the ground, warping straight to their position whenever a survivor triggers them by walking."
     },
     {
-        "id": 61,
+        "id": 57,
         "name": "The Doctor",
         "character_code": "K07",
         "role": "Killer",
@@ -1043,7 +1043,7 @@ characters = [
         "description": "An oppressive disruption killer who releases localized madness shockwaves, driving survivors insane to reveal their locations and block interactions."
     },
     {
-        "id": 62,
+        "id": 58,
         "name": "The Huntress",
         "character_code": "K08",
         "role": "Killer",
@@ -1060,7 +1060,7 @@ characters = [
         "description": "A deadly ranged killer who hurls sharp hatchets across loops and open maps, injuring or downing survivors from afar."
     },
     {
-        "id": 63,
+        "id": 59,
         "name": "The Cannibal",
         "character_code": "K09",
         "role": "Killer",
@@ -1077,7 +1077,7 @@ characters = [
         "description": "A close-quarters threat killer (Leatherface) who swings his chainsaw in a wide, multi-hit sweeping tantrum, instantly downing any clusters of survivors."
     },
     {
-        "id": 64,
+        "id": 60,
         "name": "The Nightmare",
         "character_code": "K10",
         "role": "Killer",
@@ -1094,7 +1094,7 @@ characters = [
         "description": "A surreal dreamscape killer (Freddy Krueger) who pulls survivors into a sleeping state, allowing him to teleport directly to generators and lay slowing blood traps."
     },
     {
-        "id": 65,
+        "id": 61,
         "name": "The Pig",
         "character_code": "K11",
         "role": "Killer",
@@ -1111,7 +1111,7 @@ characters = [
         "description": "A stealthy ambush killer (Amanda Young) who crouches to remove her terror radius, lunges out from corners, and places ticking Reverse Bear Traps on downed survivors."
     },
     {
-        "id": 66,
+        "id": 62,
         "name": "The Clown",
         "character_code": "K12",
         "role": "Killer",
@@ -1128,7 +1128,7 @@ characters = [
         "description": "A tactical anti-loop killer who throws bottles of toxic gas to blur visions and slow down survivors, while deploying yellow gas to speed up his own chases."
     },
     {
-        "id": 67,
+        "id": 63,
         "name": "The Spirit",
         "character_code": "K13",
         "role": "Killer",
@@ -1145,7 +1145,7 @@ characters = [
         "description": "A mind-game killer who detaches from her physical shell to travel invisibly through the spirit plane, tracking survivors purely via audio cues and scratch marks."
     },
     {
-        "id": 68,
+        "id": 64,
         "name": "The Legion",
         "character_code": "K14",
         "role": "Killer",
@@ -1162,7 +1162,7 @@ characters = [
         "description": "A fast-paced hit-and-run killer squad that sprint vaults over windows and pallets to rapidly stab multiple survivors, applying the bleeding Deep Wound status."
     },
     {
-        "id": 69,
+        "id": 65,
         "name": "The Plague",
         "character_code": "K15",
         "role": "Killer",
@@ -1179,7 +1179,7 @@ characters = [
         "description": "A systematic affliction killer who vomits contagious bile onto objects and survivors, forcing them into a permanently broken, vomiting, and trackable state."
     },
     {
-        "id": 70,
+        "id": 66,
         "name": "The Ghost Face",
         "character_code": "K16",
         "role": "Killer",
@@ -1196,7 +1196,7 @@ characters = [
         "description": "A methodical stealth killer who hides his red stain and terror radius completely, leaning around corners to stalk and expose individual survivors."
     },
     {
-        "id": 71,
+        "id": 67,
         "name": "The Demogorgon",
         "character_code": "K17",
         "role": "Killer",
@@ -1213,7 +1213,7 @@ characters = [
         "description": "A monstrous apex predator that lunges long distances across loops to shred pallets and tears open organic ground portals to travel under the map."
     },
     {
-        "id": 72,
+        "id": 68,
         "name": "The Oni",
         "character_code": "K18",
         "role": "Killer",
@@ -1230,7 +1230,7 @@ characters = [
         "description": "A high-momentum snowball killer who absorbs glowing blood orbs dropped by injured survivors to trigger a raging state, gaining map-wide dash speeds and lethal clubs."
     },
     {
-        "id": 73,
+        "id": 69,
         "name": "The Deathslinger",
         "character_code": "K19",
         "role": "Killer",
@@ -1247,7 +1247,7 @@ characters = [
         "description": "An inventive ranged killer who fires a mechanical harpoon gun to impale survivors, reeling them in closer across obstacles for a basic attack blow."
     },
     {
-        "id": 74,
+        "id": 70,
         "name": "The Executioner",
         "character_code": "K20",
         "role": "Killer",
@@ -1264,7 +1264,7 @@ characters = [
         "description": "A heavy control killer (Pyramid Head) who carves trenches into the floor to afflict survivors, bypassing standard hook mechanics entirely via Cages of Atonement."
     },
     {
-        "id": 75,
+        "id": 71,
         "name": "The Blight",
         "character_code": "K21",
         "role": "Killer",
@@ -1281,7 +1281,7 @@ characters = [
         "description": "A high-speed kinetic killer who drinks serum to bounce aggressively off environmental walls, launching lightning-fast lethal rush strikes down loops."
     },
     {
-        "id": 76,
+        "id": 72,
         "name": "The Twins",
         "character_code": "K22",
         "role": "Killer",
@@ -1298,7 +1298,7 @@ characters = [
         "description": "A dual-character tag killer who splits her conjoined twin Victor from Charlotte's chest, controlling him to run at high speed and pounce on survivor backs."
     },
     {
-        "id": 77,
+        "id": 73,
         "name": "The Trickster",
         "character_code": "K23",
         "role": "Killer",
@@ -1315,7 +1315,7 @@ characters = [
         "description": "A flamboyant ranged killer who unleashes rapid-fire volleys of throwing knives to fill up a survivor's laceration meter from medium range."
     },
     {
-        "id": 78,
+        "id": 74,
         "name": "The Nemesis",
         "character_code": "K24",
         "role": "Killer",
@@ -1332,7 +1332,7 @@ characters = [
         "description": "An evolving juggernaut bio-weapon killer who whips survivors with an infection tentacle to increase his power reach, supported by roaming AI zombies."
     },
     {
-        "id": 79,
+        "id": 75,
         "name": "The Cenobite",
         "character_code": "K25",
         "role": "Killer",
@@ -1349,7 +1349,7 @@ characters = [
         "description": "A global harassment killer (Pinhead) who shoots guided gateway hooks to tie down survivors, forcing them to find a puzzle box to halt constant passive chain attacks."
     },
     {
-        "id": 80,
+        "id": 76,
         "name": "The Artist",
         "character_code": "K26",
         "role": "Killer",
@@ -1366,7 +1366,7 @@ characters = [
         "description": "A tactical long-distance cross-map killer who sets ink crows on walls, firing them directly through solid objects to swarm or injure survivors across the realm."
     },
     {
-        "id": 81,
+        "id": 77,
         "name": "The Onryō",
         "character_code": "K27",
         "role": "Killer",
@@ -1383,7 +1383,7 @@ characters = [
         "description": "A creeping psychological curse killer (Sadako) who manifests out of active TV monitors to build up Condemned status layers on survivors, allowing instant executions."
     },
     {
-        "id": 82,
+        "id": 78,
         "name": "The Dredge",
         "character_code": "K28",
         "role": "Killer",
@@ -1400,7 +1400,7 @@ characters = [
         "description": "An amorphous manifestation of negative energy that teleports inside map lockers, materializes remnants during loops, and triggers a pitch-black Nightfall shroud."
     },
     {
-        "id": 83,
+        "id": 79,
         "name": "The Mastermind",
         "character_code": "K29",
         "role": "Killer",
@@ -1417,7 +1417,7 @@ characters = [
         "description": "A high-speed bio-engineered predator (Albert Wesker) who dashes twice to grab and throw survivors, infecting them with a slowing Uroboros pathogen."
     },
     {
-        "id": 84,
+        "id": 80,
         "name": "The Knight",
         "character_code": "K30",
         "role": "Killer",
@@ -1434,7 +1434,7 @@ characters = [
         "description": "A tactical squad commander killer who draws physical search paths to summon AI spectral guards, tasking them to destroy objects or hunt survivors down."
     },
     {
-        "id": 85,
+        "id": 81,
         "name": "The Skull Merchant",
         "character_code": "K31",
         "role": "Killer",
@@ -1451,7 +1451,7 @@ characters = [
         "description": "A high-tech hunting tracker who deploys spinning surveillance drones to map out territories, exposing survivors and tracking their exact positions."
     },
     {
-        "id": 86,
+        "id": 82,
         "name": "The Singularity",
         "character_code": "K32",
         "role": "Killer",
@@ -1468,7 +1468,7 @@ characters = [
         "description": "A corrupted AI lifeform that shoots biopod cameras onto structural surfaces, shooting slipstream nodes onto survivors to teleport straight behind them."
     },
     {
-        "id": 87,
+        "id": 83,
         "name": "The Xenomorph",
         "character_code": "K33",
         "role": "Killer",
@@ -1485,7 +1485,7 @@ characters = [
         "description": "An iconic alien predator that crawls on all fours through sub-surface floor tunnels, emerging at control stations to strike loops using a razor-sharp tail lash."
     },
     {
-        "id": 88,
+        "id": 84,
         "name": "The Good Guy",
         "character_code": "K34",
         "role": "Killer",
@@ -1502,7 +1502,7 @@ characters = [
         "description": "A diminutive, third-person perspective killer doll (Chucky) who completely hides his physical form in white footprints, launching scamper slice rushes under loops."
     },
     {
-        "id": 89,
+        "id": 85,
         "name": "The Unknown",
         "character_code": "K35",
         "role": "Killer",
@@ -1519,7 +1519,7 @@ characters = [
         "description": "A bizarre cryptid horror that bounces structural venom toxins off loop walls to weaken survivors, dropping stationary decoys to instantly teleport across tiles."
     },
     {
-        "id": 90,
+        "id": 86,
         "name": "The Lich",
         "character_code": "K36",
         "role": "Killer",
@@ -1536,7 +1536,7 @@ characters = [
         "description": "An ancient sorcerer (Vecna) who toggles through four magical spell types to lift dropped pallets, fly over gaps, track items, or launch magical skeletons."
     },
     {
-        "id": 91,
+        "id": 87,
         "name": "The Dark Lord",
         "character_code": "K37",
         "role": "Killer",
@@ -1553,7 +1553,7 @@ characters = [
         "description": "A shape-shifting vampire king (Dracula) who transitions between Vampire form to cast hellfire columns, Wolf form to chase scent tracks, and Bat form to teleport over vaults."
     },
     {
-        "id": 92,
+        "id": 88,
         "name": "The Hound",
         "character_code": "K38",
         "role": "Killer",
@@ -1570,7 +1570,7 @@ characters = [
         "description": "A feral tracker killer that moves on all fours to follow scent trails left by running survivors, executing extended bite lunges that apply heavy hemorrhage."
     },
     {
-        "id": 93,
+        "id": 89,
         "name": "The Ghoul",
         "character_code": "K39",
         "role": "Killer",
@@ -1587,7 +1587,7 @@ characters = [
         "description": "An aggressive, half-ghoul killer who thrives on slowing survivors in chases, speeding up hook pickups, and locking down windows and standing pallets during the endgame."
     },
     {
-        "id": 95,
+        "id": 90,
         "name": "The Krasue",
         "character_code": "K41",
         "role": "Killer",
@@ -1604,7 +1604,7 @@ characters = [
         "description": "A split-form killer inspired by Thai folklore who detaches her floating head to lunge out with a long-range Intestinal Whip, while her perks maximize map-wide tracking, false terror radii, and sudden endgame pressure."
     },
     {
-        "id": 96,
+        "id": 91,
         "name": "The Slasher",
         "character_code": "K35_JV",
         "role": "Killer",
@@ -1621,7 +1621,7 @@ characters = [
         "description": "A relentless, masked powerhouse (Jason Voorhees) who blends high-speed invisible map teleportation with a brutal projectile-flinging mechanics to isolate and pin down survivors."
     },
     {
-        "id": 97,
+        "id": 92,
         "name": "The Judgment",
         "character_code": "K42",
         "role": "Killer",
