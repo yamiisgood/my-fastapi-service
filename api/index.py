@@ -939,7 +939,8 @@ characters = [
         "perk_3": "Agitation",
         "difficulty": "Easy",
         "power": "Bear Trap",
-        "description": "An area-control killer who sets hidden, physical steel bear traps across the map to catch, damage, and immobilize unwary survivors."
+        "description": "An area-control killer who sets hidden, physical steel bear traps across the map to catch, damage, and immobilize unwary survivors.",
+        "image": "https://deadbydaylight.com/static/0a16e1db54f6c959580370679235eefb/7f738/DBD_Killer_Trapper_only_335b9655b2.webp"
     },
     {
         "id": 52,
@@ -956,7 +957,8 @@ characters = [
         "perk_3": "Shadowborn",
         "difficulty": "Easy",
         "power": "Wailing Bell",
-        "description": "A stealth killer who rings a mystical bell to turn completely invisible, allowing him to traverse the map swiftly and ambush survivors."
+        "description": "A stealth killer who rings a mystical bell to turn completely invisible, allowing him to traverse the map swiftly and ambush survivors.",
+        "image": "https://deadbydaylight.com/static/8dd6b13f4343ca2e6b072f91b0f30308/04af3/DBD_Killer_Wraith_only_23c19dc579.webp"
     },
     {
         "id": 53,
@@ -973,7 +975,8 @@ characters = [
         "perk_3": "Tinkerer",
         "difficulty": "Easy",
         "power": "Chainsaw Sprint",
-        "description": "A high-mobility, high-threat killer who charges forward at high speeds with his chainsaw, instantly downing any survivor caught in his path."
+        "description": "A high-mobility, high-threat killer who charges forward at high speeds with his chainsaw, instantly downing any survivor caught in his path.",
+        "image": "https://deadbydaylight.com/static/b2296c4b7485cabc0b79cc205fc14b13/60045/DBD_Killer_Hillbilly_only_e3d5fe3977.webp"
     },
     {
         "id": 54,
@@ -990,7 +993,8 @@ characters = [
         "perk_3": "Thanatophobia",
         "difficulty": "Very Hard",
         "power": "Spencer's Last Breath",
-        "description": "A hyper-lethal teleporting killer who blinks directly through solid obstacles and walls to immediately strike fleeing survivors."
+        "description": "A hyper-lethal teleporting killer who blinks directly through solid obstacles and walls to immediately strike fleeing survivors.",
+        "image": "https://deadbydaylight.com/static/b327d72cd084f3f3f0d3ba02e2d369b4/61ef0/DBD_Killer_Nurse_only_fead4a1990.webp"
     },
     {
         "id": 55,
@@ -1007,7 +1011,8 @@ characters = [
         "perk_3": "Dying Light",
         "difficulty": "Intermediate",
         "power": "Evil Within",
-        "description": "An imposing stalker killer (Michael Myers) who watches survivors from afar to charge his inner malice, granting permanent stat tiers and instant-down capabilities."
+        "description": "An imposing stalker killer (Michael Myers) who watches survivors from afar to charge his inner malice, granting permanent stat tiers and instant-down capabilities.",
+        "image": "https://deadbydaylight.wiki.gg/images/thumb/New_Store_Shape.png/1200px-New_Store_Shape.png?2d776e"
     },
     {
         "id": 56,
@@ -1024,7 +1029,8 @@ characters = [
         "perk_3": "Hex: Devour Hope",
         "difficulty": "Intermediate",
         "power": "Phantasm Traps",
-        "description": "A tactical teleportation killer who draws mud traps on the ground, warping straight to their position whenever a survivor triggers them by walking."
+        "description": "A tactical teleportation killer who draws mud traps on the ground, warping straight to their position whenever a survivor triggers them by walking.",
+        "image": "https://deadbydaylight.com/static/eb104dc89d97177666f957ba9c60675b/c187b/DBD_Killer_Hag_only_d49168367b.webp"
     },
     {
         "id": 57,
@@ -1041,7 +1047,8 @@ characters = [
         "perk_3": "Overcharge",
         "difficulty": "Easy",
         "power": "Carter's Spark",
-        "description": "An oppressive disruption killer who releases localized madness shockwaves, driving survivors insane to reveal their locations and block interactions."
+        "description": "An oppressive disruption killer who releases localized madness shockwaves, driving survivors insane to reveal their locations and block interactions.",
+        "image": "https://deadbydaylight.com/static/5a1d801090435633f93d3449ac0a6471/5bbf2/DBD_Killer_Doctor_only_dbafb9a311.webp"
     },
     {
         "id": 58,
@@ -1058,7 +1065,8 @@ characters = [
         "perk_3": "Hex: Huntress Lullaby",
         "difficulty": "Intermediate",
         "power": "Hunting Hatchets",
-        "description": "A deadly ranged killer who hurls sharp hatchets across loops and open maps, injuring or downing survivors from afar."
+        "description": "A deadly ranged killer who hurls sharp hatchets across loops and open maps, injuring or downing survivors from afar.",
+        "image": "https://deadbydaylight.com/static/f00176036126f7f53d2944c863882ab9/e3912/DBD_Killer_Huntress_only_7510a188be.webp"
     },
     {
         "id": 59,
@@ -1075,7 +1083,8 @@ characters = [
         "perk_3": "Franklin's Demise",
         "difficulty": "Easy",
         "power": "Bubba's Chainsaw",
-        "description": "A close-quarters threat killer (Leatherface) who swings his chainsaw in a wide, multi-hit sweeping tantrum, instantly downing any clusters of survivors."
+        "description": "A close-quarters threat killer (Leatherface) who swings his chainsaw in a wide, multi-hit sweeping tantrum, instantly downing any clusters of survivors.",
+        "image": "https://deadbydaylight.com/static/1b68cdf1dd6c262332c572c0648d9e55/3f3fe/DBD_Killer_Cannibal_Leatherface_only_a4f6f2ed64.webp"
     },
     {
         "id": 60,
@@ -1092,7 +1101,8 @@ characters = [
         "perk_3": "Blood Warden",
         "difficulty": "Easy",
         "power": "Dream Demon",
-        "description": "A surreal dreamscape killer (Freddy Krueger) who pulls survivors into a sleeping state, allowing him to teleport directly to generators and lay slowing blood traps."
+        "description": "A surreal dreamscape killer (Freddy Krueger) who pulls survivors into a sleeping state, allowing him to teleport directly to generators and lay slowing blood traps.",
+        "image": "https://deadbydaylight.com/static/d89551facdb494b7bf07bf152bdeb510/03c7d/DBD_Killer_Nighmare_only_23c0774f8a.webp"
     },
     {
         "id": 61,
@@ -1109,7 +1119,8 @@ characters = [
         "perk_3": "Make Your Choice",
         "difficulty": "Easy",
         "power": "Jigsaw's Baptism",
-        "description": "A stealthy ambush killer (Amanda Young) who crouches to remove her terror radius, lunges out from corners, and places ticking Reverse Bear Traps on downed survivors."
+        "description": "A stealthy ambush killer (Amanda Young) who crouches to remove her terror radius, lunges out from corners, and places ticking Reverse Bear Traps on downed survivors.",
+        "image": "https://deadbydaylight.com/static/5368608f638bb795cebec319c929e767/12c29/DBD_Killer_Pig_Amanda_only_5e01155e0f.webp"
     },
     {
         "id": 62,
@@ -1126,7 +1137,8 @@ characters = [
         "perk_3": "Pop Goes the Weasel",
         "difficulty": "Easy",
         "power": "The Afterpiece Tonic",
-        "description": "A tactical anti-loop killer who throws bottles of toxic gas to blur visions and slow down survivors, while deploying yellow gas to speed up his own chases."
+        "description": "A tactical anti-loop killer who throws bottles of toxic gas to blur visions and slow down survivors, while deploying yellow gas to speed up his own chases.",
+        "image": "https://deadbydaylight.com/static/b6629de77d94f595b115f99f031a421e/8d0aa/DBD_Killer_Clown_only_266fa0018c.webp"
     },
     {
         "id": 63,
@@ -1143,7 +1155,8 @@ characters = [
         "perk_3": "Rancor",
         "difficulty": "Hard",
         "power": "Yamaoka's Haunting",
-        "description": "A mind-game killer who detaches from her physical shell to travel invisibly through the spirit plane, tracking survivors purely via audio cues and scratch marks."
+        "description": "A mind-game killer who detaches from her physical shell to travel invisibly through the spirit plane, tracking survivors purely via audio cues and scratch marks.",
+        "image": "https://deadbydaylight.com/static/0b2f9f0e0198dce197e013af0e0522ce/6a87c/DBD_Killer_Spirit_only_ca6f40fdfa.webp"
     },
     {
         "id": 64,
@@ -1160,7 +1173,8 @@ characters = [
         "perk_3": "Iron Maiden",
         "difficulty": "Easy",
         "power": "Feral Frenzy",
-        "description": "A fast-paced hit-and-run killer squad that sprint vaults over windows and pallets to rapidly stab multiple survivors, applying the bleeding Deep Wound status."
+        "description": "A fast-paced hit-and-run killer squad that sprint vaults over windows and pallets to rapidly stab multiple survivors, applying the bleeding Deep Wound status.",
+        "image" : "https://deadbydaylight.com/static/bc74d8d8211446710efd92be4a9fca00/84c23/DBD_Killer_Legion_only_0868f7f5e9.webp"
     },
     {
         "id": 65,
@@ -1177,7 +1191,8 @@ characters = [
         "perk_3": "Dark Devotion",
         "difficulty": "Intermediate",
         "power": "Vile Purge",
-        "description": "A systematic affliction killer who vomits contagious bile onto objects and survivors, forcing them into a permanently broken, vomiting, and trackable state."
+        "description": "A systematic affliction killer who vomits contagious bile onto objects and survivors, forcing them into a permanently broken, vomiting, and trackable state.",
+        "image": "https://deadbydaylight.com/static/2c332894590eb9a0dbf89e3c2c6d8400/222ac/DBD_Killer_Plague_only_418a9c3f53.webp"
     },
     {
         "id": 66,
@@ -1194,7 +1209,8 @@ characters = [
         "perk_3": "Furtive Chase",
         "difficulty": "Easy",
         "power": "Night Shroud",
-        "description": "A methodical stealth killer who hides his red stain and terror radius completely, leaning around corners to stalk and expose individual survivors."
+        "description": "A methodical stealth killer who hides his red stain and terror radius completely, leaning around corners to stalk and expose individual survivors.",
+        "image": "https://deadbydaylight.com/static/57467dbd8c49b9983ba369ba74c25652/664d8/DBD_Killer_Ghostface_only_1702579267.webp"
     },
     {
         "id": 67,
@@ -1211,7 +1227,8 @@ characters = [
         "perk_3": "Mindbreaker",
         "difficulty": "Intermediate",
         "power": "Of the Abyss",
-        "description": "A monstrous apex predator that lunges long distances across loops to shred pallets and tears open organic ground portals to travel under the map."
+        "description": "A monstrous apex predator that lunges long distances across loops to shred pallets and tears open organic ground portals to travel under the map.",
+        "image": "https://deadbydaylight.com/static/c42f4f5e440caf1d000a5e829db8d234/22fcf/CM_1639_DBD_Website_Ch13_Character_Page_Demogordon_ONLY_4c396614fc.webp"
     },
     {
         "id": 68,
@@ -1228,7 +1245,8 @@ characters = [
         "perk_3": "Nemesis",
         "difficulty": "Hard",
         "power": "Yamaoka's Wrath",
-        "description": "A high-momentum snowball killer who absorbs glowing blood orbs dropped by injured survivors to trigger a raging state, gaining map-wide dash speeds and lethal clubs."
+        "description": "A high-momentum snowball killer who absorbs glowing blood orbs dropped by injured survivors to trigger a raging state, gaining map-wide dash speeds and lethal clubs.",
+        "image": "https://deadbydaylight.com/static/eb970e766a7c9afbf0de6446f192a9d5/7e76c/DBD_Killer_Oni_only_0229974851.webp"
     },
     {
         "id": 69,
@@ -1245,7 +1263,8 @@ characters = [
         "perk_3": "Hex: Retribution",
         "difficulty": "Intermediate",
         "power": "The Redeemer",
-        "description": "An inventive ranged killer who fires a mechanical harpoon gun to impale survivors, reeling them in closer across obstacles for a basic attack blow."
+        "description": "An inventive ranged killer who fires a mechanical harpoon gun to impale survivors, reeling them in closer across obstacles for a basic attack blow.",
+        "image": "https://deadbydaylight.com/static/19d0fe628ace98ffe58686d956af6397/52d66/DBD_Killer_Deathslinger_only_ffbf514957.webp"
     },
     {
         "id": 70,
@@ -1262,7 +1281,8 @@ characters = [
         "perk_3": "Deathbound",
         "difficulty": "Hard",
         "power": "Rites of Judgement",
-        "description": "A heavy control killer (Pyramid Head) who carves trenches into the floor to afflict survivors, bypassing standard hook mechanics entirely via Cages of Atonement."
+        "description": "A heavy control killer (Pyramid Head) who carves trenches into the floor to afflict survivors, bypassing standard hook mechanics entirely via Cages of Atonement.",
+        "image": "https://deadbydaylight.com/static/1538c76190c8016b52dc33e1505b9677/32e6d/DBD_Killer_Executioner_only_5bb54b863d.webp"
     },
     {
         "id": 71,
@@ -1279,7 +1299,8 @@ characters = [
         "perk_3": "Hex: Undying",
         "difficulty": "Very Hard",
         "power": "Blighted Rush",
-        "description": "A high-speed kinetic killer who drinks serum to bounce aggressively off environmental walls, launching lightning-fast lethal rush strikes down loops."
+        "description": "A high-speed kinetic killer who drinks serum to bounce aggressively off environmental walls, launching lightning-fast lethal rush strikes down loops.",
+        "image": "https://deadbydaylight.com/static/9ac591966078a53d892bdd96ddc61e80/64f54/DBD_Killer_Blight_only_2aee8a6af9.webp"
     },
     {
         "id": 72,
@@ -1296,7 +1317,8 @@ characters = [
         "perk_3": "Coupe de Grâce",
         "difficulty": "Very Hard",
         "power": "Blood Bond",
-        "description": "A dual-character tag killer who splits her conjoined twin Victor from Charlotte's chest, controlling him to run at high speed and pounce on survivor backs."
+        "description": "A dual-character tag killer who splits her conjoined twin Victor from Charlotte's chest, controlling him to run at high speed and pounce on survivor backs.",
+        "image": "https://deadbydaylight.com/static/649cc9013a47c71d43f688f439ec5173/be6cc/DBD_Killer_Twins_only_525459f74d.webp"
     },
     {
         "id": 73,
@@ -1313,7 +1335,8 @@ characters = [
         "perk_3": "No Way Out",
         "difficulty": "Easy",
         "power": "Showstopper",
-        "description": "A flamboyant ranged killer who unleashes rapid-fire volleys of throwing knives to fill up a survivor's laceration meter from medium range."
+        "description": "A flamboyant ranged killer who unleashes rapid-fire volleys of throwing knives to fill up a survivor's laceration meter from medium range.",
+        "image": "https://deadbydaylight.com/static/e18a0bd6ac96324b1d2602da1bcbab03/714c6/DBD_Killer_Trickster_only_d4def7ebe7.webp"
     },
     {
         "id": 74,
@@ -1330,7 +1353,8 @@ characters = [
         "perk_3": "Eruption",
         "difficulty": "Easy",
         "power": "T-Virus",
-        "description": "An evolving juggernaut bio-weapon killer who whips survivors with an infection tentacle to increase his power reach, supported by roaming AI zombies."
+        "description": "An evolving juggernaut bio-weapon killer who whips survivors with an infection tentacle to increase his power reach, supported by roaming AI zombies.",
+        "image": "https://deadbydaylight.com/static/40f14945a0bb25c8ade4b655067e2b7b/0d27d/DBD_Killer_Nemesis_only_1f21d6c597.webp"
     },
     {
         "id": 75,
@@ -1347,7 +1371,8 @@ characters = [
         "perk_3": "Scourge Hook: Gift of Pain",
         "difficulty": "Hard",
         "power": "Summons of Pain",
-        "description": "A global harassment killer (Pinhead) who shoots guided gateway hooks to tie down survivors, forcing them to find a puzzle box to halt constant passive chain attacks."
+        "description": "A global harassment killer (Pinhead) who shoots guided gateway hooks to tie down survivors, forcing them to find a puzzle box to halt constant passive chain attacks.",
+        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/97/New_Store_Cenobite.png/revision/latest?cb=20220618153646
     },
     {
         "id": 76,
@@ -1364,7 +1389,8 @@ characters = [
         "perk_3": "Hex: Pentimento",
         "difficulty": "Intermediate",
         "power": "Birds of Torment",
-        "description": "A tactical long-distance cross-map killer who sets ink crows on walls, firing them directly through solid objects to swarm or injure survivors across the realm."
+        "description": "A tactical long-distance cross-map killer who sets ink crows on walls, firing them directly through solid objects to swarm or injure survivors across the realm.",
+        "image": "https://deadbydaylight.com/static/1375bac7853d2b422c9d402512b33c37/2d973/DBD_Killer_Artist_only_bbf9b6d6c0.webp"
     },
     {
         "id": 77,
@@ -1381,7 +1407,8 @@ characters = [
         "perk_3": "Merciless Storm",
         "difficulty": "Intermediate",
         "power": "Deluge of Fear",
-        "description": "A creeping psychological curse killer (Sadako) who manifests out of active TV monitors to build up Condemned status layers on survivors, allowing instant executions."
+        "description": "A creeping psychological curse killer (Sadako) who manifests out of active TV monitors to build up Condemned status layers on survivors, allowing instant executions.",
+        "image": "https://deadbydaylight.com/static/2738fa84a2543b75bf57737f50eea39d/de856/DBD_Killer_Sadako_only_d334828435.webp"
     },
     {
         "id": 78,
@@ -1398,7 +1425,8 @@ characters = [
         "perk_3": "Septic Touch",
         "difficulty": "Intermediate",
         "power": "Reign of Darkness",
-        "description": "An amorphous manifestation of negative energy that teleports inside map lockers, materializes remnants during loops, and triggers a pitch-black Nightfall shroud."
+        "description": "An amorphous manifestation of negative energy that teleports inside map lockers, materializes remnants during loops, and triggers a pitch-black Nightfall shroud.",
+        "image": "https://deadbydaylight.com/static/57a2ab46664c85b21eb33df3805bf8c3/333f3/DBD_Killer_Dredge_only_c28a27b6df.webp"
     },
     {
         "id": 79,
@@ -1415,7 +1443,8 @@ characters = [
         "perk_3": "Terminus",
         "difficulty": "Intermediate",
         "power": "Virulent Bound",
-        "description": "A high-speed bio-engineered predator (Albert Wesker) who dashes twice to grab and throw survivors, infecting them with a slowing Uroboros pathogen."
+        "description": "A high-speed bio-engineered predator (Albert Wesker) who dashes twice to grab and throw survivors, infecting them with a slowing Uroboros pathogen.",
+        "image": "https://deadbydaylight.com/static/840fe6a15ff6ac71baea9db50c32e990/ef384/DBD_Killer_Albert_Uroboros_only_77cebee344.webp"
     },
     {
         "id": 80,
@@ -1432,7 +1461,8 @@ characters = [
         "perk_3": "Hubris",
         "difficulty": "Intermediate",
         "power": "Guardia Compagnia",
-        "description": "A tactical squad commander killer who draws physical search paths to summon AI spectral guards, tasking them to destroy objects or hunt survivors down."
+        "description": "A tactical squad commander killer who draws physical search paths to summon AI spectral guards, tasking them to destroy objects or hunt survivors down.",
+        "image": "https://deadbydaylight.com/static/31c5ecfd7979d01016dafb3031176deb/cac3b/DBD_Killer_The_Knight_only_ddaf0f74ff.webp"
     },
     {
         "id": 81,
@@ -1449,7 +1479,8 @@ characters = [
         "perk_3": "Game Afoot",
         "difficulty": "Easy",
         "power": "Eyes in the Sky",
-        "description": "A high-tech hunting tracker who deploys spinning surveillance drones to map out territories, exposing survivors and tracking their exact positions."
+        "description": "A high-tech hunting tracker who deploys spinning surveillance drones to map out territories, exposing survivors and tracking their exact positions.",
+        "image": "https://deadbydaylight.com/static/c364f528d9ee002b283a453ef0963649/06b08/DBD_Killer_The_Skull_Merchant_only_cbca2c0957.webp"
     },
     {
         "id": 82,
@@ -1466,7 +1497,8 @@ characters = [
         "perk_3": "Machine Learning",
         "difficulty": "Very Hard",
         "power": "Quantum Instantiation",
-        "description": "A corrupted AI lifeform that shoots biopod cameras onto structural surfaces, shooting slipstream nodes onto survivors to teleport straight behind them."
+        "description": "A corrupted AI lifeform that shoots biopod cameras onto structural surfaces, shooting slipstream nodes onto survivors to teleport straight behind them.",
+        "image": "https://deadbydaylight.com/static/ca427decdaf86c120784d8eb10be2bc6/173e8/CM_1432_DBD_Website_Ch28_Character_Page_Killer_Singularity_ONLY_199b669864.webp"
     },
     {
         "id": 83,
@@ -1483,7 +1515,8 @@ characters = [
         "perk_3": "Ultimate Weapon",
         "difficulty": "Easy",
         "power": "Hidden Pursuit",
-        "description": "An iconic alien predator that crawls on all fours through sub-surface floor tunnels, emerging at control stations to strike loops using a razor-sharp tail lash."
+        "description": "An iconic alien predator that crawls on all fours through sub-surface floor tunnels, emerging at control stations to strike loops using a razor-sharp tail lash.",
+        "image": "https://deadbydaylight.com/static/f2a90cd827af5aa5e36279ab007253ce/9f503/CM_1549_DBD_Character_Render_Killer_Xenomorph_45dfe1e09a.webp"
     },
     {
         "id": 84,
@@ -1500,7 +1533,8 @@ characters = [
         "perk_3": "Batteries Included",
         "difficulty": "Hard",
         "power": "Playtime's Over",
-        "description": "A diminutive, third-person perspective killer doll (Chucky) who completely hides his physical form in white footprints, launching scamper slice rushes under loops."
+        "description": "A diminutive, third-person perspective killer doll (Chucky) who completely hides his physical form in white footprints, launching scamper slice rushes under loops.",
+        "image": "https://deadbydaylight.com/static/42fe9477c529d4e03acde37b0d1c1e21/dfece/CM_1660_DBD_Character_Renders_Killer_23c9551fea.webp"
     },
     {
         "id": 85,
@@ -1517,7 +1551,8 @@ characters = [
         "perk_3": "Undone",
         "difficulty": "Hard",
         "power": "UVX",
-        "description": "A bizarre cryptid horror that bounces structural venom toxins off loop walls to weaken survivors, dropping stationary decoys to instantly teleport across tiles."
+        "description": "A bizarre cryptid horror that bounces structural venom toxins off loop walls to weaken survivors, dropping stationary decoys to instantly teleport across tiles.",
+        "image": "https://deadbydaylight.com/static/4d498c3ffb28512cb44bc36164259541/4d32b/DBD_Website_Ch31_Character_Page_Killer_The_Unknown_e603fc0678.webp"
     },
     {
         "id": 86,
@@ -1534,7 +1569,8 @@ characters = [
         "perk_3": "Dark Arrogance",
         "difficulty": "Hard",
         "power": "Vile Book of Spells",
-        "description": "An ancient sorcerer (Vecna) who toggles through four magical spell types to lift dropped pallets, fly over gaps, track items, or launch magical skeletons."
+        "description": "An ancient sorcerer (Vecna) who toggles through four magical spell types to lift dropped pallets, fly over gaps, track items, or launch magical skeletons.",
+        "image": "https://deadbydaylight.com/static/c69220d5d81bdf443501bfb07418035e/d17e6/DBD_Website_Ch32_Character_Page_Killer_Vecna_ONLY_7e9136c8c7.webp"
     },
     {
         "id": 87,
@@ -1546,29 +1582,31 @@ characters = [
         "realm": "Castle Dracula",
         "dlc": "Castlevania Chapter",
         "year": 2024,
-        "perk_1": "Dominance",
-        "perk_2": "Human Frailty",
-        "perk_3": "Exquisite Blood",
+        "perk_1": "Hex: Wretched Fate",
+        "perk_2": "Human Greed",
+        "perk_3": "Dominance",
         "difficulty": "Hard",
-        "power": "Vampiric Powers",
-        "description": "A shape-shifting vampire king (Dracula) who transitions between Vampire form to cast hellfire columns, Wolf form to chase scent tracks, and Bat form to teleport over vaults."
+        "power": "Transformation",
+        "description": "A shape-shifting vampire king (Dracula) who transitions between Vampire form to cast hellfire columns, Wolf form to chase scent tracks, and Bat form to teleport over vaults.",
+        "image": "https://deadbydaylight.com/static/f1a04bf8578d04e99f80941bb5703836/40a45/DBD_ECLAIR_WEBPAGE_Character_Page_Killer_DRACULA_ONLY_0e06f099cb.webp"
     },
     {
         "id": 88,
-        "name": "The Hound",
+        "name": "The Houndmaster",
         "character_code": "K38",
         "role": "Killer",
-        "gender": "Male",
+        "gender": "Female",
         "origin": "United States",
         "realm": "The Void",
-        "dlc": "Doomed Echoes Chapter",
+        "dlc": "Doomed Course Chapter",
         "year": 2024,
-        "perk_1": "Scent of Blood",
-        "perk_2": "Cornered Prey",
-        "perk_3": "Terrible Maw",
+        "perk_1": "All-shaking Thunder",
+        "perk_2": "Scourged Hook: Jagged Compass",
+        "perk_3": "No Quarter",
         "difficulty": "Intermediate",
-        "power": "Savage Hunt",
-        "description": "A feral tracker killer that moves on all fours to follow scent trails left by running survivors, executing extended bite lunges that apply heavy hemorrhage."
+        "power": "Scent of Blood",
+        "description": "Cast adrift by a horrific tragedy, Portia Maye arose from the blood with renewed purpose: to inflict unspeakable pain on those who tore her family apart. With her loyal dog forever at her side, her insatiable lust for violence runs deeper than the darkest ocean trench.",
+        "image": "https://deadbydaylight.com/static/e4616484af0706362e35f613c864973d/504aa/DBD_GELATO_WEBPAGE_Character_Page_KILLER_ONLY_9b9cd1c91f.webp"
     },
     {
         "id": 89,
@@ -1585,7 +1623,8 @@ characters = [
         "perk_3": "None Are Free",
         "difficulty": "Intermediate",
         "power": "One-Eyed Terror",
-        "description": "An aggressive, half-ghoul killer who thrives on slowing survivors in chases, speeding up hook pickups, and locking down windows and standing pallets during the endgame."
+        "description": "An aggressive, half-ghoul killer who thrives on slowing survivors in chases, speeding up hook pickups, and locking down windows and standing pallets during the endgame.",
+        "image": "https://deadbydaylight.com/static/9df1bc372b5ac7892b0b61d114720944/b6bfd/DBD_GELATO_WEBPAGE_Character_Page_KILLER_CHARACTER_ONLY_425ce91cd7.webp"
     },
     {
         "id": 90,
@@ -1602,7 +1641,8 @@ characters = [
         "perk_3": "Hex: Overture of Doom",
         "difficulty": "Hard",
         "power": "Visceral Flight",
-        "description": "A split-form killer inspired by Thai folklore who detaches her floating head to lunge out with a long-range Intestinal Whip, while her perks maximize map-wide tracking, false terror radii, and sudden endgame pressure."
+        "description": "A split-form killer inspired by Thai folklore who detaches her floating head to lunge out with a long-range Intestinal Whip, while her perks maximize map-wide tracking, false terror radii, and sudden endgame pressure.",
+        "image": "https://deadbydaylight.com/static/66c166b08c4b63eb1c25c4078ac58566/82cf4/DBD_MAPLE_CH_WEB_CHARACTERPAGE_KILLER_Krasue_01_2a1bf40066.webp"
     },
     {
         "id": 91,
@@ -1619,7 +1659,8 @@ characters = [
         "perk_3": "Rampage",
         "difficulty": "Easy",
         "power": "Omnipresent Evil",
-        "description": "A relentless, masked powerhouse (Jason Voorhees) who blends high-speed invisible map teleportation with a brutal projectile-flinging mechanics to isolate and pin down survivors."
+        "description": "A relentless, masked powerhouse (Jason Voorhees) who blends high-speed invisible map teleportation with a brutal projectile-flinging mechanics to isolate and pin down survivors.",
+        "image": "https://deadbydaylight.com/static/b88b3476b9c2ad477d484ba2078468b7/ca5bd/DBD_SUSHI_CHAPTER_Character_Page_Jason_CHARACTER_77eb1fa23f.webp"
     },
     {
         "id": 92,
@@ -1636,9 +1677,45 @@ characters = [
         "perk_3": "Lay Waste",
         "difficulty": "Very Hard",
         "power": "Divine Condemned",
-        "description": "A punishing celestial entity that casts down columns of divine light to brand survivors with Heresy, allowing it to banish downed heretics straight into the grueling trial of Exile."
+        "description": "A punishing celestial entity that casts down columns of divine light to brand survivors with Heresy, allowing it to banish downed heretics straight into the grueling trial of Exile.",
+        "image": "https://deadbydaylight.com/static/31dfb99c3863c874547592463c4785b7/ca5bd/DBD_UDON_CHAPTER_STAND_ALONE_RENDERS_WEB_ASSETS_THE_JUDGMENT_CHARACTER_ONLY_af1b049c5a.webp"
+    },
+    {
+        "id": 93,
+        "name": "The First (Henry Creel / Vecna)",
+        "character_code": "K45",
+        "role": "Killer",
+        "gender": "Male",
+        "origin": "United States",
+        "realm": "Hawkins National Laboratory",
+        "dlc": "Chapter 39: Stranger Things 2",
+        "year": 2026,
+        "perk_1": "Turn Back The Clock",
+        "perk_2": "Secret Project",
+        "perk_3": "Hex: Hive Mind",
+        "difficulty": "Hard",
+        "power": "Test Subject #001",
+        "description": "A telekinetic horror born from Henry Creel's descent into the Upside Down, who tears open dimensional Vine gates to traverse the map and unleashes a devastating Undergate strike to snap survivors' minds and bodies alike.",
+        "image": "https://deadbydaylight.com/static/46fd87ede14695260195ddbc2691f431/5bd17/DBD_POUTINE_WEBPAGE_Character_Page_THEFIRST_ONLY_58ed00b1f5.webp"
+    },
+    {
+        "id": 94,
+        "name": "The Animatronic (William Afton / Springtrap)",
+        "character_code": "K40",
+        "role": "Killer",
+        "gender": "Male",
+        "origin": "United States",
+        "realm": "Withered Isle",
+        "dlc": "Chapter 36: Five Nights at Freddy's",
+        "year": 2025,
+        "perk_1": "Help Wanted",
+        "perk_2": "Phantom Fear",
+        "perk_3": "Haywire",
+        "difficulty": "Hard",
+        "power": "Fazbear's Fright",
+        "description": "The Five Nights at Freddy's antagonist trapped inside a decaying Spring Bonnie suit, who throws an embedded fire axe at fleeing survivors and spawns lockable Security Doors across the map to trap them inside sealed rooms.",
+        "image": "https://deadbydaylight.com/static/5834e921a7ce2c9eb75c618bedc7131f/494af/DBD_KETCHUP_WEBPAGE_Asset_CHARACTER_ONLY_SPRINGTRAP_99e8fac4d1.webp"
     }
-]
 
 
 # Helper function to prevent client caching on Vercel
