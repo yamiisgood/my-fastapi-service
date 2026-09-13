@@ -1372,7 +1372,7 @@ characters = [
         "difficulty": "Hard",
         "power": "Summons of Pain",
         "description": "A global harassment killer (Pinhead) who shoots guided gateway hooks to tie down survivors, forcing them to find a puzzle box to halt constant passive chain attacks.",
-        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/97/New_Store_Cenobite.png/revision/latest?cb=20220618153646
+        "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/97/New_Store_Cenobite.png/revision/latest?cb=20220618153646"
     },
     {
         "id": 76,
@@ -1716,7 +1716,7 @@ characters = [
         "description": "The Five Nights at Freddy's antagonist trapped inside a decaying Spring Bonnie suit, who throws an embedded fire axe at fleeing survivors and spawns lockable Security Doors across the map to trap them inside sealed rooms.",
         "image": "https://deadbydaylight.com/static/5834e921a7ce2c9eb75c618bedc7131f/494af/DBD_KETCHUP_WEBPAGE_Asset_CHARACTER_ONLY_SPRINGTRAP_99e8fac4d1.webp"
     }
-
+]
 
 # Helper function to prevent client caching on Vercel
 def set_no_cache_headers(response: Response):
