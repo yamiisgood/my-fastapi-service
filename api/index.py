@@ -52,7 +52,8 @@ characters = [
         "perk_3": "Adrenaline",
         "difficulty": "Easy",
         "power": "None",
-        "description": "An energetic athlete capable of outrunning danger, vaulting silently, and escaping high-pressure chases."
+        "description": "An energetic athlete capable of outrunning danger, vaulting silently, and escaping high-pressure chases.",
+        "image": "https://deadbydaylight.com/static/0fe15a5913b4d237f4e4f813e492cbba/fa99b/DBD_Survivor_Meg_only_5019ce4dbb.webp"
     },
     {
         "id": 3,
@@ -69,7 +70,8 @@ characters = [
         "perk_3": "Self-Care",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A studious botanist who uses her knowledge to heal herself and her teammates with high efficiency."
+        "description": "A studious botanist who uses her knowledge to heal herself and her teammates with high efficiency.",
+        "image": "https://deadbydaylight.com/static/74aa57bab4337e239da486e69269b970/b66d6/DBD_Survivor_Claudette_only_92c9dc3504.webp"
     },
     {
         "id": 4,
@@ -86,7 +88,8 @@ characters = [
         "perk_3": "Saboteur",
         "difficulty": "Easy",
         "power": "None",
-        "description": "A solitary survivalist capable of sabotaging meat hooks quietly and staying calm under intense pressure."
+        "description": "A solitary survivalist capable of sabotaging meat hooks quietly and staying calm under intense pressure.",
+        "image": "https://deadbydaylight.com/static/f48c2c6f50fe1d5a3a538668681d64ed/e86eb/DBD_Survivor_Jake_only_d11a2df75e.webp"
     },
     {
         "id": 5,
@@ -103,7 +106,8 @@ characters = [
         "perk_3": "Streetwise",
         "difficulty": "Intermediate",
         "power": "None",
-        "description": "An urban artist skilled in stealth, crouch-walking quickly, and landing safely from extreme heights."
+        "description": "An urban artist skilled in stealth, crouch-walking quickly, and landing safely from extreme heights.",
+        "image": "https://deadbydaylight.com/static/1e954a7b4549ed626cac2f60ca2f1028/2df8f/DBD_Survivor_Nea_only_8dab36e01b.webp"
     },
     {
         "id": 6,
@@ -120,7 +124,8 @@ characters = [
         "perk_3": "Decisive Strike",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A resilient survivor whose determination allows her to become the Killer's Obsession and break free from grasps."
+        "description": "A resilient survivor whose determination allows her to become the Killer's Obsession and break free from grasps.",
+        "iamge": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/90/New_Store_Laurie.png/revision/latest?cb=20220325045515"
     },
     {
         "id": 7,
@@ -155,7 +160,8 @@ characters = [
         "perk_3": "Unbreakable",
         "difficulty": "Hard",
         "power": "None",
-        "description": "A tough military veteran accustomed to sacrificing himself for the group and picking himself up from dying states."
+        "description": "A tough military veteran accustomed to sacrificing himself for the group and picking himself up from dying states.",
+        "image": "https://deadbydaylight.com/static/25a713e5f0cb97ae95598346607788de/c3d2b/DBD_Survivor_William_Bill_only_b845ef6c74.webp"
     },
     {
         "id": 9,
