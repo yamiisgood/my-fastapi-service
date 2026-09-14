@@ -2207,46 +2207,44 @@ def get_characters(
         "characters": paginated_results
     }
 
-# SEARCH CHARACTERS BY ANY KEYWORD
-@app.get("/api/v1/characters/search")
-def search_characters(
-    response: Response,
-    q: str = Query(..., min_length=1),
-    limit: int = Query(10, ge=1, le=100),
-    offset: int = Query(0, ge=0)
-):
-    set_no_cache_headers(response)
+# ============================================================
+# SEARCH CHARACTERS (Protected)
+# ============================================================
+@app.get("/api/v1/characters/search", dependencies=[Depends(verify_api_key)])
+def search_characters(q: str = Query(..., min_length=1)):
     search_query = q.lower()
-    matched = []
-    for c in characters:
+    results = []
+
+    for character in characters:
         searchable_text = (
-            f"{c['character_code']} "
-            f"{c['name']} "
-            f"{c['role']} "
-            f"{c['gender']} "
-            f"{c['origin']} "
-            f"{c['realm']} "
-            f"{c['dlc']} "
-            f"{c['year']} "
-            f"{c['perk_1']} "
-            f"{c['perk_2']} "
-            f"{c['perk_3']} "
-            f"{c['difficulty']} "
-            f"{c.get('power', '')}"
+            f"{character['id']} "
+            f"{character['name']} "
+            f"{character['character_code']} "
+            f"{character['role']} "
+            f"{character['gender']} "
+            f"{character['origin']} "
+            f"{character['realm']} "
+            f"{character['dlc']} "
+            f"{character['year']} "
+            f"{character['perk_1']} "
+            f"{character['perk_2']} "
+            f"{character['perk_3']} "
+            f"{character['difficulty']} "
+            f"{character.get('power', '')} "
+            f"{character['movement_speed']} "
+            f"{character['terror_radius']} "
+            f"{character.get('height', '')} "
+            f"{character['voice_actor']}"
         ).lower()
 
         if search_query in searchable_text:
-            matched.append(c)
-            
-    paginated_results = matched[offset : offset + limit]
+            results.append(character)
+
     return {
         "query": q,
-        "total": len(matched),
-        "limit": limit,
-        "offset": offset,
-        "results": paginated_results
+        "count": len(results),
+        "results": results
     }
-
 # GET SINGLE CHARACTER BY ID
 @app.get("/api/v1/characters/{character_id}")
 def get_character(character_id: int, response: Response):
