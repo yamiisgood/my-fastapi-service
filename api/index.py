@@ -3,7 +3,37 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Optional, Literal
 from datetime import datetime
+# ============================================================
+# HEALTH CHECK (Public)
+# ============================================================
+@app.get("/health")
+def health_check():
+    return {
+        "status": "ok",
+        "service": "Dead by Daylight Character Directory API",
+        "version": API_VERSION,
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
 
+# ============================================================
+# GET ALL CHARACTERS (Protected)
+# ============================================================
+@app.get("/api/v1/characters", dependencies=[Depends(verify_api_key)])
+def get_characters():
+    return {
+        "count": len(characters),
+        "characters": characters
+    }
+
+# ============================================================
+# GET ONE CHARACTER (Protected)
+# ============================================================
+@app.get("/api/v1/characters/{character_id}", dependencies=[Depends(verify_api_key)])
+def get_character(character_id: int):
+    for character in characters:
+        if character["id"] == character_id:
+            return character
+    raise HTTPException(status_code=404, detail="Character not found.")
 # ============================================================
 # CONFIGURATION & CONSTANTS
 # ============================================================
