@@ -1,4 +1,5 @@
-const API_URL = "https://my-fastapi-service-coral.vercel.app";
+const API_URL = "https://my-fastapi-service-coral.vercel.app/api/v1";
+const API_KEY = "student-api-key-123"; 
 
 let currentPage = 0;
 const limit = 10;
@@ -6,9 +7,11 @@ let currentRole = "";
 let currentQuery = "";
 let debounceTimer = null;
 
+// CENTRALIZED FETCH OPTIONS
 const fetchOptions = {
     cache: "no-store",
     headers: {
+        "x-api-key": API_KEY,
         "Cache-Control": "no-cache, no-store, must-revalidate",
         "Pragma": "no-cache"
     }
@@ -39,7 +42,7 @@ async function loadCharacters(page = 0, role = "") {
         console.error("Error loading characters:", error);
         const container = getContainer();
         if (container) {
-            container.innerHTML = "<p>Unable to connect to the API.</p>";
+            container.innerHTML = "<p>Unable to connect to the API. (Check API Key or CORS)</p>";
         }
     }
 }
@@ -151,6 +154,10 @@ async function viewCharacter(id) {
                 <p><strong>Realm:</strong> ${character.realm}</p>
                 <p><strong>DLC Chapter:</strong> ${character.dlc}</p>
                 ${powerSection}
+                <p><strong>Base Speed:</strong> ${character.movement_speed || 'N/A'}</p>
+                <p><strong>Terror Radius:</strong> ${character.terror_radius || 'N/A'}</p>
+                <p><strong>Height:</strong> ${character.height || 'N/A'}</p>
+                <p><strong>Voice Actor:</strong> ${character.voice_actor || 'N/A'}</p>
                 <p><strong>Perk 1:</strong> ${character.perk_1 || 'N/A'}</p>
                 <p><strong>Perk 2:</strong> ${character.perk_2 || 'N/A'}</p>
                 <p><strong>Perk 3:</strong> ${character.perk_3 || 'N/A'}</p>
@@ -214,7 +221,7 @@ function getModal() {
 document.addEventListener("DOMContentLoaded", () => {
     loadCharacters(0);
 
-    // Live search input with debounce (300ms)
+    // Live search input with debounce
     const searchInput = document.getElementById("searchInput");
     if (searchInput) {
         searchInput.addEventListener("input", () => {
