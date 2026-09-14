@@ -2134,7 +2134,8 @@ def home(response: Response):
             "/api/v1/characters/{character_id}"
         ]
     }
-
+validated_characters = [Character(**character).model_dump() for character in character]
+characters = validated_characters
 # GET ALL CHARACTERS (WITH ROLE FILTER, PAGINATION, AND SORTING)
 @app.get("/api/v1/characters")
 def get_characters(
