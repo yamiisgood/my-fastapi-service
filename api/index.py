@@ -2118,10 +2118,17 @@ characters = [
 # Validate all character dictionaries
 validated_characters = [Character(**character).model_dump() for character in characters]
 characters = validated_characters
-# =========================================================================
-# API ENDPOINTS (VERSIONED: /api/v1/)
-# =========================================================================
 
+def verify_api_key(x_api_key: Optional[str] = Header(default=None)):
+    if x_api_key != API_KEY:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or missing API key."
+        )
+    return True
+# =========================================================================
+# API ENDPOINTS 
+# =========================================================================
 @app.get("/api/v1/")
 def home(response: Response):
     set_no_cache_headers(response)
