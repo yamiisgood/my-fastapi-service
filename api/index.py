@@ -1,10 +1,17 @@
-from fastapi import FastAPI, HTTPException, Query, Response
+from fastapi import FastAPI, HTTPException, Header, Query, Response, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from datetime import datetime
+
+# ============================================================
+# CONFIGURATION & CONSTANTS
+# ============================================================
+API_KEY = "student-api-key-123"
+API_VERSION = "1.0"
 
 app = FastAPI(
     title="Dead by Daylight Character Directory API",
     description="A REST API containing all Survivors and Killers in Dead by Daylight with 14 unique fields each.",
-    version="2.0.0"
+    version=API_VERSION
 )
 
 app.add_middleware(
@@ -811,7 +818,6 @@ characters = [
         "description": "A battle-hardened monster hunter who extends killer aura reveal durations and upgrades his current item tier upon stunning the killer.",
         "image": "https://deadbydaylight.com/static/1b26554ebecb0d0c4ecc9e43eca418b2/8634a/DBD_ECLAIR_WEBPAGE_Character_Page_Survivor_Trevor_ONLY_5c3deb1b56.webp"
     },
-    
     {
         "id": 45,
         "name": "Rick Grimes",
@@ -920,7 +926,6 @@ characters = [
         "description": "Raised in captivity and studied for her psychic abilities, the lonely girl called Eleven never experienced a meaningful connection",
         "image": "https://deadbydaylight.com/static/2a03b828a4986c03a59f3d3749604ee8/8834d/DBD_POUTINE_WEBPAGE_Character_Page_ELEVEN_VF_2_Character_Only_e8f307c7a5.webp"
     },
-   
     # =========================================================================
     # KILLERS
     # =========================================================================
@@ -1174,7 +1179,7 @@ characters = [
         "difficulty": "Easy",
         "power": "Feral Frenzy",
         "description": "A fast-paced hit-and-run killer squad that sprint vaults over windows and pallets to rapidly stab multiple survivors, applying the bleeding Deep Wound status.",
-        "image" : "https://deadbydaylight.com/static/bc74d8d8211446710efd92be4a9fca00/84c23/DBD_Killer_Legion_only_0868f7f5e9.webp"
+        "image": "https://deadbydaylight.com/static/bc74d8d8211446710efd92be4a9fca00/84c23/DBD_Killer_Legion_only_0868f7f5e9.webp"
     },
     {
         "id": 65,
@@ -1726,26 +1731,27 @@ def set_no_cache_headers(response: Response):
 
 
 # =========================================================================
-# API ENDPOINTS
+# API ENDPOINTS (VERSIONED: /api/v1/)
 # =========================================================================
 
-@app.get("/")
+@app.get("/api/v1/")
 def home(response: Response):
     set_no_cache_headers(response)
     return {
         "message": "Welcome to the Dead by Daylight Character Directory API!",
+        "version": API_VERSION,
         "total_characters": len(characters),
         "survivors_count": len([c for c in characters if c["role"] == "Survivor"]),
         "killers_count": len([c for c in characters if c["role"] == "Killer"]),
         "endpoints": [
-            "/characters",
-            "/characters/search",
-            "/characters/{character_id}"
+            "/api/v1/characters",
+            "/api/v1/characters/search",
+            "/api/v1/characters/{character_id}"
         ]
     }
 
 # GET ALL CHARACTERS (WITH ROLE FILTER, PAGINATION, AND SORTING)
-@app.get("/characters")
+@app.get("/api/v1/characters")
 def get_characters(
     response: Response,
     role: str = Query(None, description="Filter by 'Survivor' or 'Killer'"),
@@ -1778,7 +1784,7 @@ def get_characters(
     }
 
 # SEARCH CHARACTERS BY ANY KEYWORD
-@app.get("/characters/search")
+@app.get("/api/v1/characters/search")
 def search_characters(
     response: Response,
     q: str = Query(..., min_length=1),
@@ -1786,7 +1792,7 @@ def search_characters(
     offset: int = Query(0, ge=0)
 ):
     set_no_cache_headers(response)
-    q = q.lower()
+    search_query = q.lower()
     matched = []
     for c in characters:
         searchable_text = (
@@ -1805,7 +1811,7 @@ def search_characters(
             f"{c.get('power', '')}"
         ).lower()
 
-        if q in searchable_text:
+        if search_query in searchable_text:
             matched.append(c)
             
     paginated_results = matched[offset : offset + limit]
@@ -1818,7 +1824,7 @@ def search_characters(
     }
 
 # GET SINGLE CHARACTER BY ID
-@app.get("/characters/{character_id}")
+@app.get("/api/v1/characters/{character_id}")
 def get_character(character_id: int, response: Response):
     set_no_cache_headers(response)
     for c in characters:
