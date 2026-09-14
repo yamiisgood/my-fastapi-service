@@ -23,11 +23,29 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+class Characters(BaseModel):
+    id: int
+    name: str = Field(min_length=1)
+    character_code: str = Field(min_length=1)
+    role: str = Field(min_length=1)
+    gender: str = Field(min_length=1)
+    origin: str = Field(min_length=1)
+    realm: str = Field(min_length=1)
+    dlc: str = Field(min_length=1)
+    year: int = Field(ge=2016, le=2100)
+    perk_1: str = Field(min_length=1)
+    perk_2: str = Field(min_length=1)
+    perk_3: str = Field(min_length=1)
+    difficulty: str = Field(min_length=1)
+    power: str = Field(default="None")
+    description: str = Field(min_length=1)
+    movement_speed: str = Field(min_length=1)
+    terror_radius: str = Field(min_length=1)
+    height: str = Field(default="N/A")
+    voice_actor: str = Field(min_length=1)
+    
+    
 characters = [
-    # =========================================================================
-    # SURVIVORS
-    # =========================================================================
     {
         "id": 1,
         "name": "Dwight Fairfield",
@@ -45,10 +63,10 @@ characters = [
         "power": "None",
         "description": "A nervous leader whose perks help allies locate one another and increase team repair and action efficiency.",
         "image": "https://deadbydaylight.com/static/0fe15a5913b4d237f4e4f813e492cbba/fa99b/DBD_Survivor_Meg_only_5019ce4dbb.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Ian Chuprun (BHVR)"
     },
     {
         "id": 2,
@@ -67,10 +85,10 @@ characters = [
         "power": "None",
         "description": "An energetic athlete capable of outrunning danger, vaulting silently, and escaping high-pressure chases.",
         "image": "https://deadbydaylight.com/static/0fe15a5913b4d237f4e4f813e492cbba/fa99b/DBD_Survivor_Meg_only_5019ce4dbb.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Ingrid Blemur (BHVR)"
     },
     {
         "id": 3,
@@ -89,10 +107,10 @@ characters = [
         "power": "None",
         "description": "A studious botanist who uses her knowledge to heal herself and her teammates with high efficiency.",
         "image": "https://deadbydaylight.com/static/74aa57bab4337e239da486e69269b970/b66d6/DBD_Survivor_Claudette_only_92c9dc3504.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Sarah Robinson (BHVR)"
     },
     {
         "id": 4,
@@ -111,10 +129,10 @@ characters = [
         "power": "None",
         "description": "A solitary survivalist capable of sabotaging meat hooks quietly and staying calm under intense pressure.",
         "image": "https://deadbydaylight.com/static/f48c2c6f50fe1d5a3a538668681d64ed/e86eb/DBD_Survivor_Jake_only_d11a2df75e.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Kevin Boissonneault (BHVR)"
     },
     {
         "id": 5,
@@ -133,10 +151,10 @@ characters = [
         "power": "None",
         "description": "An urban artist skilled in stealth, crouch-walking quickly, and landing safely from extreme heights.",
         "image": "https://deadbydaylight.com/static/1e954a7b4549ed626cac2f60ca2f1028/2df8f/DBD_Survivor_Nea_only_8dab36e01b.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Morgane Ravasi (BHVR)"
     },
     {
         "id": 6,
@@ -155,10 +173,10 @@ characters = [
         "power": "None",
         "description": "A resilient survivor whose determination allows her to become the Killer's Obsession and break free from grasps.",
         "image": "https://static.wikia.nocookie.net/halloweenmovie/images/b/b9/LaurieDBD.webp/revision/latest?cb=20220402055032",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Catherine Lecours (BHVR)"
     },
     {
         "id": 7,
@@ -177,10 +195,10 @@ characters = [
         "power": "None",
         "description": "A lucky gambler who boosts aura reading ranges and increases luck and chest add-on quality for the team.",
         "image": "https://deadbydaylight.com/static/b8d8bc40047189d8410df495e6691270/0005a/DBD_Survivor_Ace_only_f4ed90f604.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Sébastien Varas (BHVR)"
     },
     {
         "id": 8,
@@ -199,10 +217,10 @@ characters = [
         "power": "None",
         "description": "A tough military veteran accustomed to sacrificing himself for the group and picking himself up from dying states.",
         "image": "https://deadbydaylight.com/static/25a713e5f0cb97ae95598346607788de/c3d2b/DBD_Survivor_William_Bill_only_b845ef6c74.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Ricardo Gomez (BHVR)"
     },
     {
         "id": 9,
@@ -221,10 +239,10 @@ characters = [
         "power": "None",
         "description": "An esports competitor who repairs generators quietly, gains speed when vaulting, and tracks Killer actions.",
         "image": "https://deadbydaylight.com/static/64f24a9f3705db694aa68a2bd28d10d9/ad4ca/DBD_Survivor_Feng_Ming_only_a988940ff0.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Bianca Lavric (BHVR)"
     },
     {
         "id": 10,
@@ -243,10 +261,10 @@ characters = [
         "power": "None",
         "description": "A rugged brawler who takes hits for his teammates, pushes through injuries, and withstands fatal blows.",
         "image": "https://deadbydaylight.com/static/37b607f85bcac74e5b7dd0ee159b4643/4421b/DBD_Survivor_David_King_only_92578775b6.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Stefan Horvath (BHVR)"
     },
     {
         "id": 11,
@@ -265,10 +283,10 @@ characters = [
         "power": "None",
         "description": "A sleepy survivor who opens exit gates faster, loots med-kits reliably, and reduces status effect durations.",
         "image": "https://deadbydaylight.com/static/0b2382adae76d6b79a394fdd0dce7404/0f2df/DBD_Survivor_Quentin_only_1ec65c154a.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Louis McLean (BHVR)"
     },
     {
         "id": 12,
@@ -287,10 +305,10 @@ characters = [
         "power": "None",
         "description": "An obsessed detective who crawls quickly while recovering and tracks objective auras after generator completions.",
         "image": "https://deadbydaylight.com/static/1cd51fbdf2a23db9a1f73720e49662d4/1b615/DBD_Survivor_David_Tapp_only_372da5fad1.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Dave Blake (BHVR)"
     },
     {
         "id": 13,
@@ -309,10 +327,10 @@ characters = [
         "power": "None",
         "description": "A hopeful songbird who tracks vault and pallet auras and fiercely resists being carried to hooks.",
         "image": "https://deadbydaylight.com/static/c19ceb6f87fdc19072ec9afb471bffde/43423/DBD_Survivor_Kate_only_a94e775efb.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Daphné Poulin Gourdeau (BHVR)"
     },
     {
         "id": 14,
@@ -331,10 +349,10 @@ characters = [
         "power": "None",
         "description": "A resourceful teacher capable of distracting Killers with pebbles and unhooking himself securely.",
         "image": "https://deadbydaylight.com/static/d573cb5d078562279defa864f92865dc/8ada0/DBD_Survivor_Adam_only_b71e1ed1d8.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Bourbaki Joseph (BHVR)"
     },
     {
         "id": 15,
@@ -353,10 +371,10 @@ characters = [
         "power": "None",
         "description": "A quiet artist whose perks break hooks upon escape, show team auras, and hide his own from the Killer.",
         "image": "https://deadbydaylight.com/static/fc98f794f4bc8fb3d3bf9739efa2cf48/12122/DBD_Survivor_Jeff_only_4c4caad581.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Filip Ivanovic (BHVR)"
     },
     {
         "id": 16,
@@ -375,10 +393,10 @@ characters = [
         "power": "None",
         "description": "An influential talk show host who heals while healing others, hides scratch marks on generator completions, and stuns Killers out of lockers.",
         "image": "https://deadbydaylight.com/static/363228a4ebced2a793845352cb86ac67/1852c/DBD_Survivor_Jane_only_4629ed580e.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Patricia Brochu-Gagné (BHVR)"
     },
     {
         "id": 17,
@@ -397,10 +415,10 @@ characters = [
         "power": "None",
         "description": "A legendary demon hunter who converts recovery progress to wiggle progress and absorbs fatal blows.",
         "image": "https://deadbydaylight.com/static/f864b1820f2137a46144a3c46c533011/0fb44/DBD_Survivor_Ash_only_03e2a515fa.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Bruce Campbell (Original Actor)"
     },
     {
         "id": 18,
@@ -419,10 +437,10 @@ characters = [
         "power": "None",
         "description": "A headstrong journalist who heals herself by cleansing totems, sees her own scratch marks, and highlights generators for nearby allies.",
         "image": "https://deadbydaylight.com/static/4c128ebcae087481f9a55f2ad8f4b5e2/71c80/CM_1639_DBD_Website_Ch13_Character_Page_Nancy_ONLY_8f259fd20e.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Madison Lee (Voice Actress)"
     },
     {
         "id": 19,
@@ -441,10 +459,10 @@ characters = [
         "power": "None",
         "description": "A protective former popular kid who pauses hook struggle timers and hides unhooked teammates' pools of blood and scratch marks.",
         "image": "https://deadbydaylight.com/static/6b9c65a52cef3e1f7ea7ad9e68870f02/f5268/CM_1639_DBD_Website_Ch13_Character_Page_Steve_ONLY_f87506bf77.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Undisclosed Voice Actor"
     },
     {
         "id": 20,
@@ -463,10 +481,10 @@ characters = [
         "power": "None",
         "description": "A hardened street racer who resets dropped pallets, hides her pools of blood when injured, and aids wiggling allies.",
         "image": "https://deadbydaylight.com/static/915a04bc5882f32ab2e6e74f99568f85/1c3db/DBD_Survivor_Yui_Kamura_only_fcfa8c6786.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Daniela Pinto (BHVR)"
     },
     {
         "id": 21,
@@ -485,10 +503,10 @@ characters = [
         "power": "None",
         "description": "An independent filmmaker capable of instantly healing others at her own expense and masking her aura after being unhooked.",
         "image": "https://deadbydaylight.com/static/647ba234e9c9806c0783453bb0373247/5b0f6/DBD_Survivor_Zarina_only_404279f793.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Émilie Paquin (BHVR)"
     },
     {
         "id": 22,
@@ -507,10 +525,10 @@ characters = [
         "power": "None",
         "description": "A resilient young woman who blocks generators from the Killer's regression using the Entity and gains endurance after healing.",
         "image": "https://deadbydaylight.com/static/2efda55012428f36ea64fd987d446cfe/a3edc/DBD_Survivor_Cheryl_only_2b098e322c.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Undisclosed Voice Actress"
     },
     {
         "id": 23,
@@ -529,10 +547,10 @@ characters = [
         "power": "None",
         "description": "A brilliant architect who refills depleted item charges inside lockers and gains speed boosts to actions based on injured allies.",
         "image": "https://deadbydaylight.com/static/e4f7bbde54b1571c7d3e4122f0de8d7e/315f4/DBD_Survivor_Felix_only_a3f9dddd83.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Frédéric Poirier (BHVR)"
     },
     {
         "id": 24,
@@ -551,10 +569,10 @@ characters = [
         "power": "None",
         "description": "An occult investigator who rummages through opened chests, fakes locker entries, and drops pallets on the Killer while being carried.",
         "image": "https://deadbydaylight.com/static/d24ddf5d55c8ee3bb7d5da18c155bc63/d3b07/DBD_Survivor_Elodie_only_61b051f9db.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Beatrix Moersch (BHVR)"
     },
     {
         "id": 25,
@@ -573,10 +591,10 @@ characters = [
         "power": "None",
         "description": "A self-serving music producer who benefits from her teammates' misfortunes, gaining generator tokens and sprint bursts from pallet stuns.",
         "image": "https://deadbydaylight.com/static/b38895e1b5c2b0807af564b00908b1ff/99ebe/DBD_Survivor_Yun_Jin_only_ad2b67d501.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "So-Hee Kim (Voice Actor)"
     },
     {
         "id": 26,
@@ -595,10 +613,10 @@ characters = [
         "power": "None",
         "description": "An elite police operative who cleanses totems rapidly, regains instant healing progress upon unhooking, and traps generators with blinding mines.",
         "image": "https://deadbydaylight.com/static/11142a038069d83025fdb2d1215ce96a/a5a4c/DBD_Survivor_Jill_only_6add07fd37.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Chaney Crabb (The Monster Factory)"
     },
     {
         "id": 27,
@@ -617,10 +635,10 @@ characters = [
         "power": "None",
         "description": "An idealistic rookie cop who completely silences his healing sounds and crafts blinding flashbang grenades inside lockers.",
         "image": "https://deadbydaylight.com/static/9756c3a8ceed79cf76cbe28f96fc039f/4a362/DBD_Survivor_Leon_only_83e8e83493.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Riley McShane (The Monster Factory)"
     },
     {
         "id": 28,
@@ -639,10 +657,10 @@ characters = [
         "power": "None",
         "description": "A modern witch who blesses totems to create areas where survivors can heal quickly and hide their scratch marks.",
         "image": "https://deadbydaylight.com/static/38b6b06bcd8f4629c7ed3784f8872cfd/2f542/DBD_Survivor_Mikaela_only_3e3b90279b.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Adrienne Cowan (The Monster Factory)"
     },
     {
         "id": 29,
@@ -661,10 +679,10 @@ characters = [
         "power": "None",
         "description": "A brilliant codebreaker who extends hit speed bursts and creates a recovery oasis for downed allies using Boon totems.",
         "image": "https://deadbydaylight.com/static/a187b5b028cb0a23a7e6228dcbc68e29/944ed/DBD_Survivor_Jonah_only_214fe0fc2f.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Felipe Quinzaños (The Monster Factory)"
     },
     {
         "id": 30,
@@ -683,10 +701,10 @@ characters = [
         "power": "None",
         "description": "A psychic marine biologist who completely hides blood, scratches, and grunts after stunning a killer, and blesses totems to grant speed boosts.",
         "image": "https://deadbydaylight.com/static/e83583da80436b24b6ce4f497f56e31e/a6472/DBD_Survivor_Yoichi_only_67e6855e29.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Mirai Kawashima (The Monster Factory)"
     },
     {
         "id": 31,
@@ -705,10 +723,10 @@ characters = [
         "power": "None",
         "description": "A psychic podcaster who sees nearby ally scratch marks, blinds Killers to inflict blindness, and increases repair speed after cleansing totems.",
         "image": "https://deadbydaylight.com/static/4db50dcec74a704f235259d8847f47e2/5fed0/DBD_Survivor_Haddie_only_c03e10dcd0.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Ashavari Anna Joshi (The Monster Factory)"
     },
     {
         "id": 32,
@@ -727,10 +745,10 @@ characters = [
         "power": "None",
         "description": "A secretive spy who installs camera wiretaps on generators, heals instantly when nearby allies are hit, and hides traces when the lone survivor.",
         "image": "https://deadbydaylight.com/static/c50f82b1434e9e777754d09e467ec0cf/82f4a/DBD_Survivor_Ada_Wong_only_5a1367612e.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Vicky Psarakis (The Monster Factory)"
     },
     {
         "id": 33,
@@ -749,10 +767,10 @@ characters = [
         "power": "None",
         "description": "A young prodigy medic who pauses the sacrifice timer of hooked allies and rewards rapid consecutive Great Skill Checks with huge repair bursts.",
         "image": "https://deadbydaylight.com/static/44a306f9dd69bba3c8dd77b5298070b9/4e40a/DBD_Survivor_Rebeca_only_b6a6753e9b.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Megan Orvold-Scheider (The Monster Factory)"
     },
     {
         "id": 34,
@@ -771,10 +789,10 @@ characters = [
         "power": "None",
         "description": "An ancient, arcane scholar who stores generator progression to instantly dump it elsewhere and reveals the Killer during Great Skill Checks.",
         "image": "https://deadbydaylight.com/static/8cd8121c9f773a21c7f17ae85d5d7d23/aff4d/DBD_Survivor_Vittorio_only_4848b4923b.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Luc de Villars (The Monster Factory)"
     },
     {
         "id": 35,
@@ -793,10 +811,10 @@ characters = [
         "power": "None",
         "description": "A community-focused kite fighter whose perks reward group generator repairs and synchronized vault maneuvers during chases.",
         "image": "https://deadbydaylight.com/static/6cdb99c07fcc2f22b3333bea19e48530/ea2f7/DBD_Survivor_Thalita_only_5d556e7020.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Sylvia Salustti (Brazilian Voice Actress)"
     },
     {
         "id": 36,
@@ -815,10 +833,10 @@ characters = [
         "power": "None",
         "description": "A calm analyst who activates massive sprint bursts when the killer picks up an ally and can force exhaustion recovery at the cost of health.",
         "image": "https://deadbydaylight.com/static/2d0ab948e475fc1fb44858a560bd9966/33492/DBD_Survivor_Renato_only_cd4eb78666.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Felipe Grinnan (Brazilian Voice Actor)"
     },
     {
         "id": 37,
@@ -837,10 +855,10 @@ characters = [
         "power": "None",
         "description": "A cloned starship technician who runs faster when injured, reveals the highest-progress generator during chases, and recycles depleted toolboxes.",
         "image": "https://deadbydaylight.com/static/d7941b67057e857981d0ebd9b55dde5a/c0840/CM_1285_DBD_Website_Ch27_Character_Page_Survivor_Gabriel_ONLY_1d66e2e05e.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Stevie Boiser (The Monster Factory)"
     },
     {
         "id": 38,
@@ -859,10 +877,10 @@ characters = [
         "power": "None",
         "description": "An eccentric movie superstar who can scream to read killer auras, fake his own death to completely heal from the dying state, and gain random items.",
         "image": "https://deadbydaylight.com/static/207bcdca864bfebdd18949e565e13867/fadb4/CM_1489_DBD_Website_Ch28_5_Character_Page_Survivor_Nick_Cage_ONLY_f3160126ef.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Nicolas Cage"
     },
     {
         "id": 39,
@@ -881,10 +899,10 @@ characters = [
         "power": "None",
         "description": "An iron-willed space survivor who suppresses her footsteps while healthy and installs slowing chemical traps onto dropped pallets.",
         "image": "https://deadbydaylight.com/static/5abb04054e04b4b184a98ced0a4f25fc/83653/CM_1549_DBD_Character_Render_Survivor_Ellen_18e40d4323.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Molly Daisy (The Monster Factory)"
     },
     {
         "id": 40,
@@ -903,10 +921,10 @@ characters = [
         "power": "None",
         "description": "A tormented writer who runs faster while shining flashlights, inflicts slowed movement on blinded killers, and alters skill check frequencies.",
         "image": "https://deadbydaylight.com/static/4e16e064f9f2888a3ef27202bc256e43/aa26e/DBD_Chap30_5_Zodiac_Character_Renders_Survivor_3b678c2a9a.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Matthew Porretta (Original Voice Actor)"
     },
     {
         "id": 41,
@@ -925,10 +943,10 @@ characters = [
         "power": "None",
         "description": "A gothic alternative girl who performs dark invocations inside the basement to trade her health for permanent match-wide generator repair progress.",
         "image": "https://deadbydaylight.com/static/18f59ffadbe3fa28c1d170a4960ea260/dbd1f/DBD_Website_Ch31_Character_Page_Survivor_Sable_084678d1f0.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Liz Morey (Professional Voice Actress)"
     },
     {
         "id": 42,
@@ -947,10 +965,10 @@ characters = [
         "power": "None",
         "description": "An elven bard who casts illusory copies of herself on objectives and plays dice roll musical melodies to boost team performance.",
         "image": "https://deadbydaylight.com/static/ee95eb716d9e9ee9256126b11270a284/b0d5c/DBD_Website_Ch31_Character_Page_Survivor_Aestri_ONLY_0d4f73719b.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Aestri: Jesse Vilinsky; Baermar: Robbie Daymond"
     },
     {
         "id": 43,
@@ -969,10 +987,10 @@ characters = [
         "power": "None",
         "description": "A legendary archaeologist who executes high-speed window vaults while healthy, bypasses screams, and permanently drops max generator requirements.",
         "image": "https://deadbydaylight.com/static/14ec5edaf1680a41f9db353056227255/44bb7/WEB_DBD_DONUTS_Survivor_Lara_only_c83551f39a.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Emily O'Brien (Voice Actress)"
     },
     {
         "id": 44,
@@ -991,10 +1009,10 @@ characters = [
         "power": "None",
         "description": "A battle-hardened monster hunter who extends killer aura reveal durations and upgrades his current item tier upon stunning the killer.",
         "image": "https://deadbydaylight.com/static/1b26554ebecb0d0c4ecc9e43eca418b2/8634a/DBD_ECLAIR_WEBPAGE_Character_Page_Survivor_Trevor_ONLY_5c3deb1b56.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Andrew Wheildon-Dennis (Voice Actor)"
     },
     {
         "id": 45,
@@ -1012,7 +1030,11 @@ characters = [
         "difficulty": "Hard",
         "power": "None",
         "description": "A tactical former sheriff who crafts fragile temporary replacement pallets out of destroyed loops and draws killer aggro away from injured team members.",
-        "image": "https://deadbydaylight.com/static/249e148bb87d0ddb393b2815caa2c4ab/d5ea7/Db_D_LASAGNA_CH_Character_Art_Survivor_S47_WEB_3840_X1344_VF_2_Character_only_d19bdfa143.webp"
+        "image": "https://deadbydaylight.com/static/249e148bb87d0ddb393b2815caa2c4ab/d5ea7/Db_D_LASAGNA_CH_Character_Art_Survivor_S47_WEB_3840_X1344_VF_2_Character_only_d19bdfa143.webp",
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Andrew Lincoln"
     },
     {
         "id": 46,
@@ -1031,10 +1053,10 @@ characters = [
         "power": "None",
         "description": "A fearless katana survivor who triggers high-stakes, single-use window stuns, picks herself up from the dying state, and grants defensive buffs.",
         "image": "https://deadbydaylight.com/static/3049fe32c32188db2d9de7d3b8982886/58672/Db_D_LASAGNA_CH_Character_Art_Survivor_S48_WEB_3840_X1344_V_Fb_Character_only_98ff606a16.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Erikka J. (Voice Actress)"
     },
     {
         "id": 47,
@@ -1053,10 +1075,10 @@ characters = [
         "power": "None",
         "description": "An energetic punk rock drummer who utilizes rhythm performance actions to trigger team skill check bursts and slips out of loops with advanced stealth.",
         "image": "https://deadbydaylight.com/static/69acdd3cb30f83ee0a48bd0a15a0e732/88c81/DBD_MAPLE_CH_WEB_CHARACTERPAGE_SURVIVOR_Vee_098b4a177e.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Sura Siu (Voice-Over Artist)"
     },
     {
         "id": 48,
@@ -1075,10 +1097,10 @@ characters = [
         "power": "None",
         "description": "An otherworldly astronaut who marks physical navigation points on the map and channels short distances to pass directly through solid tile walls.",
         "image": "https://deadbydaylight.com/static/ac13b9b590f6f406796835634e60fee8/ca5bd/DBD_UDON_CHAPTER_STAND_ALONE_RENDERS_WEB_ASSETS_AURORA_CHARACTER_ONLY_2163848678.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Claire Vousden (Voice Actress)"
     },
     {
         "id": 49,
@@ -1097,10 +1119,10 @@ characters = [
         "power": "None",
         "description": "Clever and loyal to a fault, Dustin Hendersen has saved his group more time than he can count.",
         "image": "https://deadbydaylight.com/static/7c0009ce5812866c62919b5f7a15dfb0/3b120/DBD_WEBPAGE_Character_Page_DUSTIN_CHARACTER_ONLY_1b12c7a603.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Jacob Craner (Voice Actor)"
     },
     {
         "id": 50,
@@ -1119,14 +1141,11 @@ characters = [
         "power": "None",
         "description": "Raised in captivity and studied for her psychic abilities, the lonely girl called Eleven never experienced a meaningful connection",
         "image": "https://deadbydaylight.com/static/2a03b828a4986c03a59f3d3749604ee8/8834d/DBD_POUTINE_WEBPAGE_Character_Page_ELEVEN_VF_2_Character_Only_e8f307c7a5.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "N/A",
+        "height": "N/A",
+        "voice_actor": "Abby Espiritu (Voice Actress)"
     },
-    # =========================================================================
-    # KILLERS
-    # =========================================================================
     {
         "id": 51,
         "name": "The Trapper",
@@ -1144,11 +1163,10 @@ characters = [
         "power": "Bear Trap",
         "description": "An area-control killer who sets hidden, physical steel bear traps across the map to catch, damage, and immobilize unwary survivors.",
         "image": "https://deadbydaylight.com/static/0a16e1db54f6c959580370679235eefb/7f738/DBD_Killer_Trapper_only_335b9655b2.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
-        
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Filip Ivanovic (BHVR)"
     },
     {
         "id": 52,
@@ -1167,10 +1185,10 @@ characters = [
         "power": "Wailing Bell",
         "description": "A stealth killer who rings a mystical bell to turn completely invisible, allowing him to traverse the map swiftly and ambush survivors.",
         "image": "https://deadbydaylight.com/static/8dd6b13f4343ca2e6b072f91b0f30308/04af3/DBD_Killer_Wraith_only_23c19dc579.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Filip Ivanovic (BHVR)"
     },
     {
         "id": 53,
@@ -1189,10 +1207,10 @@ characters = [
         "power": "Chainsaw Sprint",
         "description": "A high-mobility, high-threat killer who charges forward at high speeds with his chainsaw, instantly downing any survivor caught in his path.",
         "image": "https://deadbydaylight.com/static/b2296c4b7485cabc0b79cc205fc14b13/60045/DBD_Killer_Hillbilly_only_e3d5fe3977.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Filip Ivanovic (BHVR)"
     },
     {
         "id": 54,
@@ -1211,10 +1229,10 @@ characters = [
         "power": "Spencer's Last Breath",
         "description": "A hyper-lethal teleporting killer who blinks directly through solid obstacles and walls to immediately strike fleeing survivors.",
         "image": "https://deadbydaylight.com/static/b327d72cd084f3f3f0d3ba02e2d369b4/61ef0/DBD_Killer_Nurse_only_fead4a1990.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Anais Renevey (BHVR)"
     },
     {
         "id": 55,
@@ -1233,10 +1251,10 @@ characters = [
         "power": "Evil Within",
         "description": "An imposing stalker killer (Michael Myers) who watches survivors from afar to charge his inner malice, granting permanent stat tiers and instant-down capabilities.",
         "image": "https://deadbydaylight.wiki.gg/images/thumb/New_Store_Shape.png/1200px-New_Store_Shape.png?2d776e",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Frédéric Poirier (BHVR)"
     },
     {
         "id": 56,
@@ -1255,10 +1273,10 @@ characters = [
         "power": "Phantasm Traps",
         "description": "A tactical teleportation killer who draws mud traps on the ground, warping straight to their position whenever a survivor triggers them by walking.",
         "image": "https://deadbydaylight.com/static/eb104dc89d97177666f957ba9c60675b/c187b/DBD_Killer_Hag_only_d49168367b.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Eliane Pregent"
     },
     {
         "id": 57,
@@ -1277,10 +1295,10 @@ characters = [
         "power": "Carter's Spark",
         "description": "An oppressive disruption killer who releases localized madness shockwaves, driving survivors insane to reveal their locations and block interactions.",
         "image": "https://deadbydaylight.com/static/5a1d801090435633f93d3449ac0a6471/5bbf2/DBD_Killer_Doctor_only_dbafb9a311.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Alex Lin (BHVR)"
     },
     {
         "id": 58,
@@ -1299,10 +1317,10 @@ characters = [
         "power": "Hunting Hatchets",
         "description": "A deadly ranged killer who hurls sharp hatchets across loops and open maps, injuring or downing survivors from afar.",
         "image": "https://deadbydaylight.com/static/f00176036126f7f53d2944c863882ab9/e3912/DBD_Killer_Huntress_only_7510a188be.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Amélie Leguiader (BHVR)"
     },
     {
         "id": 59,
@@ -1321,10 +1339,10 @@ characters = [
         "power": "Bubba's Chainsaw",
         "description": "A close-quarters threat killer (Leatherface) who swings his chainsaw in a wide, multi-hit sweeping tantrum, instantly downing any clusters of survivors.",
         "image": "https://deadbydaylight.com/static/1b68cdf1dd6c262332c572c0648d9e55/3f3fe/DBD_Killer_Cannibal_Leatherface_only_a4f6f2ed64.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Filip Ivanovic (BHVR)"
     },
     {
         "id": 60,
@@ -1343,10 +1361,10 @@ characters = [
         "power": "Dream Demon",
         "description": "A surreal dreamscape killer (Freddy Krueger) who pulls survivors into a sleeping state, allowing him to teleport directly to generators and lay slowing blood traps.",
         "image": "https://deadbydaylight.com/static/d89551facdb494b7bf07bf152bdeb510/03c7d/DBD_Killer_Nighmare_only_23c0774f8a.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Filip Ivanovic (BHVR)"
     },
     {
         "id": 61,
@@ -1365,10 +1383,10 @@ characters = [
         "power": "Jigsaw's Baptism",
         "description": "A stealthy ambush killer (Amanda Young) who crouches to remove her terror radius, lunges out from corners, and places ticking Reverse Bear Traps on downed survivors.",
         "image": "https://deadbydaylight.com/static/5368608f638bb795cebec319c929e767/12c29/DBD_Killer_Pig_Amanda_only_5e01155e0f.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Christine Marsh (BHVR)"
     },
     {
         "id": 62,
@@ -1387,10 +1405,10 @@ characters = [
         "power": "The Afterpiece Tonic",
         "description": "A tactical anti-loop killer who throws bottles of toxic gas to blur visions and slow down survivors, while deploying yellow gas to speed up his own chases.",
         "image": "https://deadbydaylight.com/static/b6629de77d94f595b115f99f031a421e/8d0aa/DBD_Killer_Clown_only_266fa0018c.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Sébastien Duval (BHVR)"
     },
     {
         "id": 63,
@@ -1409,10 +1427,10 @@ characters = [
         "power": "Yamaoka's Haunting",
         "description": "A mind-game killer who detaches from her physical shell to travel invisibly through the spirit plane, tracking survivors purely via audio cues and scratch marks.",
         "image": "https://deadbydaylight.com/static/0b2f9f0e0198dce197e013af0e0522ce/6a87c/DBD_Killer_Spirit_only_ca6f40fdfa.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Gabrielle Murphy (BHVR)"
     },
     {
         "id": 64,
@@ -1431,10 +1449,10 @@ characters = [
         "power": "Feral Frenzy",
         "description": "A fast-paced hit-and-run killer squad that sprint vaults over windows and pallets to rapidly stab multiple survivors, applying the bleeding Deep Wound status.",
         "image": "https://deadbydaylight.com/static/bc74d8d8211446710efd92be4a9fca00/84c23/DBD_Killer_Legion_only_0868f7f5e9.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Julie/Susie: Emilie Deschamps (BHVR); Frank/Joey: Nicolas Brassard (BHVR)"
     },
     {
         "id": 65,
@@ -1453,10 +1471,10 @@ characters = [
         "power": "Vile Purge",
         "description": "A systematic affliction killer who vomits contagious bile onto objects and survivors, forcing them into a permanently broken, vomiting, and trackable state.",
         "image": "https://deadbydaylight.com/static/2c332894590eb9a0dbf89e3c2c6d8400/222ac/DBD_Killer_Plague_only_418a9c3f53.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Undisclosed Voice Actress"
     },
     {
         "id": 66,
@@ -1475,10 +1493,10 @@ characters = [
         "power": "Night Shroud",
         "description": "A methodical stealth killer who hides his red stain and terror radius completely, leaning around corners to stalk and expose individual survivors.",
         "image": "https://deadbydaylight.com/static/57467dbd8c49b9983ba369ba74c25652/664d8/DBD_Killer_Ghostface_only_1702579267.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Filip Ivanovic (Art Director)"
     },
     {
         "id": 67,
@@ -1497,10 +1515,10 @@ characters = [
         "power": "Of the Abyss",
         "description": "A monstrous apex predator that lunges long distances across loops to shred pallets and tears open organic ground portals to travel under the map.",
         "image": "https://deadbydaylight.com/static/c42f4f5e440caf1d000a5e829db8d234/22fcf/CM_1639_DBD_Website_Ch13_Character_Page_Demogordon_ONLY_4c396614fc.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "None (various digitally processed sounds)"
     },
     {
         "id": 68,
@@ -1519,10 +1537,10 @@ characters = [
         "power": "Yamaoka's Wrath",
         "description": "A high-momentum snowball killer who absorbs glowing blood orbs dropped by injured survivors to trigger a raging state, gaining map-wide dash speeds and lethal clubs.",
         "image": "https://deadbydaylight.com/static/eb970e766a7c9afbf0de6446f192a9d5/7e76c/DBD_Killer_Oni_only_0229974851.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Jean-Baptiste Garnier (BHVR)"
     },
     {
         "id": 69,
@@ -1541,10 +1559,10 @@ characters = [
         "power": "The Redeemer",
         "description": "An inventive ranged killer who fires a mechanical harpoon gun to impale survivors, reeling them in closer across obstacles for a basic attack blow.",
         "image": "https://deadbydaylight.com/static/19d0fe628ace98ffe58686d956af6397/52d66/DBD_Killer_Deathslinger_only_ffbf514957.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Patrick Harris (BHVR)"
     },
     {
         "id": 70,
@@ -1563,10 +1581,10 @@ characters = [
         "power": "Rites of Judgement",
         "description": "A heavy control killer (Pyramid Head) who carves trenches into the floor to afflict survivors, bypassing standard hook mechanics entirely via Cages of Atonement.",
         "image": "https://deadbydaylight.com/static/1538c76190c8016b52dc33e1505b9677/32e6d/DBD_Killer_Executioner_only_5bb54b863d.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Jean-Baptiste Garnier (BHVR)"
     },
     {
         "id": 71,
@@ -1585,10 +1603,10 @@ characters = [
         "power": "Blighted Rush",
         "description": "A high-speed kinetic killer who drinks serum to bounce aggressively off environmental walls, launching lightning-fast lethal rush strikes down loops.",
         "image": "https://deadbydaylight.com/static/9ac591966078a53d892bdd96ddc61e80/64f54/DBD_Killer_Blight_only_2aee8a6af9.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Jean-Baptiste Garnier (BHVR) & Mathieu Favier (BHVR)"
     },
     {
         "id": 72,
@@ -1607,10 +1625,10 @@ characters = [
         "power": "Blood Bond",
         "description": "A dual-character tag killer who splits her conjoined twin Victor from Charlotte's chest, controlling him to run at high speed and pounce on survivor backs.",
         "image": "https://deadbydaylight.com/static/649cc9013a47c71d43f688f439ec5173/be6cc/DBD_Killer_Twins_only_525459f74d.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Charlotte: Catherine Gauthier (BHVR); Victor: Jean-Baptiste Garnier (BHVR)"
     },
     {
         "id": 73,
@@ -1629,10 +1647,10 @@ characters = [
         "power": "Showstopper",
         "description": "A flamboyant ranged killer who unleashes rapid-fire volleys of throwing knives to fill up a survivor's laceration meter from medium range.",
         "image": "https://deadbydaylight.com/static/e18a0bd6ac96324b1d2602da1bcbab03/714c6/DBD_Killer_Trickster_only_d4def7ebe7.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Titus Kim (Voice Actor)"
     },
     {
         "id": 74,
@@ -1651,10 +1669,10 @@ characters = [
         "power": "T-Virus",
         "description": "An evolving juggernaut bio-weapon killer who whips survivors with an infection tentacle to increase his power reach, supported by roaming AI zombies.",
         "image": "https://deadbydaylight.com/static/40f14945a0bb25c8ade4b655067e2b7b/0d27d/DBD_Killer_Nemesis_only_1f21d6c597.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Sébastien Croteau (Nemesis); Roxana B.L. (Female Zombie); David A.B. (Male Zombie) (The Monster Factory)"
     },
     {
         "id": 75,
@@ -1673,10 +1691,10 @@ characters = [
         "power": "Summons of Pain",
         "description": "A global harassment killer (Pinhead) who shoots guided gateway hooks to tie down survivors, forcing them to find a puzzle box to halt constant passive chain attacks.",
         "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/97/New_Store_Cenobite.png/revision/latest?cb=20220618153646",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Doug Bradley (Original Actor)"
     },
     {
         "id": 76,
@@ -1695,10 +1713,10 @@ characters = [
         "power": "Birds of Torment",
         "description": "A tactical long-distance cross-map killer who sets ink crows on walls, firing them directly through solid objects to swarm or injure survivors across the realm.",
         "image": "https://deadbydaylight.com/static/1375bac7853d2b422c9d402512b33c37/2d973/DBD_Killer_Artist_only_bbf9b6d6c0.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Beatrix Moersch"
     },
     {
         "id": 77,
@@ -1717,10 +1735,10 @@ characters = [
         "power": "Deluge of Fear",
         "description": "A creeping psychological curse killer (Sadako) who manifests out of active TV monitors to build up Condemned status layers on survivors, allowing instant executions.",
         "image": "https://deadbydaylight.com/static/2738fa84a2543b75bf57737f50eea39d/de856/DBD_Killer_Sadako_only_d334828435.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "None"
     },
     {
         "id": 78,
@@ -1739,10 +1757,10 @@ characters = [
         "power": "Reign of Darkness",
         "description": "An amorphous manifestation of negative energy that teleports inside map lockers, materializes remnants during loops, and triggers a pitch-black Nightfall shroud.",
         "image": "https://deadbydaylight.com/static/57a2ab46664c85b21eb33df3805bf8c3/333f3/DBD_Killer_Dredge_only_c28a27b6df.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Roxana B.L.; Maude Théberge; Vanessa Landry; Misha Standjofski; Philippe Langelier; Sébastien Croteau (The Monster Factory)"
     },
     {
         "id": 79,
@@ -1761,10 +1779,10 @@ characters = [
         "power": "Virulent Bound",
         "description": "A high-speed bio-engineered predator (Albert Wesker) who dashes twice to grab and throw survivors, infecting them with a slowing Uroboros pathogen.",
         "image": "https://deadbydaylight.com/static/840fe6a15ff6ac71baea9db50c32e990/ef384/DBD_Killer_Albert_Uroboros_only_77cebee344.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Connor Fogarty (The Monster Factory)"
     },
     {
         "id": 80,
@@ -1783,10 +1801,10 @@ characters = [
         "power": "Guardia Compagnia",
         "description": "A tactical squad commander killer who draws physical search paths to summon AI spectral guards, tasking them to destroy objects or hunt survivors down.",
         "image": "https://deadbydaylight.com/static/31c5ecfd7979d01016dafb3031176deb/cac3b/DBD_Killer_The_Knight_only_ddaf0f74ff.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Misha Standjofski (Knight); David A.B. (Carnifex); Simon Girard (Assassin); Jeff Mott (Jailer) (The Monster Factory)"
     },
     {
         "id": 81,
@@ -1805,10 +1823,10 @@ characters = [
         "power": "Eyes in the Sky",
         "description": "A high-tech hunting tracker who deploys spinning surveillance drones to map out territories, exposing survivors and tracking their exact positions.",
         "image": "https://deadbydaylight.com/static/c364f528d9ee002b283a453ef0963649/06b08/DBD_Killer_The_Skull_Merchant_only_cbca2c0957.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Viky Boyer (The Monster Factory)"
     },
     {
         "id": 82,
@@ -1827,10 +1845,10 @@ characters = [
         "power": "Quantum Instantiation",
         "description": "A corrupted AI lifeform that shoots biopod cameras onto structural surfaces, shooting slipstream nodes onto survivors to teleport straight behind them.",
         "image": "https://deadbydaylight.com/static/ca427decdaf86c120784d8eb10be2bc6/173e8/CM_1432_DBD_Website_Ch28_Character_Page_Killer_Singularity_ONLY_199b669864.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Unknown"
     },
     {
         "id": 83,
@@ -1849,10 +1867,10 @@ characters = [
         "power": "Hidden Pursuit",
         "description": "An iconic alien predator that crawls on all fours through sub-surface floor tunnels, emerging at control stations to strike loops using a razor-sharp tail lash.",
         "image": "https://deadbydaylight.com/static/f2a90cd827af5aa5e36279ab007253ce/9f503/CM_1549_DBD_Character_Render_Killer_Xenomorph_45dfe1e09a.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Sébastien Croteau (The Monster Factory)"
     },
     {
         "id": 84,
@@ -1871,10 +1889,10 @@ characters = [
         "power": "Playtime's Over",
         "description": "A diminutive, third-person perspective killer doll (Chucky) who completely hides his physical form in white footprints, launching scamper slice rushes under loops.",
         "image": "https://deadbydaylight.com/static/42fe9477c529d4e03acde37b0d1c1e21/dfece/CM_1660_DBD_Character_Renders_Killer_23c9551fea.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Brad Dourif (Original Actor)"
     },
     {
         "id": 85,
@@ -1893,10 +1911,10 @@ characters = [
         "power": "UVX",
         "description": "A bizarre cryptid horror that bounces structural venom toxins off loop walls to weaken survivors, dropping stationary decoys to instantly teleport across tiles.",
         "image": "https://deadbydaylight.com/static/4d498c3ffb28512cb44bc36164259541/4d32b/DBD_Website_Ch31_Character_Page_Killer_The_Unknown_e603fc0678.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Zoey Alexandria (Professional Transvoice Teacher)"
     },
     {
         "id": 86,
@@ -1915,10 +1933,10 @@ characters = [
         "power": "Vile Book of Spells",
         "description": "An ancient sorcerer (Vecna) who toggles through four magical spell types to lift dropped pallets, fly over gaps, track items, or launch magical skeletons.",
         "image": "https://deadbydaylight.com/static/c69220d5d81bdf443501bfb07418035e/d17e6/DBD_Website_Ch32_Character_Page_Killer_Vecna_ONLY_7e9136c8c7.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Matt Mercer (Voice Actor and Game Designer)"
     },
     {
         "id": 87,
@@ -1937,10 +1955,10 @@ characters = [
         "power": "Transformation",
         "description": "A shape-shifting vampire king (Dracula) who transitions between Vampire form to cast hellfire columns, Wolf form to chase scent tracks, and Bat form to teleport over vaults.",
         "image": "https://deadbydaylight.com/static/f1a04bf8578d04e99f80941bb5703836/40a45/DBD_ECLAIR_WEBPAGE_Character_Page_Killer_DRACULA_ONLY_0e06f099cb.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Crispin Freeman (Voice Actor)"
     },
     {
         "id": 88,
@@ -1959,10 +1977,10 @@ characters = [
         "power": "Scent of Blood",
         "description": "Cast adrift by a horrific tragedy, Portia Maye arose from the blood with renewed purpose: to inflict unspeakable pain on those who tore her family apart. With her loyal dog forever at her side, her insatiable lust for violence runs deeper than the darkest ocean trench.",
         "image": "https://deadbydaylight.com/static/e4616484af0706362e35f613c864973d/504aa/DBD_GELATO_WEBPAGE_Character_Page_KILLER_ONLY_9b9cd1c91f.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Debra Wilson (Blindlight)"
     },
     {
         "id": 89,
@@ -1981,10 +1999,10 @@ characters = [
         "power": "One-Eyed Terror",
         "description": "An aggressive, half-ghoul killer who thrives on slowing survivors in chases, speeding up hook pickups, and locking down windows and standing pallets during the endgame.",
         "image": "https://deadbydaylight.com/static/9df1bc372b5ac7892b0b61d114720944/b6bfd/DBD_GELATO_WEBPAGE_Character_Page_KILLER_CHARACTER_ONLY_425ce91cd7.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Natsuki Hanae (Original Voice Actor)"
     },
     {
         "id": 90,
@@ -2003,10 +2021,10 @@ characters = [
         "power": "Visceral Flight",
         "description": "A split-form killer inspired by Thai folklore who detaches her floating head to lunge out with a long-range Intestinal Whip, while her perks maximize map-wide tracking, false terror radii, and sudden endgame pressure.",
         "image": "https://deadbydaylight.com/static/66c166b08c4b63eb1c25c4078ac58566/82cf4/DBD_MAPLE_CH_WEB_CHARACTERPAGE_KILLER_Krasue_01_2a1bf40066.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Body Form: Organ Prawang (Opera Singer); Head Form: Roxana B.L. (The Monster Factory)"
     },
     {
         "id": 91,
@@ -2025,10 +2043,10 @@ characters = [
         "power": "Omnipresent Evil",
         "description": "A relentless, masked powerhouse (Jason Voorhees) who blends high-speed invisible map teleportation with a brutal projectile-flinging mechanics to isolate and pin down survivors.",
         "image": "https://deadbydaylight.com/static/b88b3476b9c2ad477d484ba2078468b7/ca5bd/DBD_SUSHI_CHAPTER_Character_Page_Jason_CHARACTER_77eb1fa23f.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "None"
     },
     {
         "id": 92,
@@ -2047,10 +2065,10 @@ characters = [
         "power": "Divine Condemned",
         "description": "A punishing celestial entity that casts down columns of divine light to brand survivors with Heresy, allowing it to banish downed heretics straight into the grueling trial of Exile.",
         "image": "https://deadbydaylight.com/static/31dfb99c3863c874547592463c4785b7/ca5bd/DBD_UDON_CHAPTER_STAND_ALONE_RENDERS_WEB_ASSETS_THE_JUDGMENT_CHARACTER_ONLY_af1b049c5a.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Elsie Lovelock (Voice Actress)"
     },
     {
         "id": 93,
@@ -2069,10 +2087,10 @@ characters = [
         "power": "Test Subject #001",
         "description": "A telekinetic horror born from Henry Creel's descent into the Upside Down, who tears open dimensional Vine gates to traverse the map and unleashes a devastating Undergate strike to snap survivors' minds and bodies alike.",
         "image": "https://deadbydaylight.com/static/46fd87ede14695260195ddbc2691f431/5bd17/DBD_POUTINE_WEBPAGE_Character_Page_THEFIRST_ONLY_58ed00b1f5.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "Andrew Morgado (Voice Actor)"
     },
     {
         "id": 94,
@@ -2091,20 +2109,12 @@ characters = [
         "power": "Fazbear's Fright",
         "description": "The Five Nights at Freddy's antagonist trapped inside a decaying Spring Bonnie suit, who throws an embedded fire axe at fleeing survivors and spawns lockable Security Doors across the map to trap them inside sealed rooms.",
         "image": "https://deadbydaylight.com/static/5834e921a7ce2c9eb75c618bedc7131f/494af/DBD_KETCHUP_WEBPAGE_Asset_CHARACTER_ONLY_SPRINGTRAP_99e8fac4d1.webp",
-        "movement_speed": "",
-        "terror_radius": "",
-        "height": "",
-        "voice_actor": ""
+        "movement_speed": "4.0",
+        "terror_radius": "32",
+        "height": "N/A",
+        "voice_actor": "PJ Heywood (Original Voice Actor)"
     }
 ]
-
-# Helper function to prevent client caching on Vercel
-def set_no_cache_headers(response: Response):
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    response.headers["Pragma"] = "no-cache"
-    response.headers["Expires"] = "0"
-
-
 # =========================================================================
 # API ENDPOINTS (VERSIONED: /api/v1/)
 # =========================================================================
