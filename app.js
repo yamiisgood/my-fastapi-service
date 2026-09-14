@@ -1,9 +1,10 @@
-const API_URL = "https://my-fastapi-service-gi31.vercel.app";
+const API_URL = "https://my-fastapi-service-coral.vercel.app";
 
 let currentPage = 0;
 const limit = 10;
 let currentRole = "";
 let currentQuery = "";
+let debounceTimer = null;
 
 const fetchOptions = {
     cache: "no-store",
@@ -28,22 +29,64 @@ async function loadCharacters(page = 0, role = "") {
         }
 
         const response = await fetch(url, fetchOptions);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        
         const data = await response.json();
         
         displayCharacters(data.characters);
         updatePaginationControls(data.total, currentPage);
     } catch (error) {
         console.error("Error loading characters:", error);
-        const container = document.getElementById("characterList") || document.getElementById("agentList");
+        const container = getContainer();
         if (container) {
             container.innerHTML = "<p>Unable to connect to the API.</p>";
         }
     }
 }
 
+// SEARCH CHARACTERS
+async function searchCharacters(page = 0) {
+    const searchInput = document.getElementById("searchInput");
+    const query = searchInput ? searchInput.value.trim() : "";
+    
+    if (!query) {
+        loadCharacters(0, currentRole);
+        return;
+    }
+
+    try {
+        currentPage = parseInt(page, 10);
+        currentQuery = query;
+        const offset = currentPage * limit;
+
+        const response = await fetch(
+            `${API_URL}/characters/search?q=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`,
+            fetchOptions
+        );
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+        const data = await response.json();
+        let results = data.results || [];
+
+        // Apply local role filter if a role is selected during search
+        if (currentRole) {
+            results = results.filter(c => c.role.toLowerCase() === currentRole.toLowerCase());
+        }
+
+        displayCharacters(results);
+        updatePaginationControls(data.total, currentPage);
+    } catch (error) {
+        console.error("Search failed:", error);
+        const container = getContainer();
+        if (container) {
+            container.innerHTML = "<p>Search failed to execute.</p>";
+        }
+    }
+}
+
 // DISPLAY CHARACTERS IN GRID
 function displayCharacters(characters) {
-    const listContainer = document.getElementById("characterList") || document.getElementById("agentList");
+    const listContainer = getContainer();
     if (!listContainer) return;
     
     listContainer.innerHTML = "";
@@ -58,7 +101,6 @@ function displayCharacters(characters) {
         card.className = "agent-card";
         card.onclick = () => viewCharacter(character.id);
         
-        // Image support with fallback placeholder
         const imageUrl = character.image || 'https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity';
 
         card.innerHTML = `
@@ -115,7 +157,7 @@ async function viewCharacter(id) {
             </div>
         `;
 
-        const modal = document.getElementById("agentModal") || document.getElementById("characterModal");
+        const modal = getModal();
         if (modal) modal.style.display = "flex";
     } catch (error) {
         console.error("Error fetching character details:", error);
@@ -123,47 +165,18 @@ async function viewCharacter(id) {
     }
 }
 
-// CLOSE MODAL
+// MODAL CONTROLS
 function closeModal() {
-    const modal = document.getElementById("agentModal") || document.getElementById("characterModal");
+    const modal = getModal();
     if (modal) modal.style.display = "none";
 }
 
 window.onclick = function(event) {
-    const modal = document.getElementById("agentModal") || document.getElementById("characterModal");
+    const modal = getModal();
     if (modal && event.target === modal) modal.style.display = "none";
 };
 
-// SEARCH CHARACTERS
-async function searchCharacters(page = 0) {
-    const searchInput = document.getElementById("searchInput");
-    const query = searchInput ? searchInput.value.trim() : "";
-    
-    if (!query) {
-        loadCharacters(0, currentRole);
-        return;
-    }
-
-    try {
-        currentPage = parseInt(page, 10);
-        currentQuery = query;
-        const offset = currentPage * limit;
-
-        const response = await fetch(
-            `${API_URL}/characters/search?q=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`,
-            fetchOptions
-        );
-        const data = await response.json();
-        
-        displayCharacters(data.results);
-        updatePaginationControls(data.total, currentPage);
-    } catch (error) {
-        console.error("Search failed:", error);
-        alert("Search failed.");
-    }
-}
-
-// RENDER PAGINATION BUTTONS
+// PAGINATION
 function updatePaginationControls(totalItems, page) {
     const paginationContainer = document.getElementById("paginationContainer");
     if (!paginationContainer) return;
@@ -188,5 +201,36 @@ function changePage(newPage) {
     }
 }
 
-// INITIAL LOAD
-loadCharacters(0);
+// HELPERS
+function getContainer() {
+    return document.getElementById("characterList") || document.getElementById("agentList");
+}
+
+function getModal() {
+    return document.getElementById("agentModal") || document.getElementById("characterModal");
+}
+
+// EVENT LISTENERS & DEBOUNCE
+document.addEventListener("DOMContentLoaded", () => {
+    loadCharacters(0);
+
+    // Live search input with debounce (300ms)
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+        searchInput.addEventListener("input", () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                searchCharacters(0);
+            }, 300);
+        });
+    }
+
+    // Role Filter drop-down or button change listener
+    const roleSelect = document.getElementById("roleSelect") || document.getElementById("roleFilter");
+    if (roleSelect) {
+        roleSelect.addEventListener("change", (e) => {
+            const selectedRole = e.target.value;
+            loadCharacters(0, selectedRole);
+        });
+    }
+});
