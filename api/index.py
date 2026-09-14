@@ -1739,8 +1739,8 @@ def home(response: Response):
         "killers_count": len([c for c in characters if c["role"] == "Killer"]),
         "endpoints": [
             "/characters",
-            "/characters/{character_id}",
-            "/characters/search"
+            "/characters/search",
+            "/characters/{character_id}"
         ]
     }
 
