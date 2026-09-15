@@ -2176,7 +2176,7 @@ def home():
 # ============================================================
 # GET ALL CHARACTERS (Protected, with role filter, pagination, sorting)
 # ============================================================
-@app.get("/api/v1/characters", dependencies=[Depends(verify_api_key)])
+@app.get("/characters", dependencies=[Depends(verify_api_key)])
 def get_characters(
     role: str = Query(None, description="Filter by 'Survivor' or 'Killer'"),
     sort_by: str = Query("name", description="Sort field: 'name', 'year', 'difficulty', 'character_code'"),
@@ -2212,7 +2212,7 @@ def get_characters(
 # NOTE: this route must be defined BEFORE /characters/{character_id}
 # otherwise FastAPI will try to treat "search" as a character_id
 # ============================================================
-@app.get("/api/v1/characters/search", dependencies=[Depends(verify_api_key)])
+@app.get("/characters/search", dependencies=[Depends(verify_api_key)])
 def search_characters(
     q: str = Query(..., min_length=1),
     limit: int = Query(10, ge=1, le=100, description="Items per page (default: 10)"),
@@ -2261,7 +2261,7 @@ def search_characters(
 # ============================================================
 # GET ONE CHARACTER (Protected)
 # ============================================================
-@app.get("/api/v1/characters/{character_id}", dependencies=[Depends(verify_api_key)])
+@app.get("/characters/{character_id}", dependencies=[Depends(verify_api_key)])
 def get_character(character_id: int):
     for character in characters:
         if character["id"] == character_id:
