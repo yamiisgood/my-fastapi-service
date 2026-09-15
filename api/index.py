@@ -2235,6 +2235,7 @@ def search_characters(
             f"{character['perk_3']} "
             f"{character['difficulty']} "
             f"{character.get('power', '')} "
+            f"{character['description']} "
             f"{character['movement_speed']} "
             f"{character['terror_radius']} "
             f"{character.get('height', '')} "
