@@ -1,51 +1,21 @@
-from fastapi import FastAPI, HTTPException, Header, Query, Response, Depends
+from fastapi import FastAPI, HTTPException, Header, Query, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Optional
 from datetime import datetime, timezone
-# ============================================================
-# HEALTH CHECK (Public)
-# ============================================================
-@app.get("/health")
-def health_check():
-    return {
-        "status": "ok",
-        "service": "Dead by Daylight Character Directory API",
-        "version": API_VERSION,
-        "timestamp": datetime.now(timezone.utc).isoformat()
-    }
 
-# ============================================================
-# GET ALL CHARACTERS (Protected)
-# ============================================================
-@app.get("/api/v1/characters", dependencies=[Depends(verify_api_key)])
-def get_characters():
-    return {
-        "count": len(characters),
-        "characters": characters
-    }
-
-# ============================================================
-# GET ONE CHARACTER (Protected)
-# ============================================================
-@app.get("/api/v1/characters/{character_id}", dependencies=[Depends(verify_api_key)])
-def get_character(character_id: int):
-    for character in characters:
-        if character["id"] == character_id:
-            return character
-    raise HTTPException(status_code=404, detail="Character not found.")
 # ============================================================
 # CONFIGURATION & CONSTANTS
 # ============================================================
 API_KEY = "student-api-key-123"
 API_VERSION = "1.0"
- 
+
 app = FastAPI(
     title="Dead by Daylight Character Directory API",
     description="A REST API containing all Survivors and Killers in Dead by Daylight with 14 unique fields each.",
     version=API_VERSION
 )
- 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -53,6 +23,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+# ============================================================
+# MODEL
+# ============================================================
 class Character(BaseModel):
     id: int
     name: str = Field(min_length=1)
@@ -69,12 +44,16 @@ class Character(BaseModel):
     difficulty: str = Field(min_length=1)
     power: str = Field(default="None")
     description: str = Field(min_length=1)
+    image: Optional[str] = Field(default=None)
     movement_speed: str = Field(min_length=1)
     terror_radius: str = Field(min_length=1)
     height: str = Field(default="N/A")
     voice_actor: str = Field(min_length=1)
-    
-    
+
+
+# ============================================================
+# DATA
+# ============================================================
 characters = [
     {
         "id": 1,
@@ -2145,9 +2124,14 @@ characters = [
         "voice_actor": "PJ Heywood (Original Voice Actor)"
     }
 ]
-# Validate all character dictionaries
+
+# Validate all character dictionaries against the model, then use the validated versions
 characters = [Character(**character).model_dump() for character in characters]
 
+
+# ============================================================
+# HELPERS
+# ============================================================
 def verify_api_key(x_api_key: Optional[str] = Header(default=None)):
     if x_api_key != API_KEY:
         raise HTTPException(
@@ -2155,12 +2139,26 @@ def verify_api_key(x_api_key: Optional[str] = Header(default=None)):
             detail="Invalid or missing API key."
         )
     return True
-# =========================================================================
-# API ENDPOINTS 
-# =========================================================================
+
+
+# ============================================================
+# HEALTH CHECK (Public)
+# ============================================================
+@app.get("/health")
+def health_check():
+    return {
+        "status": "ok",
+        "service": "Dead by Daylight Character Directory API",
+        "version": API_VERSION,
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
+
+
+# ============================================================
+# ROOT
+# ============================================================
 @app.get("/api/v1/")
-def home(response: Response):
-    set_no_cache_headers(response)
+def home():
     return {
         "message": "Welcome to the Dead by Daylight Character Directory API!",
         "version": API_VERSION,
@@ -2173,17 +2171,19 @@ def home(response: Response):
             "/api/v1/characters/{character_id}"
         ]
     }
-# GET ALL CHARACTERS (WITH ROLE FILTER, PAGINATION, AND SORTING)
-@app.get("/api/v1/characters")
+
+
+# ============================================================
+# GET ALL CHARACTERS (Protected, with role filter, pagination, sorting)
+# ============================================================
+@app.get("/api/v1/characters", dependencies=[Depends(verify_api_key)])
 def get_characters(
-    response: Response,
     role: str = Query(None, description="Filter by 'Survivor' or 'Killer'"),
     sort_by: str = Query("name", description="Sort field: 'name', 'year', 'difficulty', 'character_code'"),
     order: str = Query("asc", description="'asc' or 'desc'"),
     limit: int = Query(10, ge=1, le=100, description="Items per page (default: 10)"),
     offset: int = Query(0, ge=0, description="Page starting offset")
 ):
-    set_no_cache_headers(response)
     results = characters
 
     # Filter by role
@@ -2197,7 +2197,7 @@ def get_characters(
 
     # Paginate results
     total_count = len(results)
-    paginated_results = results[offset : offset + limit]
+    paginated_results = results[offset: offset + limit]
 
     return {
         "total": total_count,
@@ -2206,11 +2206,18 @@ def get_characters(
         "characters": paginated_results
     }
 
+
 # ============================================================
-# SEARCH CHARACTERS (Protected)
+# SEARCH CHARACTERS (Protected, with pagination to match /characters)
+# NOTE: this route must be defined BEFORE /characters/{character_id}
+# otherwise FastAPI will try to treat "search" as a character_id
 # ============================================================
 @app.get("/api/v1/characters/search", dependencies=[Depends(verify_api_key)])
-def search_characters(q: str = Query(..., min_length=1)):
+def search_characters(
+    q: str = Query(..., min_length=1),
+    limit: int = Query(10, ge=1, le=100, description="Items per page (default: 10)"),
+    offset: int = Query(0, ge=0, description="Page starting offset")
+):
     search_query = q.lower()
     results = []
 
@@ -2239,20 +2246,24 @@ def search_characters(q: str = Query(..., min_length=1)):
         if search_query in searchable_text:
             results.append(character)
 
+    total_count = len(results)
+    paginated_results = results[offset: offset + limit]
+
     return {
         "query": q,
-        "count": len(results),
-        "results": results
+        "total": total_count,
+        "limit": limit,
+        "offset": offset,
+        "results": paginated_results
     }
-# GET SINGLE CHARACTER BY ID
-@app.get("/api/v1/characters/{character_id}")
-def get_character(character_id: int, response: Response):
-    set_no_cache_headers(response)
-    for c in characters:
-        if c["id"] == character_id:
-            return c
 
-    raise HTTPException(
-        status_code=404,
-        detail="Character not found."
-    )
+
+# ============================================================
+# GET ONE CHARACTER (Protected)
+# ============================================================
+@app.get("/api/v1/characters/{character_id}", dependencies=[Depends(verify_api_key)])
+def get_character(character_id: int):
+    for character in characters:
+        if character["id"] == character_id:
+            return character
+    raise HTTPException(status_code=404, detail="Character not found.")
