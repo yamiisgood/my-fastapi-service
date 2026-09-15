@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException, Header, Query, Response, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from typing import Optional, Literal
-from datetime import datetime
+from typing import Optional
+from datetime import datetime, timezone
 # ============================================================
 # HEALTH CHECK (Public)
 # ============================================================
@@ -39,13 +39,13 @@ def get_character(character_id: int):
 # ============================================================
 API_KEY = "student-api-key-123"
 API_VERSION = "1.0"
-
+ 
 app = FastAPI(
     title="Dead by Daylight Character Directory API",
     description="A REST API containing all Survivors and Killers in Dead by Daylight with 14 unique fields each.",
     version=API_VERSION
 )
-
+ 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -53,7 +53,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-class Characters(BaseModel):
+class Character(BaseModel):
     id: int
     name: str = Field(min_length=1)
     character_code: str = Field(min_length=1)
@@ -2146,8 +2146,7 @@ characters = [
     }
 ]
 # Validate all character dictionaries
-validated_characters = [Character(**character).model_dump() for character in characters]
-characters = validated_characters
+characters = [Character(**character).model_dump() for character in characters]
 
 def verify_api_key(x_api_key: Optional[str] = Header(default=None)):
     if x_api_key != API_KEY:
