@@ -12,7 +12,7 @@ API_VERSION = "1.0"
 
 app = FastAPI(
     title="Dead by Daylight Character Directory API",
-    description="A REST API containing all Survivors and Killers in Dead by Daylight with 14 unique fields each.",
+    description="A REST API containing all Survivors and Killers in Dead by Daylight",
     version=API_VERSION
 )
 
@@ -41,7 +41,7 @@ class Character(BaseModel):
     perk_1: str = Field(min_length=1)
     perk_2: str = Field(min_length=1)
     perk_3: str = Field(min_length=1)
-    difficulty: Literal["Easy", "Intermediate", "Hard"]
+    difficulty: Literal["Easy", "Intermediate", "Hard, Very Hard"]
     power: str = Field(default="None")
     description: str = Field(min_length=1)
     image: Optional[str] = Field(default=None)
