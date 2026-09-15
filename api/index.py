@@ -41,7 +41,7 @@ class Character(BaseModel):
     perk_1: str = Field(min_length=1)
     perk_2: str = Field(min_length=1)
     perk_3: str = Field(min_length=1)
-    difficulty: Literal["Easy", "Intermediate", "Hard, Very Hard"]
+    difficulty: Literal["Easy", "Intermediate", "Hard", "Very Hard"]
     power: str = Field(default="None")
     description: str = Field(min_length=1)
     image: Optional[str] = Field(default=None)
