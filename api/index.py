@@ -2128,9 +2128,8 @@ characters = [
 # Validate all character dictionaries
 characters = [Character(**character).model_dump() for character in characters]
 
-
 # ============================================================
-# HELPERS
+# API KEY AUTHENTICATION
 # ============================================================
 def verify_api_key(x_api_key: Optional[str] = Header(default=None)):
     if x_api_key != API_KEY:
@@ -2139,7 +2138,6 @@ def verify_api_key(x_api_key: Optional[str] = Header(default=None)):
             detail="Invalid or missing API key."
         )
     return True
-
 
 # ============================================================
 # HEALTH CHECK (Public)
@@ -2152,7 +2150,6 @@ def health_check():
         "version": API_VERSION,
         "timestamp": datetime.now(timezone.utc).isoformat()
     }
-
 
 # ============================================================
 # ROOT
@@ -2172,7 +2169,6 @@ def home():
         ]
     }
 
-
 # ============================================================
 # GET ALL CHARACTERS (Protected)
 # ============================================================
@@ -2181,21 +2177,21 @@ def get_characters(
     role: str = Query(None, description="Filter by 'Survivor' or 'Killer'"),
     sort_by: str = Query("name", description="Sort field: 'name', 'year', 'difficulty', 'character_code'"),
     order: str = Query("asc", description="'asc' or 'desc'"),
-    limit: int = Query(10, ge=1, le=100, description="Items per page (default: 10)"),
+    limit: int = Query(10, ge=1, le=100, description="Items per page"),
     offset: int = Query(0, ge=0, description="Page starting offset")
 ):
     results = characters
 
-    # Filter by role
     if role:
         results = [c for c in results if c["role"].lower() == role.lower()]
-
-    # Sort results
-    reverse = (order.lower() == "desc")
+    reverse = order.lower() == "desc"
     if sort_by in ["name", "year", "difficulty", "character_code"]:
-        results = sorted(results, key=lambda x: str(x.get(sort_by, "")).lower(), reverse=reverse)
+        results = sorted(
+            results,
+            key=lambda x: str(x.get(sort_by, "")).lower(),
+            reverse=reverse
+        )
 
-    # Paginate results
     total_count = len(results)
     paginated_results = results[offset: offset + limit]
 
@@ -2213,8 +2209,8 @@ def get_characters(
 @app.get("/api/v1/characters/search", dependencies=[Depends(verify_api_key)])
 def search_characters(
     q: str = Query(..., min_length=1),
-    limit: int = Query(10, ge=1, le=100, description="Items per page (default: 10)"),
-    offset: int = Query(0, ge=0, description="Page starting offset")
+    limit: int = Query(10, ge=1, le=100),
+    offset: int = Query(0, ge=0)
 ):
     search_query = q.lower()
     results = []
@@ -2247,7 +2243,6 @@ def search_characters(
 
     total_count = len(results)
     paginated_results = results[offset: offset + limit]
-
     return {
         "query": q,
         "total": total_count,
@@ -2255,7 +2250,6 @@ def search_characters(
         "offset": offset,
         "results": paginated_results
     }
-
 
 # ============================================================
 # GET ONE CHARACTER (Protected)
@@ -2265,4 +2259,7 @@ def get_character(character_id: int):
     for character in characters:
         if character["id"] == character_id:
             return character
-    raise HTTPException(status_code=404, detail="Character not found.")
+    raise HTTPException(
+        status_code=404,
+        detail="Character not found."
+    )
