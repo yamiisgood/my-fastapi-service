@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Header, Query, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, Literal
 from datetime import datetime, timezone
 
 # ============================================================
@@ -32,7 +32,7 @@ class Character(BaseModel):
     id: int
     name: str = Field(min_length=1)
     character_code: str = Field(min_length=1)
-    role: str = Field(min_length=1)
+    role: Literal["Survivor", "Killer"]
     gender: str = Field(min_length=1)
     origin: str = Field(min_length=1)
     realm: str = Field(min_length=1)
@@ -41,7 +41,7 @@ class Character(BaseModel):
     perk_1: str = Field(min_length=1)
     perk_2: str = Field(min_length=1)
     perk_3: str = Field(min_length=1)
-    difficulty: str = Field(min_length=1)
+    difficulty: Literal["Easy", "Intermediate", "Hard"]
     power: str = Field(default="None")
     description: str = Field(min_length=1)
     image: Optional[str] = Field(default=None)
