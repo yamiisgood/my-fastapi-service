@@ -7,15 +7,15 @@ let currentRole = "";
 let currentQuery = "";
 let debounceTimer = null;
 
+
 // CENTRALIZED FETCH OPTIONS
 const fetchOptions = {
     cache: "no-store",
     headers: {
-        "x-api-key": API_KEY,
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        "Pragma": "no-cache"
+        "x-api-key": API_KEY
     }
 };
+
 
 // GET ALL CHARACTERS
 async function loadCharacters(page = 0, role = "") {
@@ -23,35 +23,40 @@ async function loadCharacters(page = 0, role = "") {
         currentPage = parseInt(page, 10);
         currentRole = role;
         currentQuery = "";
-        
         const offset = currentPage * limit;
         let url = `${API_URL}/characters?limit=${limit}&offset=${offset}`;
-        
         if (role) {
             url += `&role=${encodeURIComponent(role)}`;
         }
 
+        console.log("Requesting:", url);
         const response = await fetch(url, fetchOptions);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        
+        console.log("Status:", response.status);
+        if (!response.ok) {
+            const errorData = await response.text();
+            throw new Error(`HTTP ${response.status}: ${errorData}`);
+        }
+
         const data = await response.json();
-        
+        console.log("API Data:", data);
         displayCharacters(data.characters);
         updatePaginationControls(data.total, currentPage);
+
     } catch (error) {
         console.error("Error loading characters:", error);
         const container = getContainer();
         if (container) {
-            container.innerHTML = "<p>Unable to connect to the API. (Check API Key or CORS)</p>";
+            container.innerHTML = `<p>API Error: ${error.message}</p>`;
         }
     }
 }
+
 
 // SEARCH CHARACTERS
 async function searchCharacters(page = 0) {
     const searchInput = document.getElementById("searchInput");
     const query = searchInput ? searchInput.value.trim() : "";
-    
+
     if (!query) {
         loadCharacters(0, currentRole);
         return;
@@ -61,39 +66,43 @@ async function searchCharacters(page = 0) {
         currentPage = parseInt(page, 10);
         currentQuery = query;
         const offset = currentPage * limit;
+        const url = `${API_URL}/characters/search?q=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`;
+        console.log("Searching:", url);
+        const response = await fetch(url, fetchOptions);
+        console.log("Search Status:", response.status);
 
-        const response = await fetch(
-            `${API_URL}/characters/search?q=${encodeURIComponent(query)}&limit=${limit}&offset=${offset}`,
-            fetchOptions
-        );
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok) {
+            const errorData = await response.text();
+            throw new Error(`HTTP ${response.status}: ${errorData}`);
+        }
 
         const data = await response.json();
         let results = data.results || [];
 
-        // Apply local role filter if a role is selected during search
+        // Apply role filter if one is currently selected
         if (currentRole) {
-            results = results.filter(c => c.role.toLowerCase() === currentRole.toLowerCase());
+            results = results.filter(character =>
+                character.role.toLowerCase() === currentRole.toLowerCase()
+            );
         }
-
         displayCharacters(results);
         updatePaginationControls(data.total, currentPage);
+
     } catch (error) {
         console.error("Search failed:", error);
         const container = getContainer();
         if (container) {
-            container.innerHTML = "<p>Search failed to execute.</p>";
+            container.innerHTML = `<p>Search Error: ${error.message}</p>`;
         }
     }
 }
+
 
 // DISPLAY CHARACTERS IN GRID
 function displayCharacters(characters) {
     const listContainer = getContainer();
     if (!listContainer) return;
-    
     listContainer.innerHTML = "";
-
     if (!characters || characters.length === 0) {
         listContainer.innerHTML = "<p>No characters found in the fog.</p>";
         return;
@@ -103,9 +112,7 @@ function displayCharacters(characters) {
         const card = document.createElement("div");
         card.className = "agent-card";
         card.onclick = () => viewCharacter(character.id);
-        
-        const imageUrl = character.image || 'https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity';
-
+        const imageUrl = character.image || "https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity";
         card.innerHTML = `
             <div class="agent-year">${character.character_code}</div>
             <div class="card-portrait">
@@ -117,21 +124,29 @@ function displayCharacters(characters) {
                 <button onclick="event.stopPropagation(); viewCharacter(${character.id})">View Details</button>
             </div>
         `;
+
         listContainer.appendChild(card);
     });
 }
 
+
 // GET SINGLE CHARACTER FOR MODAL
 async function viewCharacter(id) {
     try {
-        const response = await fetch(`${API_URL}/characters/${id}`, fetchOptions);
-        if (!response.ok) throw new Error("Character not found");
+        const url = `${API_URL}/characters/${id}`;
+        console.log("Character Request:", url);
+        const response = await fetch(url, fetchOptions);
+        console.log("Character Status:", response.status);
+        if (!response.ok) {
+            const errorData = await response.text();
+            throw new Error(`HTTP ${response.status}: ${errorData}`);
+        }
 
         const character = await response.json();
+        console.log("Character Data:", character);
         const modalBody = document.getElementById("modalBody");
         if (!modalBody) return;
-
-        const imageUrl = character.image || 'https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity';
+        const imageUrl = character.image || "https://via.placeholder.com/300x400/090a0c/a82424?text=DBD+Entity";
         const powerSection = character.power && character.power !== "None"
             ? `<p><strong>Power:</strong> ${character.power}</p>`
             : `<p><strong>Power:</strong> N/A (Survivor)</p>`;
@@ -146,51 +161,60 @@ async function viewCharacter(id) {
                         <strong>Difficulty:</strong> ${character.difficulty} | <strong>Released:</strong> ${character.year}
                     </p>
                 </div>
-            </div>
-            
+            </div>   
             <p style="line-height: 1.6;">${character.description}</p>
-
             <div class="skills-list">
                 <p><strong>Realm:</strong> ${character.realm}</p>
                 <p><strong>DLC Chapter:</strong> ${character.dlc}</p>
                 ${powerSection}
-                <p><strong>Base Speed:</strong> ${character.movement_speed || 'N/A'}</p>
-                <p><strong>Terror Radius:</strong> ${character.terror_radius || 'N/A'}</p>
-                <p><strong>Height:</strong> ${character.height || 'N/A'}</p>
-                <p><strong>Voice Actor:</strong> ${character.voice_actor || 'N/A'}</p>
-                <p><strong>Perk 1:</strong> ${character.perk_1 || 'N/A'}</p>
-                <p><strong>Perk 2:</strong> ${character.perk_2 || 'N/A'}</p>
-                <p><strong>Perk 3:</strong> ${character.perk_3 || 'N/A'}</p>
+                <p><strong>Base Speed:</strong> ${character.movement_speed || "N/A"}</p>
+                <p><strong>Terror Radius:</strong> ${character.terror_radius || "N/A"}</p>
+                <p><strong>Height:</strong> ${character.height || "N/A"}</p>
+                <p><strong>Voice Actor:</strong> ${character.voice_actor || "N/A"}</p>
+                <p><strong>Perk 1:</strong> ${character.perk_1 || "N/A"}</p>
+                <p><strong>Perk 2:</strong> ${character.perk_2 || "N/A"}</p>
+                <p><strong>Perk 3:</strong> ${character.perk_3 || "N/A"}</p>
             </div>
         `;
 
         const modal = getModal();
-        if (modal) modal.style.display = "flex";
+
+        if (modal) {
+            modal.style.display = "flex";
+        }
     } catch (error) {
         console.error("Error fetching character details:", error);
-        alert("Unable to retrieve character details.");
+
+        alert(`Unable to retrieve character details.\n${error.message}`);
     }
 }
+
 
 // MODAL CONTROLS
 function closeModal() {
     const modal = getModal();
-    if (modal) modal.style.display = "none";
+
+    if (modal) {
+        modal.style.display = "none";
+    }
 }
 
 window.onclick = function(event) {
     const modal = getModal();
-    if (modal && event.target === modal) modal.style.display = "none";
+
+    if (modal && event.target === modal) {
+        modal.style.display = "none";
+    }
 };
 
 // PAGINATION
 function updatePaginationControls(totalItems, page) {
     const paginationContainer = document.getElementById("paginationContainer");
-    if (!paginationContainer) return;
 
+    if (!paginationContainer) return;
     const totalPages = Math.ceil(totalItems / limit);
-    const prevDisabled = page <= 0 ? 'disabled' : '';
-    const nextDisabled = (page + 1) >= totalPages ? 'disabled' : '';
+    const prevDisabled = page <= 0 ? "disabled" : "";
+    const nextDisabled = (page + 1) >= totalPages ? "disabled" : "";
 
     paginationContainer.innerHTML = `
         <button ${prevDisabled} onclick="changePage(${page - 1})">Previous</button>
@@ -201,22 +225,20 @@ function updatePaginationControls(totalItems, page) {
 
 function changePage(newPage) {
     if (newPage < 0) return;
+
     if (currentQuery) {
         searchCharacters(newPage);
     } else {
         loadCharacters(newPage, currentRole);
     }
 }
-
 // HELPERS
 function getContainer() {
     return document.getElementById("characterList") || document.getElementById("agentList");
 }
-
 function getModal() {
     return document.getElementById("agentModal") || document.getElementById("characterModal");
 }
-
 // EVENT LISTENERS & DEBOUNCE
 document.addEventListener("DOMContentLoaded", () => {
     loadCharacters(0);
@@ -226,17 +248,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (searchInput) {
         searchInput.addEventListener("input", () => {
             clearTimeout(debounceTimer);
+
             debounceTimer = setTimeout(() => {
                 searchCharacters(0);
             }, 300);
         });
     }
-
-    // Role Filter drop-down or button change listener
+    // Role filter dropdown
     const roleSelect = document.getElementById("roleSelect") || document.getElementById("roleFilter");
     if (roleSelect) {
-        roleSelect.addEventListener("change", (e) => {
-            const selectedRole = e.target.value;
+        roleSelect.addEventListener("change", event => {
+            const selectedRole = event.target.value;
             loadCharacters(0, selectedRole);
         });
     }
