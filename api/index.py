@@ -71,7 +71,7 @@ characters = [
         "difficulty": "Easy",
         "power": "None",
         "description": "A nervous leader whose perks help allies locate one another and increase team repair and action efficiency.",
-        "image": "https://deadbydaylight.com/static/0fe15a5913b4d237f4e4f813e492cbba/fa99b/DBD_Survivor_Meg_only_5019ce4dbb.webp",
+        "image": "https://deadbydaylight.com/static/9f01cac776fec1553e2b15d8a775c0ed/59ae3/DBD_Survivor_Dwight_only_2dc92d6416.webp",
         "movement_speed": "4.0",
         "terror_radius": "N/A",
         "height": "N/A",
