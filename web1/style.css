@@ -561,3 +561,51 @@ footer {
   color: var(--horror-text-muted);
   font-size: 0.8rem;
 }
+
+
+/* =========================================================================
+   WEBSITE SWITCHER
+   ========================================================================= */
+
+.site-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.site-switch-link {
+  color: var(--horror-text-muted);
+  text-decoration: none;
+  border: 1px solid var(--horror-border);
+  background: #0a0a0c;
+  padding: 0.45rem 0.8rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  transition: all 0.2s ease;
+}
+
+.site-switch-link:hover {
+  color: #ffffff;
+  border-color: var(--horror-red);
+  background: #16171b;
+}
+
+.site-switch-link.active {
+  color: #ffffff;
+  background: var(--horror-red);
+  border-color: var(--horror-red);
+}
+
+@media (max-width: 760px) {
+  .masthead-inner {
+    align-items: flex-start;
+  }
+
+  .site-switcher {
+    width: 100%;
+  }
+}
