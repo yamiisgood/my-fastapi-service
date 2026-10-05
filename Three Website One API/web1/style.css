@@ -1,0 +1,563 @@
+/* =========================================================================
+   DEAD BY DAYLIGHT DIRECTORY — Fog & Darkness Horror Theme
+   ========================================================================= */
+
+:root {
+  --horror-bg: #0a0a0c;
+  --horror-panel-bg: #121316;
+  --horror-card-bg: #18191d;
+  --horror-border: #2a2c33;
+  --horror-border-red: #5c1414;
+  --horror-red: #a82424;
+  --horror-red-hover: #d63030;
+  --horror-text: #d1d5db;
+  --horror-text-muted: #808792;
+  --serif: "Georgia", "Times New Roman", serif;
+  --sans: "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--horror-bg);
+  background-image: 
+    radial-gradient(circle at 50% 0%, #1f0808 0%, transparent 65%),
+    radial-gradient(circle at 50% 100%, #050507 0%, #000000 100%);
+  color: var(--horror-text);
+  font-family: var(--sans);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--horror-red);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--horror-red-hover);
+}
+
+/* =========================================================================
+   MASTHEAD & TAB BAR
+   ========================================================================= */
+
+header.site-header {
+  background: #0d0e11;
+  border-bottom: 1px solid var(--horror-border-red);
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.masthead-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+}
+
+header h1 {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: normal;
+  color: #e5e7eb;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(168, 36, 36, 0.5);
+  animation: flicker 3s infinite alternate;
+}
+
+header .tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--horror-text-muted);
+}
+
+.tab-bar {
+  background: #0a0a0c;
+  border-bottom: 1px solid var(--horror-border);
+}
+
+.tab-bar-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0 1.5rem;
+}
+
+.tab-bar-inner button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 0.65rem 1.2rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--horror-text-muted);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.tab-bar-inner button:hover {
+  color: #ffffff;
+}
+
+.tab-bar-inner button.active {
+  background: var(--horror-panel-bg);
+  border-color: var(--horror-border-red);
+  color: var(--horror-red);
+  font-weight: bold;
+}
+
+/* =========================================================================
+   PAGE FRAME & SIDEBAR
+   ========================================================================= */
+
+.page-frame {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  background: var(--horror-panel-bg);
+  border-left: 1px solid var(--horror-border);
+  border-right: 1px solid var(--horror-border);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.wiki-sidebar {
+  width: 210px;
+  flex-shrink: 0;
+  background: #0e0f12;
+  border-right: 1px solid var(--horror-border);
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.wiki-sidebar h3 {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  color: var(--horror-red);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--horror-border-red);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.wiki-sidebar h3:first-child {
+  margin-top: 0;
+}
+
+.wiki-sidebar ul {
+  list-style: none;
+}
+
+.wiki-sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+.wiki-sidebar a {
+  color: var(--horror-text-muted);
+  text-decoration: none;
+}
+
+.wiki-sidebar a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+/* MAIN CONTENT */
+
+main.wiki-content {
+  flex: 1;
+  padding: 2rem;
+  min-width: 0;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--horror-text-muted);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+main.wiki-content > h2.page-title {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: normal;
+  color: #f3f4f6;
+  border-bottom: 1px solid var(--horror-border-red);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hatnote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--horror-text-muted);
+  padding: 0.6rem 0 0.6rem 1rem;
+  border-left: 3px solid var(--horror-red);
+  background: rgba(168, 36, 36, 0.05);
+  margin-bottom: 1.75rem;
+}
+
+/* =========================================================================
+   SEARCH & FILTERS
+   ========================================================================= */
+
+.search {
+  margin-bottom: 2rem;
+}
+
+.search-controls {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search input {
+  font-family: var(--sans);
+  background-color: #0b0c0e;
+  border: 1px solid var(--horror-border);
+  color: var(--horror-text);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  width: 320px;
+  max-width: 100%;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search input:focus {
+  border-color: var(--horror-red);
+  box-shadow: 0 0 10px rgba(168, 36, 36, 0.3);
+}
+
+.search button, .role-filters .filter-btn {
+  font-family: var(--sans);
+  background: #1c1e24;
+  color: var(--horror-text);
+  border: 1px solid var(--horror-border);
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.search button:hover, .role-filters .filter-btn:hover {
+  background: var(--horror-red);
+  border-color: var(--horror-red);
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(168, 36, 36, 0.4);
+}
+
+.search button.secondary {
+  color: var(--horror-text-muted);
+}
+
+.role-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem !important;
+}
+
+/* =========================================================================
+   CHARACTER CARDS & PORTRAITS
+   ========================================================================= */
+
+h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: normal;
+  border-bottom: 1px solid var(--horror-border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+  color: #e5e7eb;
+}
+
+.agent-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.agent-card {
+  background: var(--horror-card-bg);
+  border: 1px solid var(--horror-border);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.agent-card:hover {
+  border-color: var(--horror-red);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(168, 36, 36, 0.25);
+}
+
+.agent-card .agent-year {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: rgba(10, 10, 12, 0.85);
+  border: 1px solid var(--horror-border-red);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.card-portrait {
+  width: 100%;
+  height: 220px;
+  background: #090a0c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--horror-border);
+  position: relative;
+}
+
+.card-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(25%) contrast(110%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.agent-card:hover .card-portrait img {
+  transform: scale(1.06);
+  filter: grayscale(0%) contrast(115%);
+}
+
+.card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.agent-card h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.agent-card .agent-origin {
+  color: var(--horror-text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.agent-card button {
+  margin-top: auto;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--horror-border-red);
+  color: var(--horror-red);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.agent-card:hover button {
+  background: var(--horror-red);
+  color: #ffffff;
+}
+
+/* =========================================================================
+   PAGINATION
+   ========================================================================= */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.pagination button {
+  background: #14151a;
+  border: 1px solid var(--horror-border);
+  color: var(--horror-text);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  border-color: var(--horror-red);
+  color: var(--horror-red);
+}
+
+.pagination button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* =========================================================================
+   MODAL — Horror Popup
+   ========================================================================= */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 2rem 1rem;
+}
+
+.modal-content {
+  background-color: #121317;
+  border: 1px solid var(--horror-border-red);
+  width: 92%;
+  max-width: 620px;
+  padding: 2rem;
+  position: relative;
+  color: var(--horror-text);
+  box-shadow: 0 0 35px rgba(168, 36, 36, 0.3);
+  animation: modalPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  color: var(--horror-text-muted);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: var(--horror-red);
+}
+
+.modal-body-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.modal-portrait {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid var(--horror-border-red);
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
+  flex-shrink: 0;
+}
+
+.modal-header h2 {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  color: #ffffff;
+  border: none;
+  padding: 0;
+  margin-bottom: 0.3rem;
+}
+
+.skills-list {
+  background: #090a0c;
+  border: 1px solid var(--horror-border);
+  padding: 1rem;
+  margin-top: 1.25rem;
+}
+
+.skills-list p {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #1a1b20;
+  font-size: 0.85rem;
+}
+
+.skills-list p:last-child {
+  border-bottom: none;
+}
+
+.skills-list p strong {
+  color: #e5e7eb;
+}
+
+/* =========================================================================
+   ANIMATIONS & FOOTER
+   ========================================================================= */
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 10px rgba(168, 36, 36, 0.6); }
+  50% { opacity: 0.85; text-shadow: 0 0 4px rgba(168, 36, 36, 0.2); }
+  85% { opacity: 0.95; text-shadow: 0 0 14px rgba(168, 36, 36, 0.8); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--horror-border);
+  background: #090a0c;
+  color: var(--horror-text-muted);
+  font-size: 0.8rem;
+}
