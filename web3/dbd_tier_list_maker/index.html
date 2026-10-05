@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DBDle - Dead by Daylight character guessing game">
+    <title>DBDle - Choose Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+
+    <header class="topbar">
+        <a href="index.html" class="brand">
+            <span class="dbd-logo">
+                DEAD BY<br>
+                DAYLIGHT <span class="scratch">|||||</span>
+            </span>
+
+            <span class="brand-divider"></span>
+            <span class="brand-title">DBDLE</span>
+        </a>
+
+        <nav>
+            <a href="#modes">MODES</a>
+            <a href="#about">ABOUT</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="home-hero">
+
+            <div class="hero-copy">
+
+                <p class="eyebrow">
+                    A DEAD BY DAYLIGHT CHARACTER GUESSING GAME
+                </p>
+
+                <h1>
+                    WHO'S HIDING<br>
+                    IN THE FOG?
+                </h1>
+
+                <p class="hero-text">
+                    Pick a mode and identify the hidden character using clues
+                    from your Dead by Daylight API.
+                </p>
+
+                <a href="#modes" class="main-btn">
+                    CHOOSE A MODE
+                </a>
+
+            </div>
+
+
+            <div class="hero-art">
+
+                <div class="hero-circle"></div>
+
+                <div class="hero-stat hero-stat-one">
+                    <span>MODE</span>
+                    <strong>03</strong>
+                </div>
+
+                <div class="hero-stat hero-stat-two">
+                    <span>CLUES</span>
+                    <strong>08</strong>
+                </div>
+
+                <div class="hero-stat hero-stat-three">
+                    <span>GOAL</span>
+                    <strong>GUESS</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="modes" class="mode-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">SELECT YOUR TRIAL</p>
+                <h2>THREE MODES.<br>ONE ANSWER.</h2>
+            </div>
+
+
+            <div class="mode-grid">
+
+                <article class="mode-card survivor-mode">
+
+                    <div class="mode-top">
+                        <span class="mode-number">01</span>
+                        <span class="mode-tag">SURVIVOR ONLY</span>
+                    </div>
+
+                    <h3>ESCAPE<br>THE FOG</h3>
+
+                    <p>
+                        Only Survivors can be the hidden answer and only Survivor
+                        guesses are accepted.
+                    </p>
+
+                    <a href="game.html?mode=survivor" class="mode-btn">
+                        PLAY SURVIVOR
+                    </a>
+
+                </article>
+
+
+                <article class="mode-card killer-mode">
+
+                    <div class="mode-top">
+                        <span class="mode-number">02</span>
+                        <span class="mode-tag">KILLER ONLY</span>
+                    </div>
+
+                    <h3>HUNT<br>THE ANSWER</h3>
+
+                    <p>
+                        Only Killers are included. Compare their origin, realm,
+                        DLC, release year, and difficulty.
+                    </p>
+
+                    <a href="game.html?mode=killer" class="mode-btn">
+                        PLAY KILLER
+                    </a>
+
+                </article>
+
+
+                <article class="mode-card mixed-mode">
+
+                    <div class="mode-top">
+                        <span class="mode-number">03</span>
+                        <span class="mode-tag">MIXED</span>
+                    </div>
+
+                    <h3>ENTER<br>THE UNKNOWN</h3>
+
+                    <p>
+                        Survivors and Killers can both appear. This mode gives
+                        you the largest possible character pool.
+                    </p>
+
+                    <a href="game.html?mode=mixed" class="mode-btn">
+                        PLAY MIXED
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="about" class="about-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">HOW IT WORKS</p>
+                <h2>USE EVERY<br>GUESS.</h2>
+            </div>
+
+
+            <div class="about-grid">
+
+                <article>
+                    <span>01</span>
+                    <h3>CHOOSE</h3>
+                    <p>Select Survivor, Killer, or Mixed mode.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>GUESS</h3>
+                    <p>Enter the name of one character from the selected mode.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>COMPARE</h3>
+                    <p>Use colors and arrows to see how close your guess is.</p>
+                </article>
+
+                <article>
+                    <span>04</span>
+                    <h3>SOLVE</h3>
+                    <p>Keep guessing until you find the hidden character.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        DBDLE • DEAD BAI DAYLIGHT
+    </footer>
+
+</body>
+</html>
