@@ -780,3 +780,58 @@ button {
         flex-direction: column;
     }
 }
+
+
+/* ---------- Website Switcher ---------- */
+
+.site-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 4px;
+    padding-left: 18px;
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.site-switch-link {
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.03);
+    color: #a8a8a8 !important;
+    font-size: 9px !important;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.site-switch-link::after {
+    display: none !important;
+}
+
+.site-switch-link:hover {
+    color: #fff !important;
+    border-color: var(--red);
+    background: rgba(198, 0, 0, 0.12);
+}
+
+.site-switch-link.active {
+    color: #fff !important;
+    background: var(--red);
+    border-color: var(--red);
+}
+
+@media (max-width: 760px) {
+    .site-switcher {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 8px;
+        padding-left: 0;
+        padding-top: 16px;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        flex-wrap: wrap;
+    }
+}
